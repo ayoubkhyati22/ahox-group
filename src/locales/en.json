@@ -1,0 +1,60 @@
+{
+  "nav": {
+    "home": "Home",
+    "casablanca": "Casablanca",
+    "dubai": "Dubai",
+    "frankfurt": "Frankfurt",
+    "pristina": "Pristina"
+  },
+  "hero": {
+    "title": "WHO WE ARE",
+    "scrollDown": "Scroll down"
+  },
+  "about": {
+    "text": "The foundation of our success is the trusting and coordinated collaboration with our clients, architects, and engineers. We see ourselves as partners who are involved in the planning from the very beginning and work together with all stakeholders to develop the optimal solution."
+  },
+  "services": {
+    "title": "WHAT WE DO",
+    "subtitle": "Every project is the result of numerous work steps that must be precisely coordinated.",
+    "construction": {
+      "title": "Construction Management",
+      "description": "Professional construction supervision and coordination from planning to completion. We ensure that your project is realized on time, within budget, and with the highest quality."
+    },
+    "realEstate": {
+      "title": "Real Estate",
+      "description": "Comprehensive real estate services from project development through sales to rental. We create sustainable value for investors and users."
+    },
+    "security": {
+      "title": "Security",
+      "description": "State-of-the-art security solutions and professional security management for your properties and projects. Your protection is our priority."
+    }
+  },
+  "cta": {
+    "title": "And what are your plans?",
+    "button": "Get in touch"
+  },
+  "footer": {
+    "rights": "All rights reserved"
+  },
+  "whatsapp": {
+    "message": "Hello, I am interested in your services."
+  },
+  "locations": {
+    "casablanca": {
+      "title": "Casablanca",
+      "description": "Our Casablanca location combines European expertise with North African dynamism. As Morocco's economic center, the city offers ideal conditions for international construction projects and real estate developments."
+    },
+    "dubai": {
+      "title": "Dubai",
+      "description": "Dubai stands for innovation and superlatives. At this location, we realize exceptional projects in the luxury segment and set new standards in real estate development in the Middle East."
+    },
+    "frankfurt": {
+      "title": "Frankfurt",
+      "description": "As Europe's financial metropolis, Frankfurt is our main location for demanding commercial real estate and high-quality residential projects. Here we combine German precision with international expertise."
+    },
+    "pristina": {
+      "title": "Pristina",
+      "description": "Pristina is an emerging market with great potential. We are part of the construction and modernization of the Kosovo capital and create sustainable structures for the future."
+    }
+  }
+}
