@@ -4,12 +4,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        purple: '#8B7BA8',        // Change this for main purple
-        'purple-light': '#E8E3F0', // Change this for light backgrounds
-        black: '#2C2C2C',          // Change this for text color
-        gold: '#FFC107',           // Change this for gold accent
-        orange: '#FF9966',         // Change this for orange accent
-        'gray-light': '#F5F5F7',   // Change this for backgrounds
+        purple: '#2C1F3A',        // Deep purple - main brand color
+        'purple-light': '#E8E3F0', // Light backgrounds
+        black: '#2C1F3A',          // Deep purple for text
+        gold: '#E8D700',           // Bright yellow accent
+        orange: '#D10A11',         // Red accent
+        teal: '#14B3AA',           // Teal accent
+        'gray-light': '#F5F5F7',   // Light backgrounds
       },
       borderRadius: {
         DEFAULT: '0',

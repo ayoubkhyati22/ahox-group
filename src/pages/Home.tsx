@@ -63,9 +63,8 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen bg-black">
-      {/* Hero Section - Investment Focus */}
+      {/* Hero Section */}
       <section className="h-screen relative overflow-hidden flex items-center justify-center">
-        {/* Dynamic Background */}
         <div className="absolute inset-0">
           <AnimatePresence initial={false}>
             <motion.div
@@ -82,15 +81,6 @@ const HomePage = () => {
               }}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-black/90 via-black/70 to-black/90" />
-              
-              {/* Animated Grid Overlay */}
-              <div className="absolute inset-0 opacity-20">
-                <div className="h-full w-full" style={{
-                  backgroundImage: `linear-gradient(rgba(255,215,0,0.1) 1px, transparent 1px),
-                                   linear-gradient(90deg, rgba(255,215,0,0.1) 1px, transparent 1px)`,
-                  backgroundSize: '50px 50px',
-                }}/>
-              </div>
             </motion.div>
           </AnimatePresence>
         </div>
@@ -103,24 +93,22 @@ const HomePage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              {/* Tagline Badge */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="inline-block mb-8"
+                className="inline-block mb-6"
               >
-                <div className="flex items-center gap-3 bg-gold/20 backdrop-blur-xl border border-gold/40 px-8 py-4 rounded-full">
-                  <Globe2 className="w-5 h-5 text-gold" />
-                  <span className="text-gold font-bold text-sm uppercase tracking-[0.2em]">
+                <div className="flex items-center gap-2 bg-gold/10 backdrop-blur-xl border border-gold/30 px-5 py-2 rounded-full">
+                  <Globe2 className="w-4 h-4 text-gold" />
+                  <span className="text-gold font-bold text-[10px] uppercase tracking-[0.3em]">
                     {t('about.tagline')}
                   </span>
                 </div>
               </motion.div>
 
-              {/* Main Title */}
               <motion.h1 
-                className="text-6xl md:text-8xl lg:text-9xl font-black text-white mb-8 leading-[0.9]"
+                className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-8 leading-[0.9] tracking-tighter"
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -130,168 +118,117 @@ const HomePage = () => {
                 </span>
               </motion.h1>
 
-              {/* Subtitle */}
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
-                className="text-2xl md:text-3xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed font-light"
+                className="text-xl md:text-2xl text-gray-400 mb-10 max-w-3xl mx-auto leading-relaxed font-light"
               >
                 {t('hero.subtitle')}
               </motion.p>
 
-              {/* CTA Button - MODIFIED SIZE */}
+              {/* Reduced Button Size */}
               <motion.button
                 onClick={scrollToContent}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.8 }}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="group relative inline-flex items-center gap-4 bg-gradient-to-r from-gold via-orange to-gold px-8 py-4 text-lg font-bold text-black overflow-hidden rounded-full shadow-2xl shadow-gold/30"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="group relative inline-flex items-center gap-3 bg-gradient-to-r from-gold via-orange-500 to-gold px-7 py-3 text-sm font-bold text-black overflow-hidden rounded-full shadow-xl shadow-gold/20"
               >
-                <span className="relative z-10">{t('hero.cta')}</span>
-                <ChevronRight className="relative z-10 w-6 h-6 group-hover:translate-x-2 transition-transform" />
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000"></div>
+                <span className="relative z-10 uppercase tracking-wider">{t('hero.cta')}</span>
+                <ChevronRight className="relative z-10 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700"></div>
               </motion.button>
             </motion.div>
           </div>
         </div>
 
-        {/* Scroll Indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.2 }}
-          className="absolute bottom-12 left-1/2 -translate-x-1/2 z-10"
-        >
-          <motion.button
-            onClick={scrollToContent}
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="flex flex-col items-center gap-3 text-gold hover:text-orange transition-colors"
-          >
-            <div className="w-8 h-14 border-2 border-current rounded-full flex items-start justify-center p-2">
-              <motion.div
-                className="w-2 h-2 bg-current rounded-full"
-                animate={{ y: [0, 24, 0] }}
-                transition={{ duration: 2, repeat: Infinity }}
-              />
-            </div>
-            <span className="text-xs uppercase tracking-widest font-semibold">{t('hero.scrollDown')}</span>
-          </motion.button>
-        </motion.div>
-
-        {/* Image Progress Dots */}
-        <div className="absolute bottom-32 left-1/2 -translate-x-1/2 flex gap-3 z-10">
+        {/* Right Side Vertical Slider Indicators - REDESIGNED */}
+        <div className="absolute right-8 top-1/2 -translate-y-1/2 flex flex-col items-end gap-6 z-20">
           {heroImages.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentImageIndex(index)}
-              className={`h-1.5 rounded-full transition-all ${
-                index === currentImageIndex 
-                  ? 'w-16 bg-gold shadow-lg shadow-gold/50' 
-                  : 'w-8 bg-white/30 hover:bg-white/60'
-              }`}
-            />
+              className="group flex items-center gap-4 transition-all"
+            >
+              <span className={`text-[10px] font-bold transition-all duration-500 ${
+                index === currentImageIndex ? 'text-gold opacity-100' : 'text-white opacity-0 group-hover:opacity-40'
+              }`}>
+                0{index + 1}
+              </span>
+              <div className={`h-12 w-[2px] transition-all duration-500 relative overflow-hidden ${
+                index === currentImageIndex ? 'bg-gold' : 'bg-white/20 group-hover:bg-white/40'
+              }`}>
+                {index === currentImageIndex && (
+                  <motion.div 
+                    layoutId="activeSlide"
+                    className="absolute inset-0 bg-white"
+                    initial={{ y: "-100%" }}
+                    animate={{ y: "100%" }}
+                    transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
+                  />
+                )}
+              </div>
+            </button>
           ))}
         </div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10">
+          <motion.button
+            onClick={scrollToContent}
+            animate={{ y: [0, 8, 0] }}
+            transition={{ duration: 2, repeat: Infinity }}
+            className="flex flex-col items-center gap-2 text-gold/60 hover:text-gold transition-colors"
+          >
+            <div className="w-[1px] h-12 bg-gradient-to-b from-gold/0 via-gold to-gold/0"></div>
+            <span className="text-[9px] uppercase tracking-[0.3em] font-bold">{t('hero.scrollDown')}</span>
+          </motion.button>
+        </div>
       </section>
 
-      {/* About Section - Investment Philosophy */}
-      <section className="py-32 bg-white relative overflow-hidden">
+      {/* Philosophy Section */}
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="max-w-5xl mx-auto text-center"
+            className="max-w-4xl mx-auto text-center"
           >
-            <div className="inline-block mb-8 px-6 py-3 bg-black/5 rounded-full">
-              <span className="text-sm uppercase tracking-[0.2em] font-bold text-gray-600">Our Philosophy</span>
-            </div>
-            
-            <p className="text-3xl md:text-4xl lg:text-5xl leading-relaxed text-gray-900 font-light mb-8">
-              {t('about.text')}
+            <span className="text-[11px] uppercase tracking-[0.4em] font-black text-gold mb-6 block">Our Philosophy</span>
+            <p className="text-2xl md:text-4xl leading-snug text-gray-900 font-light italic">
+              "{t('about.text')}"
             </p>
-
-            <div className="h-1 w-32 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto"></div>
           </motion.div>
         </div>
       </section>
 
-      {/* Value Proposition Section */}
-      <section className="py-32 bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gold rounded-full blur-[150px]"></div>
-          <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-orange rounded-full blur-[150px]"></div>
-        </div>
-
+      {/* Value Proposition */}
+      <section className="py-32 bg-[#050505] relative border-y border-white/5">
         <div className="container mx-auto px-6 relative z-10">
-          {/* Section Header */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-20"
-          >
-            <div className="inline-block mb-6 px-6 py-3 bg-gold/10 backdrop-blur-sm border border-gold/30 rounded-full">
-              <span className="text-sm uppercase tracking-[0.2em] font-bold text-gold">The AHOX Advantage</span>
-            </div>
-
-            <h2 className="text-5xl md:text-7xl font-black text-white mb-6">
-              <span className="bg-gradient-to-r from-white via-gold to-white bg-clip-text text-transparent">
-                {t('value.title')}
-              </span>
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-6xl font-black text-white mb-6 uppercase tracking-tighter">
+              {t('value.title')}
             </h2>
-            
-            <p className="text-2xl text-gray-400 max-w-3xl mx-auto font-light">
-              {t('value.subtitle')}
-            </p>
-          </motion.div>
+            <div className="w-20 h-1 bg-gold mx-auto"></div>
+          </div>
 
-          {/* Benefits Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
             {Array.from({ length: 6 }).map((_, index) => {
               const icons = [Target, Shield, TrendingUp, Globe2, CheckCircle2, Building2];
               const Icon = icons[index];
-              
               return (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="group relative"
+                  whileHover={{ y: -5 }}
+                  className="p-8 bg-white/5 border border-white/10 hover:border-gold/50 transition-all duration-500 group"
                 >
-                  <div className="h-full bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 hover:border-gold/50 p-8 transition-all duration-500 relative overflow-hidden">
-                    {/* Hover Glow */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-gold/0 to-gold/0 group-hover:from-gold/10 group-hover:to-orange/10 transition-all duration-500"></div>
-                    
-                    {/* Icon */}
-                    <div className="relative z-10 mb-6 w-16 h-16 flex items-center justify-center bg-gold/10 border-2 border-gold/30 group-hover:border-gold group-hover:scale-110 transition-all duration-500">
-                      <Icon className="w-8 h-8 text-gold" />
-                    </div>
-
-                    {/* Content */}
-                    <div className="relative z-10">
-                      <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-gold transition-colors">
-                        {t(`value.benefits.${index}.title`)}
-                      </h3>
-                      <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors">
-                        {t(`value.benefits.${index}.description`)}
-                      </p>
-                    </div>
-
-                    {/* Number Badge */}
-                    <div className="absolute top-6 right-6 text-6xl font-black text-gold/10 group-hover:text-gold/20 transition-colors">
-                      {String(index + 1).padStart(2, '0')}
-                    </div>
-                  </div>
+                  <Icon className="w-8 h-8 text-gold mb-6 group-hover:scale-110 transition-transform" />
+                  <h3 className="text-lg font-bold text-white mb-3 uppercase tracking-wider">{t(`value.benefits.${index}.title`)}</h3>
+                  <p className="text-gray-400 text-sm leading-relaxed">{t(`value.benefits.${index}.description`)}</p>
                 </motion.div>
               );
             })}
@@ -299,255 +236,66 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Investment Process Section */}
-      <section className="py-32 bg-white relative">
+      {/* Cities Section */}
+      <section className="py-32 bg-black">
         <div className="container mx-auto px-6">
-          {/* Section Header */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-20"
-          >
-            <div className="inline-block mb-6 px-6 py-3 bg-black/5 rounded-full">
-              <span className="text-sm uppercase tracking-[0.2em] font-bold text-gray-600">How It Works</span>
+          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+            <div className="max-w-2xl text-left">
+              <span className="text-gold font-black text-[10px] uppercase tracking-[0.3em] mb-4 block">Markets</span>
+              <h2 className="text-5xl md:text-7xl font-black text-white leading-none uppercase tracking-tighter">
+                {t('cities.title')}
+              </h2>
             </div>
-
-            <h2 className="text-5xl md:text-7xl font-black text-gray-900 mb-6">
-              {t('services.title')}
-            </h2>
-            
-            <p className="text-2xl text-gray-600 max-w-3xl mx-auto font-light">
-              {t('services.subtitle')}
+            <p className="text-gray-400 text-lg max-w-md font-light">
+              {t('cities.subtitle')}
             </p>
-          </motion.div>
+          </div>
 
-          {/* Process Steps */}
-          <div className="max-w-5xl mx-auto">
-            {Array.from({ length: 5 }).map((_, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="relative mb-12 last:mb-0"
-              >
-                {/* Connector Line */}
-                {index < 4 && (
-                  <div className="absolute left-12 top-24 w-0.5 h-full bg-gradient-to-b from-gold to-orange"></div>
-                )}
-
-                <div className="flex gap-8 items-start group">
-                  {/* Number Circle */}
-                  <div className="flex-shrink-0 w-24 h-24 bg-gradient-to-br from-gold to-orange flex items-center justify-center text-white text-3xl font-black shadow-2xl shadow-gold/30 group-hover:scale-110 transition-transform duration-500 relative z-10">
-                    {t(`services.steps.${index}.number`)}
+          <div className="grid md:grid-cols-2 gap-6">
+            {cities.map((city, index) => (
+              <motion.div key={city.name} whileHover={{ scale: 0.99 }}>
+                <Link to={`/${city.name}`} className="group relative block h-[450px] overflow-hidden">
+                  <div className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" style={{ backgroundImage: `url(${city.image})` }} />
+                  <div className={`absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80`} />
+                  <div className="absolute inset-0 p-10 flex flex-col justify-end">
+                    <span className="text-gold text-[10px] font-bold uppercase tracking-[0.2em] mb-2">{city.tag}</span>
+                    <h3 className="text-white text-4xl font-black uppercase mb-4">{t(`nav.${city.name}`)}</h3>
+                    <div className="flex items-center gap-2 text-white text-xs font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all">
+                      <span>Explore</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </div>
                   </div>
-
-                  {/* Content */}
-                  <div className="flex-1 pt-4">
-                    <h3 className="text-3xl font-bold text-gray-900 mb-4 group-hover:text-gold transition-colors">
-                      {t(`services.steps.${index}.title`)}
-                    </h3>
-                    <p className="text-xl text-gray-600 leading-relaxed">
-                      {t(`services.steps.${index}.description`)}
-                    </p>
-                  </div>
-                </div>
+                </Link>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Cities Section - Investment Markets */}
-      <section className="py-32 bg-black relative overflow-hidden">
-        {/* Background */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-1/4 left-0 w-96 h-96 bg-gold rounded-full blur-3xl"></div>
-          <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-orange rounded-full blur-3xl"></div>
-        </div>
-
-        <div className="container mx-auto px-6 relative z-10">
-          {/* Section Header */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-20"
-          >
-            <div className="inline-block mb-6 px-6 py-3 bg-gold/10 backdrop-blur-sm border border-gold/30 rounded-full">
-              <span className="text-sm uppercase tracking-[0.2em] font-bold text-gold">4 Strategic Cities</span>
-            </div>
-
-            <h2 className="text-5xl md:text-7xl font-black text-white mb-6">
-              <span className="bg-gradient-to-r from-white via-gold to-white bg-clip-text text-transparent">
-                {t('cities.title')}
-              </span>
-            </h2>
-            
-            <p className="text-2xl text-gray-400 max-w-3xl mx-auto font-light">
-              {t('cities.subtitle')}
-            </p>
-          </motion.div>
-
-          {/* Cities Grid */}
-          <div className="grid md:grid-cols-2 gap-8 max-w-7xl mx-auto">
-            {cities.map((city, index) => {
-              const Icon = city.icon;
-              return (
-                <motion.div
-                  key={city.name}
-                  initial={{ opacity: 0, y: 80 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.7, delay: index * 0.15 }}
-                  viewport={{ once: true }}
-                  className="group"
-                >
-                  <Link
-                    to={`/${city.name}`}
-                    className="block relative overflow-hidden rounded-2xl shadow-2xl hover:shadow-gold/20 transition-all duration-700"
-                  >
-                    <div className="relative h-[500px] overflow-hidden">
-                      {/* Background Image */}
-                      <div 
-                        className="absolute inset-0 bg-cover bg-center transform group-hover:scale-110 transition-transform duration-1000"
-                        style={{ backgroundImage: `url(${city.image})` }}
-                      />
-                      
-                      {/* Gradient Overlay */}
-                      <div className={`absolute inset-0 bg-gradient-to-br ${city.gradient} opacity-80 group-hover:opacity-90 transition-opacity duration-700`} />
-
-                      {/* Content */}
-                      <div className="relative h-full flex flex-col">
-                        {/* Top - Icon & Tag */}
-                        <div className="p-8 flex justify-between items-start">
-                          <motion.div
-                            whileHover={{ rotate: 360 }}
-                            transition={{ duration: 0.8 }}
-                            className="w-20 h-20 bg-white/20 backdrop-blur-xl rounded-xl flex items-center justify-center border-2 border-white/40 group-hover:bg-white/30 transition-all shadow-2xl"
-                          >
-                            <Icon className="w-10 h-10 text-white" />
-                          </motion.div>
-
-                          <div className="px-4 py-2 bg-white/20 backdrop-blur-xl border border-white/40 rounded-full">
-                            <span className="text-white text-xs font-bold uppercase tracking-wider">{city.tag}</span>
-                          </div>
-                        </div>
-
-                        {/* Bottom - Info */}
-                        <div className="mt-auto p-8 bg-gradient-to-t from-black/80 to-transparent">
-                          <h3 className="text-white font-black text-5xl mb-4 transform group-hover:translate-x-2 transition-transform">
-                            {t(`nav.${city.name}`)}
-                          </h3>
-
-                          <p className="text-white/90 text-lg mb-2 font-semibold">
-                            {t(`locations.${city.name}.subtitle`)}
-                          </p>
-
-                          <p className="text-white/80 text-sm mb-6 line-clamp-2 leading-relaxed">
-                            {t(`locations.${city.name}.description`).substring(0, 100)}...
-                          </p>
-
-                          {/* Learn More */}
-                          <div className="flex items-center gap-3 text-white font-bold opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-                            <span className="text-lg">Explore Market</span>
-                            <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </Link>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="relative py-40 overflow-hidden">
-        {/* Background */}
-        <div className="absolute inset-0">
-          <div 
-            className="absolute inset-0 bg-cover bg-center bg-fixed"
-            style={{
-              backgroundImage: 'url(https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1920&h=1080&fit=crop)',
-            }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-black/90 via-purple/85 to-black/90"></div>
+      {/* Footer CTA */}
+      <section className="relative py-32 overflow-hidden bg-zinc-950">
+        <div className="container mx-auto px-6 relative z-10 text-center">
+          <h2 className="text-4xl md:text-6xl font-black text-white mb-10 uppercase tracking-tighter">
+            {t('cta.title')}
+          </h2>
           
-          {/* Animated Particles */}
-          <div className="absolute inset-0">
-            {[...Array(20)].map((_, i) => (
-              <motion.div
-                key={i}
-                className="absolute w-1 h-1 bg-gold rounded-full"
-                initial={{
-                  x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1920),
-                  y: Math.random() * 800,
-                  opacity: 0,
-                }}
-                animate={{
-                  y: [null, Math.random() * -200 - 100],
-                  opacity: [0, 0.8, 0],
-                }}
-                transition={{
-                  duration: 3 + Math.random() * 2,
-                  repeat: Infinity,
-                  delay: Math.random() * 3,
-                }}
-              />
-            ))}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            {/* Reduced Footer Buttons */}
+            <motion.a
+              href="mailto:info@ahox-cm.de"
+              whileHover={{ scale: 1.05 }}
+              className="bg-gold text-black px-8 py-3.5 text-sm font-black uppercase tracking-widest rounded-full hover:bg-white transition-colors"
+            >
+              {t('cta.button')}
+            </motion.a>
+            <motion.a
+              href="tel:+496927278761"
+              whileHover={{ scale: 1.05 }}
+              className="bg-transparent border border-white/20 text-white px-8 py-3.5 text-sm font-black uppercase tracking-widest rounded-full hover:bg-white/10 transition-colors"
+            >
+              {t('cta.secondaryButton')}
+            </motion.a>
           </div>
-        </div>
-
-        {/* Content */}
-        <div className="container mx-auto px-6 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center max-w-5xl mx-auto"
-          >
-            <div className="inline-block mb-8 px-8 py-4 bg-gold/20 backdrop-blur-xl border-2 border-gold/40 rounded-full">
-              <span className="text-gold font-bold text-sm uppercase tracking-[0.2em]">Ready to Invest?</span>
-            </div>
-
-            <h2 className="text-5xl md:text-7xl font-black text-white mb-6 leading-tight">
-              {t('cta.title')}
-            </h2>
-
-            <p className="text-2xl text-gray-300 mb-12 font-light max-w-2xl mx-auto">
-              {t('cta.subtitle')}
-            </p>
-
-            {/* CTA Buttons - MODIFIED SIZES */}
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <motion.a
-                href="mailto:info@ahox-cm.de"
-                whileHover={{ scale: 1.05, y: -5 }}
-                whileTap={{ scale: 0.95 }}
-                className="group relative inline-flex items-center gap-4 bg-gradient-to-r from-gold via-orange to-gold px-8 py-4 text-lg font-bold text-black overflow-hidden rounded-full shadow-2xl shadow-gold/40"
-              >
-                <span className="relative z-10">{t('cta.button')}</span>
-                <ArrowRight className="relative z-10 w-6 h-6 group-hover:translate-x-2 transition-transform" />
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000"></div>
-              </motion.a>
-
-              <motion.a
-                href="tel:+496927278761"
-                whileHover={{ scale: 1.05, y: -5 }}
-                whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center gap-4 bg-white/10 backdrop-blur-xl border-2 border-white/30 hover:border-gold px-8 py-4 text-lg font-bold text-white transition-all rounded-full"
-              >
-                <span>{t('cta.secondaryButton')}</span>
-              </motion.a>
-            </div>
-          </motion.div>
         </div>
       </section>
     </div>

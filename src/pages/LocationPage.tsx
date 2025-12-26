@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { MapPin, Building2, Users, Award, TrendingUp, Phone, Mail, ChevronRight, ArrowRight } from 'lucide-react';
+import { Building2, Users, Award, TrendingUp, ChevronRight, ArrowRight } from 'lucide-react';
 
 interface LocationPageProps {
   location: 'casablanca' | 'dubai' | 'frankfurt' | 'pristina';
@@ -312,17 +312,6 @@ const LocationPage = ({ location }: LocationPageProps) => {
           </div>
         </div>
       </section>
-
-      <footer className="py-12 border-t border-black/5 container mx-auto px-6">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="text-xl font-black">AHOX-CM</div>
-          <div className="flex gap-8 text-xs font-bold uppercase tracking-widest">
-            <span>© 2024 Portfolio</span>
-            <span>Imprint</span>
-            <span>Privacy</span>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 };
