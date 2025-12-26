@@ -7,54 +7,171 @@
     "pristina": "Pristina"
   },
   "hero": {
-    "title": "WHO WE ARE",
+    "title": "CONNECTING CAPITAL WITH OPPORTUNITY",
+    "subtitle": "Your Access to High-Yield Real Estate Markets of Tomorrow",
+    "cta": "Discover Investment Opportunities",
     "scrollDown": "Scroll down"
   },
   "about": {
-    "text": "The foundation of our success is the trusting and coordinated collaboration with our clients, architects, and engineers. We see ourselves as partners who are involved in the planning from the very beginning and work together with all stakeholders to develop the optimal solution."
+    "tagline": "International Investment & Real Estate Connect",
+    "text": "As an independent investment facilitator, we link investors with vetted construction companies and real estate sellers in selected growth cities. Our goal: tailored real estate and construction investment concepts with sustainable returns."
+  },
+  "value": {
+    "title": "WHY INVEST WITH US",
+    "subtitle": "We don't sell real estate – we structure investments.",
+    "benefits": [
+      {
+        "title": "Off-Market Access",
+        "description": "Exclusive access to projects not available on the public market"
+      },
+      {
+        "title": "Local Partners",
+        "description": "Verified construction companies and partners on-site in each city"
+      },
+      {
+        "title": "Custom Concepts",
+        "description": "Investment strategies tailored to your specific goals and risk profile"
+      },
+      {
+        "title": "Risk Reduction",
+        "description": "Reduced risk through thoroughly verified structures and processes"
+      },
+      {
+        "title": "Time Efficiency",
+        "description": "Save time with clear decision-making support and expert guidance"
+      },
+      {
+        "title": "Strategic Facilitation",
+        "description": "Your trusted partner from concept to closing"
+      }
+    ]
   },
   "services": {
-    "title": "WHAT WE DO",
-    "subtitle": "Every project is the result of numerous work steps that must be precisely coordinated.",
-    "construction": {
-      "title": "Construction Management",
-      "description": "Professional construction supervision and coordination from planning to completion. We ensure that your project is realized on time, within budget, and with the highest quality."
-    },
-    "realEstate": {
-      "title": "Real Estate",
-      "description": "Comprehensive real estate services from project development through sales to rental. We create sustainable value for investors and users."
-    },
-    "security": {
-      "title": "Security",
-      "description": "State-of-the-art security solutions and professional security management for your properties and projects. Your protection is our priority."
-    }
+    "title": "OUR INVESTMENT PROCESS",
+    "subtitle": "One point of contact – multiple markets",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Investor Needs Analysis",
+        "description": "We analyze your budget, target returns, risk tolerance, and preferred location to understand your investment goals."
+      },
+      {
+        "number": "02",
+        "title": "Project Matching",
+        "description": "Selection of suitable construction companies and sellers that align with your requirements."
+      },
+      {
+        "number": "03",
+        "title": "Concept Development",
+        "description": "We develop the investment structure, construction or purchase model, and return scenarios."
+      },
+      {
+        "number": "04",
+        "title": "Facilitation & Coordination",
+        "description": "Professional coordination between investor, construction company, and seller."
+      },
+      {
+        "number": "05",
+        "title": "Support Until Closing",
+        "description": "Continuous support and guidance throughout the entire investment process."
+      }
+    ]
+  },
+  "cities": {
+    "title": "INVESTMENT MARKETS",
+    "subtitle": "Four Strategic Cities with Distinct Investment Profiles"
   },
   "cta": {
-    "title": "And what are your plans?",
-    "button": "Get in touch"
+    "title": "Ready to Build Your Portfolio?",
+    "subtitle": "For people who want their capital to work, not just sit idle.",
+    "button": "Request Personal Investment Analysis",
+    "secondaryButton": "Gain Access to Exclusive Projects"
   },
   "footer": {
-    "rights": "All rights reserved"
+    "rights": "All rights reserved",
+    "tagline": "Smart Capital. Strong Connections."
   },
   "whatsapp": {
-    "message": "Hello, I am interested in your services."
+    "message": "Hello, I'm interested in investment opportunities."
   },
   "locations": {
     "casablanca": {
       "title": "Casablanca",
-      "description": "Our Casablanca location combines European expertise with North African dynamism. As Morocco's economic center, the city offers ideal conditions for international construction projects and real estate developments."
+      "subtitle": "Emerging Market with Strong Growth Potential",
+      "description": "Casablanca offers opportunities where markets are just emerging. Rapid urbanization and increasing demand for residential and commercial properties create attractive entry prices.",
+      "idealFor": "Ideal For",
+      "features": [
+        "Early-stage investments",
+        "Project developments",
+        "Long-term growth opportunities"
+      ],
+      "highlights": [
+        "Rapid urbanization",
+        "Increasing property demand",
+        "Attractive entry prices",
+        "Growing commercial sector"
+      ]
     },
     "dubai": {
       "title": "Dubai",
-      "description": "Dubai stands for innovation and superlatives. At this location, we realize exceptional projects in the luxury segment and set new standards in real estate development in the Middle East."
+      "subtitle": "Dynamic Growth & Above-Average Returns",
+      "description": "Dubai represents speed, growth, and global capital flow. With tax-free income and international demand, it's the perfect market for cash-flow oriented investments.",
+      "idealFor": "Ideal For",
+      "features": [
+        "Cash-flow oriented investments",
+        "Short & medium-term returns",
+        "International portfolios"
+      ],
+      "highlights": [
+        "Tax-free income",
+        "International demand",
+        "Modern new developments",
+        "Fast project cycles"
+      ]
     },
     "frankfurt": {
       "title": "Frankfurt",
-      "description": "As Europe's financial metropolis, Frankfurt is our main location for demanding commercial real estate and high-quality residential projects. Here we combine German precision with international expertise."
+      "subtitle": "Stability & Long-Term Security",
+      "description": "Frankfurt stands for security, stability, and predictable returns. As Europe's financial hub, it offers high demand for residential and commercial real estate with a strong rental market.",
+      "idealFor": "Ideal For",
+      "features": [
+        "Capital preservation",
+        "Long-term returns",
+        "Core & Core+ investments"
+      ],
+      "highlights": [
+        "Europe's financial hub",
+        "High property demand",
+        "Strong rental market",
+        "Stable economic environment"
+      ]
     },
     "pristina": {
       "title": "Pristina",
-      "description": "Pristina is an emerging market with great potential. We are part of the construction and modernization of the Kosovo capital and create sustainable structures for the future."
+      "subtitle": "Undervalued Market with High Upside",
+      "description": "Pristina is a market for investors who think ahead. With a young population, low entry costs, and few professional investors, it offers first-mover advantage.",
+      "idealFor": "Ideal For",
+      "features": [
+        "Developers",
+        "Construction investments",
+        "Higher-margin opportunities"
+      ],
+      "highlights": [
+        "Young population",
+        "Low entry costs",
+        "Rising demand for new builds",
+        "First-mover advantage"
+      ]
     }
+  },
+  "targetAudience": {
+    "title": "WHO WE WORK WITH",
+    "investors": [
+      "Private Investors",
+      "Entrepreneurs",
+      "Family Offices",
+      "Capital Investors",
+      "Wealth Builders & Diversifiers"
+    ]
   }
 }
