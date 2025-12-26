@@ -1,9 +1,44 @@
 // src/pages/Home.tsx
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronRight, TrendingUp, Shield, Globe2, Target, ArrowRight, CheckCircle2, Building2, Palmtree, Landmark, Mountain } from 'lucide-react';
+import { 
+  ChevronRight, TrendingUp, Shield, Globe2, Target, 
+  ArrowRight, CheckCircle2, Building2, Palmtree, 
+  Landmark, Mountain 
+} from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+
+// --- Sub-component for the Bento Grid Cards ---
+const BenefitCard = ({ index, icon: Icon, title, desc, className, isLarge = false }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ delay: index * 0.1, duration: 0.8 }}
+    viewport={{ once: true }}
+    className={`group relative p-8 border border-white/10 overflow-hidden flex flex-col justify-between hover:border-gold/40 transition-all duration-700 ${className}`}
+  >
+    {/* Animated background glow */}
+    <div className="absolute inset-0 bg-gradient-to-br from-gold/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+    
+    <div className="relative z-10">
+      <div className={`mb-6 flex items-center justify-center rounded-full border border-gold/20 group-hover:border-gold/50 transition-all duration-500 bg-black/40 backdrop-blur-sm ${isLarge ? 'w-16 h-16' : 'w-12 h-12'}`}>
+        <Icon className={`${isLarge ? 'w-8 h-8' : 'w-5 h-5'} text-gold group-hover:scale-110 transition-transform`} />
+      </div>
+      <h3 className={`${isLarge ? 'text-2xl' : 'text-lg'} font-bold text-white mb-3 uppercase tracking-wider group-hover:text-gold transition-colors duration-500`}>
+        {title}
+      </h3>
+      <p className={`text-zinc-400 font-light leading-relaxed ${isLarge ? 'text-base' : 'text-xs line-clamp-3 group-hover:line-clamp-none'}`}>
+        {desc}
+      </p>
+    </div>
+
+    {/* Background Numbering */}
+    <div className="absolute bottom-4 right-6 text-5xl font-black text-white/[0.02] group-hover:text-gold/[0.05] transition-colors pointer-events-none">
+      0{index + 1}
+    </div>
+  </motion.div>
+);
 
 const HomePage = () => {
   const { t } = useTranslation();
@@ -18,156 +53,87 @@ const HomePage = () => {
   ];
 
   const cities = [
-    {
-      name: 'casablanca',
-      icon: Building2,
-      gradient: 'from-blue-600 via-blue-500 to-cyan-500',
-      image: 'https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=800&h=600&fit=crop',
-      tag: 'Emerging Market',
-    },
-    {
-      name: 'dubai',
-      icon: Palmtree,
-      gradient: 'from-amber-600 via-orange-500 to-yellow-500',
-      image: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&h=600&fit=crop',
-      tag: 'High Growth',
-    },
-    {
-      name: 'frankfurt',
-      icon: Landmark,
-      gradient: 'from-purple-600 via-purple-500 to-pink-500',
-      image: 'https://images.unsplash.com/photo-1564221710304-0b37c8b9d729?w=800&h=600&fit=crop',
-      tag: 'Stable Returns',
-    },
-    {
-      name: 'pristina',
-      icon: Mountain,
-      gradient: 'from-emerald-600 via-green-500 to-teal-500',
-      image: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&h=600&fit=crop',
-      tag: 'First Mover',
-    },
+    { name: 'casablanca', icon: Building2, tag: 'Emerging Market', image: 'https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=800&h=600&fit=crop' },
+    { name: 'dubai', icon: Palmtree, tag: 'High Growth', image: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&h=600&fit=crop' },
+    { name: 'frankfurt', icon: Landmark, tag: 'Stable Returns', image: 'https://images.unsplash.com/photo-1564221710304-0b37c8b9d729?w=800&h=600&fit=crop' },
+    { name: 'pristina', icon: Mountain, tag: 'First Mover', image: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&h=600&fit=crop' },
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => 
-        prevIndex === heroImages.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 5000);
+      setCurrentImageIndex((prev) => (prev === heroImages.length - 1 ? 0 : prev + 1));
+    }, 6000);
     return () => clearInterval(interval);
   }, []);
 
-  const scrollToContent = () => {
-    window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
-  };
+  const scrollToContent = () => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-black selection:bg-gold/30">
       {/* Hero Section */}
       <section className="h-screen relative overflow-hidden flex items-center justify-center">
-        <div className="absolute inset-0">
-          <AnimatePresence initial={false}>
+        <div className="absolute inset-0 z-0">
+          <AnimatePresence mode="wait">
             <motion.div
               key={currentImageIndex}
               initial={{ opacity: 0, scale: 1.1 }}
               animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.9 }}
+              exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 1.5 }}
               className="absolute inset-0"
-              style={{
-                backgroundImage: `url(${heroImages[currentImageIndex]})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-              }}
+              style={{ backgroundImage: `url(${heroImages[currentImageIndex]})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-black/90 via-black/70 to-black/90" />
+              <div className="absolute inset-0 bg-gradient-to-br from-black/95 via-black/60 to-black/90" />
             </motion.div>
           </AnimatePresence>
         </div>
 
         {/* Hero Content */}
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-6xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+        <div className="container mx-auto px-6 relative z-10 text-center">
+          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
+            <div className="inline-block mb-6 px-5 py-2 bg-gold/5 backdrop-blur-xl border border-gold/30 rounded-full">
+              <span className="text-gold font-bold text-[10px] uppercase tracking-[0.4em]">{t('about.tagline')}</span>
+            </div>
+            
+            <h1 className="text-5xl md:text-8xl font-black text-white mb-8 leading-[0.9] tracking-tighter uppercase">
+              {t('hero.title')}
+            </h1>
+
+            <p className="text-xl md:text-2xl text-zinc-400 mb-10 max-w-3xl mx-auto font-light leading-relaxed">
+              {t('hero.subtitle')}
+            </p>
+
+            <motion.button
+              onClick={scrollToContent}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="group relative inline-flex items-center gap-3 bg-gradient-to-r from-gold via-yellow-500 to-gold px-8 py-3.5 text-[12px] font-black text-black uppercase tracking-widest rounded-full shadow-2xl shadow-gold/20 overflow-hidden"
             >
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="inline-block mb-6"
-              >
-                <div className="flex items-center gap-2 bg-gold/10 backdrop-blur-xl border border-gold/30 px-5 py-2 rounded-full">
-                  <Globe2 className="w-4 h-4 text-gold" />
-                  <span className="text-gold font-bold text-[10px] uppercase tracking-[0.3em]">
-                    {t('about.tagline')}
-                  </span>
-                </div>
-              </motion.div>
-
-              <motion.h1 
-                className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-8 leading-[0.9] tracking-tighter"
-                initial={{ opacity: 0, y: 40 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-              >
-                <span className="block bg-gradient-to-r from-white via-gold to-white bg-clip-text text-transparent">
-                  {t('hero.title')}
-                </span>
-              </motion.h1>
-
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
-                className="text-xl md:text-2xl text-gray-400 mb-10 max-w-3xl mx-auto leading-relaxed font-light"
-              >
-                {t('hero.subtitle')}
-              </motion.p>
-
-              {/* Reduced Button Size */}
-              <motion.button
-                onClick={scrollToContent}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.8 }}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="group relative inline-flex items-center gap-3 bg-gradient-to-r from-gold via-orange-500 to-gold px-7 py-3 text-sm font-bold text-black overflow-hidden rounded-full shadow-xl shadow-gold/20"
-              >
-                <span className="relative z-10 uppercase tracking-wider">{t('hero.cta')}</span>
-                <ChevronRight className="relative z-10 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700"></div>
-              </motion.button>
-            </motion.div>
-          </div>
+              <span className="relative z-10">{t('hero.cta')}</span>
+              <ChevronRight className="relative z-10 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
+            </motion.button>
+          </motion.div>
         </div>
 
-        {/* Right Side Vertical Slider Indicators - REDESIGNED */}
+        {/* Right Side Vertical Luxury Slider Indicators */}
         <div className="absolute right-8 top-1/2 -translate-y-1/2 flex flex-col items-end gap-6 z-20">
           {heroImages.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentImageIndex(index)}
-              className="group flex items-center gap-4 transition-all"
+              className="group flex items-center gap-4 transition-all outline-none"
             >
-              <span className={`text-[10px] font-bold transition-all duration-500 ${
-                index === currentImageIndex ? 'text-gold opacity-100' : 'text-white opacity-0 group-hover:opacity-40'
-              }`}>
+              <span className={`text-[10px] font-bold transition-all duration-500 ${index === currentImageIndex ? 'text-gold' : 'text-white/20 opacity-0 group-hover:opacity-100'}`}>
                 0{index + 1}
               </span>
-              <div className={`h-12 w-[2px] transition-all duration-500 relative overflow-hidden ${
-                index === currentImageIndex ? 'bg-gold' : 'bg-white/20 group-hover:bg-white/40'
-              }`}>
+              <div className={`h-12 w-[1px] transition-all duration-700 relative overflow-hidden ${index === currentImageIndex ? 'bg-gold w-[2px]' : 'bg-white/10 group-hover:bg-white/30'}`}>
                 {index === currentImageIndex && (
                   <motion.div 
                     layoutId="activeSlide"
                     className="absolute inset-0 bg-white"
-                    initial={{ y: "-100%" }}
-                    animate={{ y: "100%" }}
-                    transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
+                    animate={{ y: ["-100%", "100%"] }}
+                    transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
                   />
                 )}
               </div>
@@ -176,62 +142,78 @@ const HomePage = () => {
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10">
-          <motion.button
-            onClick={scrollToContent}
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="flex flex-col items-center gap-2 text-gold/60 hover:text-gold transition-colors"
-          >
-            <div className="w-[1px] h-12 bg-gradient-to-b from-gold/0 via-gold to-gold/0"></div>
-            <span className="text-[9px] uppercase tracking-[0.3em] font-bold">{t('hero.scrollDown')}</span>
-          </motion.button>
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-3">
+           <div className="w-[1px] h-12 bg-gradient-to-b from-transparent via-gold to-transparent" />
+           <span className="text-[9px] uppercase tracking-[0.5em] text-gold font-black opacity-60">{t('hero.scrollDown')}</span>
         </div>
       </section>
 
       {/* Philosophy Section */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
+      <section className="py-24 bg-white text-black">
+        <div className="container mx-auto px-6 text-center">
+          <motion.div 
+            initial={{ opacity: 0, y: 40 }} 
+            whileInView={{ opacity: 1, y: 0 }} 
             viewport={{ once: true }}
-            className="max-w-4xl mx-auto text-center"
+            className="max-w-4xl mx-auto"
           >
-            <span className="text-[11px] uppercase tracking-[0.4em] font-black text-gold mb-6 block">Our Philosophy</span>
-            <p className="text-2xl md:text-4xl leading-snug text-gray-900 font-light italic">
-              "{t('about.text')}"
-            </p>
+            <span className="text-gold font-black text-[11px] uppercase tracking-[0.5em] mb-8 block">Investment Philosophy</span>
+            <p className="text-2xl md:text-4xl leading-snug font-light italic">"{t('about.text')}"</p>
           </motion.div>
         </div>
       </section>
 
-      {/* Value Proposition */}
-      <section className="py-32 bg-[#050505] relative border-y border-white/5">
+      {/* Bento Grid: Why Invest With Us */}
+      <section className="py-32 bg-[#050505] relative overflow-hidden">
         <div className="container mx-auto px-6 relative z-10">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-6xl font-black text-white mb-6 uppercase tracking-tighter">
-              {t('value.title')}
-            </h2>
-            <div className="w-20 h-1 bg-gold mx-auto"></div>
+          {/* Section Header */}
+          <div className="flex flex-col md:flex-row items-end justify-between mb-20 gap-8">
+            <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="max-w-2xl">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-[1px] bg-gold"></div>
+                <span className="text-gold font-bold text-[10px] uppercase tracking-[0.4em]">Strategic Excellence</span>
+              </div>
+              <h2 className="text-4xl md:text-6xl font-black text-white leading-none uppercase tracking-tighter">
+                Why <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold via-white to-gold/50">Invest</span> <br />
+                With AHOX?
+              </h2>
+            </motion.div>
+            <p className="text-zinc-500 text-lg max-w-sm font-light border-l border-gold/20 pl-6 leading-relaxed">
+              {t('value.subtitle')}
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-            {Array.from({ length: 6 }).map((_, index) => {
-              const icons = [Target, Shield, TrendingUp, Globe2, CheckCircle2, Building2];
-              const Icon = icons[index];
-              return (
-                <motion.div
-                  key={index}
-                  whileHover={{ y: -5 }}
-                  className="p-8 bg-white/5 border border-white/10 hover:border-gold/50 transition-all duration-500 group"
-                >
-                  <Icon className="w-8 h-8 text-gold mb-6 group-hover:scale-110 transition-transform" />
-                  <h3 className="text-lg font-bold text-white mb-3 uppercase tracking-wider">{t(`value.benefits.${index}.title`)}</h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">{t(`value.benefits.${index}.description`)}</p>
-                </motion.div>
-              );
-            })}
+          {/* Creative Bento Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-6 gap-4 auto-rows-[250px]">
+            {/* Row 1 */}
+            <BenefitCard 
+              index={0} icon={Target} title={t('value.benefits.0.title')} desc={t('value.benefits.0.description')}
+              className="md:col-span-3 md:row-span-2 bg-gradient-to-br from-white/[0.05] to-transparent" isLarge
+            />
+            <BenefitCard 
+              index={1} icon={Shield} title={t('value.benefits.1.title')} desc={t('value.benefits.1.description')}
+              className="md:col-span-3 md:row-span-1 bg-white/[0.02]"
+            />
+            
+            {/* Row 2 */}
+            <BenefitCard 
+              index={2} icon={TrendingUp} title={t('value.benefits.2.title')} desc={t('value.benefits.2.description')}
+              className="md:col-span-2 md:row-span-1 bg-white/[0.02]"
+            />
+            <BenefitCard 
+              index={3} icon={Globe2} title={t('value.benefits.3.title')} desc={t('value.benefits.3.description')}
+              className="md:col-span-2 md:row-span-2 border-gold/10 bg-gold/[0.01]" isLarge
+            />
+            
+            {/* Row 3 */}
+            <BenefitCard 
+              index={4} icon={CheckCircle2} title={t('value.benefits.4.title')} desc={t('value.benefits.4.description')}
+              className="md:col-span-2 md:row-span-1 bg-white/[0.02]"
+            />
+            <BenefitCard 
+              index={5} icon={Building2} title={t('value.benefits.5.title')} desc={t('value.benefits.5.description')}
+              className="md:col-span-2 md:row-span-1 bg-white/[0.02]"
+            />
           </div>
         </div>
       </section>
@@ -240,29 +222,23 @@ const HomePage = () => {
       <section className="py-32 bg-black">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-            <div className="max-w-2xl text-left">
-              <span className="text-gold font-black text-[10px] uppercase tracking-[0.3em] mb-4 block">Markets</span>
-              <h2 className="text-5xl md:text-7xl font-black text-white leading-none uppercase tracking-tighter">
-                {t('cities.title')}
-              </h2>
-            </div>
-            <p className="text-gray-400 text-lg max-w-md font-light">
-              {t('cities.subtitle')}
-            </p>
+            <h2 className="text-5xl md:text-7xl font-black text-white uppercase tracking-tighter leading-none">
+              {t('cities.title')}
+            </h2>
+            <p className="text-zinc-500 text-lg max-w-xs text-right font-light italic">{t('cities.subtitle')}</p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            {cities.map((city, index) => (
-              <motion.div key={city.name} whileHover={{ scale: 0.99 }}>
-                <Link to={`/${city.name}`} className="group relative block h-[450px] overflow-hidden">
+          <div className="grid md:grid-cols-2 gap-8">
+            {cities.map((city) => (
+              <motion.div key={city.name} whileHover={{ y: -10 }} transition={{ duration: 0.5 }}>
+                <Link to={`/${city.name}`} className="group relative block h-[500px] overflow-hidden rounded-sm">
                   <div className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" style={{ backgroundImage: `url(${city.image})` }} />
-                  <div className={`absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80`} />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
                   <div className="absolute inset-0 p-10 flex flex-col justify-end">
-                    <span className="text-gold text-[10px] font-bold uppercase tracking-[0.2em] mb-2">{city.tag}</span>
-                    <h3 className="text-white text-4xl font-black uppercase mb-4">{t(`nav.${city.name}`)}</h3>
-                    <div className="flex items-center gap-2 text-white text-xs font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all">
-                      <span>Explore</span>
-                      <ArrowRight className="w-4 h-4" />
+                    <span className="text-gold text-[10px] font-black uppercase tracking-[0.3em] mb-2">{city.tag}</span>
+                    <h3 className="text-white text-4xl font-black uppercase mb-4 group-hover:text-gold transition-colors">{t(`nav.${city.name}`)}</h3>
+                    <div className="flex items-center gap-2 text-white text-[10px] font-black uppercase tracking-widest opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                      <span>Enter Market</span> <ArrowRight className="w-4 h-4" />
                     </div>
                   </div>
                 </Link>
@@ -272,26 +248,24 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Footer CTA */}
-      <section className="relative py-32 overflow-hidden bg-zinc-950">
-        <div className="container mx-auto px-6 relative z-10 text-center">
-          <h2 className="text-4xl md:text-6xl font-black text-white mb-10 uppercase tracking-tighter">
+      {/* Final CTA Section */}
+      <section className="py-32 bg-zinc-950 border-t border-white/5 relative overflow-hidden">
+        <div className="container mx-auto px-6 text-center relative z-10">
+          <h2 className="text-4xl md:text-6xl font-black text-white mb-12 uppercase tracking-tighter leading-none">
             {t('cta.title')}
           </h2>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            {/* Reduced Footer Buttons */}
             <motion.a
               href="mailto:info@ahox-cm.de"
               whileHover={{ scale: 1.05 }}
-              className="bg-gold text-black px-8 py-3.5 text-sm font-black uppercase tracking-widest rounded-full hover:bg-white transition-colors"
+              className="bg-gold text-black px-8 py-3.5 text-[11px] font-black uppercase tracking-[0.2em] rounded-full shadow-xl shadow-gold/10"
             >
               {t('cta.button')}
             </motion.a>
             <motion.a
               href="tel:+496927278761"
               whileHover={{ scale: 1.05 }}
-              className="bg-transparent border border-white/20 text-white px-8 py-3.5 text-sm font-black uppercase tracking-widest rounded-full hover:bg-white/10 transition-colors"
+              className="bg-transparent border border-white/20 text-white px-8 py-3.5 text-[11px] font-black uppercase tracking-[0.2em] rounded-full hover:bg-white/5 transition-all"
             >
               {t('cta.secondaryButton')}
             </motion.a>
