@@ -57,9 +57,9 @@ const Footer = () => {
             className="lg:col-span-1"
           >
             <img 
-              src="https://ahox-cm.de/wp-content/uploads/2023/07/ahox-logo-png.png" 
+              src="/src/images/ahox-group-main-logo.svg" 
               alt="AHOX Logo" 
-              className="h-16 w-auto object-contain mb-6"
+              className="h-22 w-auto object-contain mb-6"
             />
             <p className="text-gray-400 leading-relaxed mb-6">
               Premium construction, real estate, and security solutions across four continents. Building excellence since day one.

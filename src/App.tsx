@@ -6,7 +6,7 @@ import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
 import HomePage from './pages/Home';
 import LocationPage from './pages/LocationPage';
-// import ConstructionPage from './pages/ConstructionPage';
+import ConstructionManagementPage from './pages/ConstructionManagementPage';
 import RealEstatePage from './pages/RealEstatePage';
 import SecurityPage from './pages/SecurityPage';
 
@@ -31,7 +31,7 @@ function App() {
           <Route path="/pristina" element={<LocationPage location="pristina" />} />
           
           {/* Service Pages */}
-          {/* <Route path="/construction" element={<ConstructionPage />} /> */}
+          <Route path="/construction" element={<ConstructionManagementPage />} />
           <Route path="/real-estate" element={<RealEstatePage />} />
           <Route path="/security" element={<SecurityPage />} />
         </Routes>

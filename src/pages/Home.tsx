@@ -63,19 +63,19 @@ const HomePage = () => {
   const divisions = [
     {
       id: 'construction',
-      logo: '/mnt/user-data/uploads/1766785480981_image.png', // Teal Construction logo
+      logo: '/src/images/ahox-construction-management-logo.svg', // Teal Construction logo
       color: '#14B3AA',
       link: '/construction'
     },
     {
       id: 'realEstate',
-      logo: '/mnt/user-data/uploads/1766785480981_image.png', // Yellow Real Estate logo (using same for now)
+      logo: '/src/images/ahox-real-estate-logo.svg', // Yellow Real Estate logo (using same for now)
       color: '#E8D700',
       link: '/real-estate'
     },
     {
       id: 'security',
-      logo: '/mnt/user-data/uploads/1766785480981_image.png', // Red Security logo (using same for now)
+      logo: '/src/images/ahox-security-logo.svg', // Red Security logo (using same for now)
       color: '#D10A11',
       link: '/security'
     }

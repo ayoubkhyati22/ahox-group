@@ -1,11 +1,12 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Globe, ChevronDown, Menu, X } from 'lucide-react';
+import { Globe, ChevronDown, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
 const Header = () => {
   const { t, i18n } = useTranslation();
+  const location = useLocation();
   const [isLangOpen, setIsLangOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -16,6 +17,14 @@ const Header = () => {
     { code: 'darija', label: 'العربية', flag: '🇲🇦' },
   ];
 
+  const navLinks = [
+    { path: '/', label: t('nav.home') },
+    { path: '/casablanca', label: t('nav.casablanca') },
+    { path: '/dubai', label: t('nav.dubai') },
+    { path: '/frankfurt', label: t('nav.frankfurt') },
+    { path: '/pristina', label: t('nav.pristina') },
+  ];
+
   const currentLanguage = languages.find(lang => lang.code === i18n.language) || languages[0];
 
   const changeLanguage = (lng: string) => {
@@ -23,235 +32,173 @@ const Header = () => {
     setIsLangOpen(false);
   };
 
+  // Lock scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [isMobileMenuOpen]);
+
   useEffect(() => {
     document.documentElement.dir = i18n.language === 'darija' ? 'rtl' : 'ltr';
     document.documentElement.lang = i18n.language;
   }, [i18n.language]);
 
-  // Close dropdown when clicking outside
-  useEffect(() => {
-    const handleClickOutside = () => {
-      setIsLangOpen(false);
-    };
-    if (isLangOpen) {
-      document.addEventListener('click', handleClickOutside);
-      return () => document.removeEventListener('click', handleClickOutside);
-    }
-  }, [isLangOpen]);
+  // Framer Motion Variants
+  const menuVariants = {
+    closed: { opacity: 0, x: "100%", transition: { duration: 0.4, ease: [0.4, 0, 0.2, 1] } },
+    opened: { opacity: 1, x: 0, transition: { duration: 0.4, ease: [0.4, 0, 0.2, 1] } }
+  };
+
+  const containerVariants = {
+    opened: { transition: { staggerChildren: 0.1, delayChildren: 0.2 } },
+    closed: { transition: { staggerChildren: 0.05, staggerDirection: -1 } }
+  };
+
+  const itemVariants = {
+    closed: { opacity: 0, y: 20 },
+    opened: { opacity: 1, y: 0 }
+  };
 
   return (
-    <motion.header
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.6 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-lg shadow-xl border-b-2 border-teal/30"
-    >
-      <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-20">
+    <>
+      <motion.header
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        className="fixed top-0 left-0 right-0 z-[60] bg-white/80 backdrop-blur-xl border-b border-gray-100"
+      >
+        <div className="container mx-auto px-6 h-20 flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center group relative">
-            <motion.img 
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.3 }}
-              src="https://ahox-cm.de/wp-content/uploads/2023/07/ahox-logo-png.png" 
-              alt="AHOX Logo" 
-              className="h-14 w-auto object-contain"
-            />
-            {/* Glow effect on hover - Updated to teal */}
-            <div className="absolute inset-0 bg-teal/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
+          <Link to="/" className="z-[70]">
+            <img src="/src/images/ahox-group-main-logo.svg" alt="AHOX" className="h-12 w-auto" />
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-2">
-            <Link
-              to="/"
-              className="relative px-5 py-2.5 text-purple hover:text-teal font-semibold transition-all group"
-            >
-              <span className="relative z-10">{t('nav.home')}</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-teal/10 to-gold/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-teal to-gold transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
-            </Link>
-
-            <Link
-              to="/casablanca"
-              className="relative px-5 py-2.5 text-purple hover:text-teal font-semibold transition-all group"
-            >
-              <span className="relative z-10">{t('nav.casablanca')}</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-teal/10 to-gold/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-teal to-gold transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
-            </Link>
-
-            <Link
-              to="/dubai"
-              className="relative px-5 py-2.5 text-purple hover:text-teal font-semibold transition-all group"
-            >
-              <span className="relative z-10">{t('nav.dubai')}</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-teal/10 to-gold/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-teal to-gold transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
-            </Link>
-
-            <Link
-              to="/frankfurt"
-              className="relative px-5 py-2.5 text-purple hover:text-teal font-semibold transition-all group"
-            >
-              <span className="relative z-10">{t('nav.frankfurt')}</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-teal/10 to-gold/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-teal to-gold transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
-            </Link>
-
-            <Link
-              to="/pristina"
-              className="relative px-5 py-2.5 text-purple hover:text-teal font-semibold transition-all group"
-            >
-              <span className="relative z-10">{t('nav.pristina')}</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-teal/10 to-gold/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-teal to-gold transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
-            </Link>
+          {/* Desktop Nav */}
+          <nav className="hidden lg:flex items-center gap-8">
+            {navLinks.map((link) => (
+              <Link
+                key={link.path}
+                to={link.path}
+                className={`text-sm font-medium tracking-wide transition-colors hover:text-teal ${
+                  location.pathname === link.path ? 'text-teal' : 'text-slate-600'
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
           </nav>
 
-          {/* Language Dropdown & Mobile Menu */}
-          <div className="flex items-center gap-4">
-            {/* Language Dropdown with premium effects - Updated colors */}
-            <div className="relative">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setIsLangOpen(!isLangOpen);
-                }}
-                className="flex items-center gap-2 px-4 py-2.5 bg-gradient-to-r from-gray-50 to-white hover:from-teal/10 hover:to-gold/10 rounded-lg transition-all group border-2 border-gray-200 hover:border-teal shadow-md hover:shadow-lg"
+          <div className="flex items-center gap-3">
+            {/* Desktop Language Selector */}
+            <div className="relative hidden lg:block">
+              <button
+                onClick={() => setIsLangOpen(!isLangOpen)}
+                className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-gray-200 hover:border-teal transition-all text-sm font-medium text-slate-700"
               >
                 <Globe className="w-4 h-4 text-teal" />
-                <span className="text-sm font-semibold text-purple hidden sm:inline">
-                  {currentLanguage.flag} {currentLanguage.label}
-                </span>
-                <span className="text-sm font-semibold text-purple sm:hidden">
-                  {currentLanguage.flag}
-                </span>
-                <ChevronDown 
-                  className={`w-4 h-4 text-gray-500 transition-transform duration-300 ${
-                    isLangOpen ? 'rotate-180' : ''
-                  }`} 
-                />
-              </motion.button>
-
+                {currentLanguage.code.toUpperCase()}
+                <ChevronDown className={`w-3 h-3 transition-transform ${isLangOpen ? 'rotate-180' : ''}`} />
+              </button>
+              
               <AnimatePresence>
                 {isLangOpen && (
                   <motion.div
-                    initial={{ opacity: 0, y: -10, scale: 0.95 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: -10, scale: 0.95 }}
-                    transition={{ duration: 0.2 }}
-                    className="absolute right-0 mt-2 w-52 bg-white rounded-xl shadow-2xl border-2 border-teal/30 overflow-hidden"
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    className="absolute right-0 mt-3 w-40 bg-white rounded-2xl shadow-2xl border border-gray-100 p-2 overflow-hidden"
                   >
-                    {languages.map((lang, index) => (
-                      <motion.button
+                    {languages.map((lang) => (
+                      <button
                         key={lang.code}
-                        initial={{ opacity: 0, x: -10 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: index * 0.05 }}
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          changeLanguage(lang.code);
-                        }}
-                        className={`w-full px-5 py-3.5 text-left transition-all flex items-center gap-3 relative group ${
-                          i18n.language === lang.code 
-                            ? 'bg-gradient-to-r from-teal/20 to-gold/20 border-l-4 border-teal' 
-                            : 'hover:bg-gradient-to-r hover:from-teal/5 hover:to-gold/5'
-                        }`}
+                        onClick={() => changeLanguage(lang.code)}
+                        className="w-full text-left px-4 py-2 hover:bg-slate-50 rounded-xl text-sm transition-colors flex items-center justify-between"
                       >
-                        <span className="text-2xl">{lang.flag}</span>
-                        <span className={`font-semibold ${i18n.language === lang.code ? 'text-teal' : 'text-purple'}`}>
-                          {lang.label}
-                        </span>
-                        {i18n.language === lang.code && (
-                          <motion.span 
-                            initial={{ scale: 0 }}
-                            animate={{ scale: 1 }}
-                            className="ml-auto text-teal text-xl font-bold"
-                          >
-                            ✓
-                          </motion.span>
-                        )}
-                        {/* Shine effect on hover */}
-                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
-                      </motion.button>
+                        <span>{lang.label}</span>
+                        {i18n.language === lang.code && <div className="w-1.5 h-1.5 bg-teal rounded-full" />}
+                      </button>
                     ))}
                   </motion.div>
                 )}
               </AnimatePresence>
             </div>
 
-            {/* Mobile Menu Button */}
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+            {/* Mobile Hamburger - Custom Minimalist */}
+            <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden p-2.5 text-purple hover:text-teal hover:bg-teal/10 rounded-lg transition-all border-2 border-gray-200 hover:border-teal"
+              className="z-[70] lg:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5 relative"
             >
-              {isMobileMenuOpen ? (
-                <X className="w-6 h-6" />
-              ) : (
-                <Menu className="w-6 h-6" />
-              )}
-            </motion.button>
+              <motion.span 
+                animate={isMobileMenuOpen ? { rotate: 45, y: 5 } : { rotate: 0, y: 0 }}
+                className="w-6 h-0.5 bg-slate-900 block rounded-full"
+              />
+              <motion.span 
+                animate={isMobileMenuOpen ? { opacity: 0 } : { opacity: 1 }}
+                className="w-6 h-0.5 bg-slate-900 block rounded-full"
+              />
+              <motion.span 
+                animate={isMobileMenuOpen ? { rotate: -45, y: -5 } : { rotate: 0, y: 0 }}
+                className="w-6 h-0.5 bg-slate-900 block rounded-full"
+              />
+            </button>
           </div>
         </div>
+      </motion.header>
 
-        {/* Mobile Navigation */}
-        <AnimatePresence>
-          {isMobileMenuOpen && (
-            <motion.nav
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
-              className="lg:hidden border-t-2 border-teal/20 py-4 space-y-2"
-            >
-              <Link
-                to="/"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="block px-4 py-3 text-purple hover:text-teal hover:bg-gradient-to-r hover:from-teal/10 hover:to-gold/10 rounded-lg transition-all font-semibold"
-              >
-                {t('nav.home')}
-              </Link>
-              <Link
-                to="/casablanca"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="block px-4 py-3 text-purple hover:text-teal hover:bg-gradient-to-r hover:from-teal/10 hover:to-gold/10 rounded-lg transition-all font-semibold"
-              >
-                {t('nav.casablanca')}
-              </Link>
-              <Link
-                to="/dubai"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="block px-4 py-3 text-purple hover:text-teal hover:bg-gradient-to-r hover:from-teal/10 hover:to-gold/10 rounded-lg transition-all font-semibold"
-              >
-                {t('nav.dubai')}
-              </Link>
-              <Link
-                to="/frankfurt"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="block px-4 py-3 text-purple hover:text-teal hover:bg-gradient-to-r hover:from-teal/10 hover:to-gold/10 rounded-lg transition-all font-semibold"
-              >
-                {t('nav.frankfurt')}
-              </Link>
-              <Link
-                to="/pristina"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="block px-4 py-3 text-purple hover:text-teal hover:bg-gradient-to-r hover:from-teal/10 hover:to-gold/10 rounded-lg transition-all font-semibold"
-              >
-                {t('nav.pristina')}
-              </Link>
-            </motion.nav>
-          )}
-        </AnimatePresence>
-      </div>
+      {/* Fullscreen Mobile Menu Overlay */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            variants={menuVariants}
+            initial="closed"
+            animate="opened"
+            exit="closed"
+            className="fixed inset-0 z-[55] bg-white flex flex-col"
+          >
+            <div className="flex-1 flex flex-col justify-center px-10 pt-20">
+              <motion.div variants={containerVariants} className="space-y-6">
+                {navLinks.map((link) => (
+                  <motion.div key={link.path} variants={itemVariants}>
+                    <Link
+                      to={link.path}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="text-4xl font-light tracking-tight text-slate-900 hover:text-teal transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  </motion.div>
+                ))}
+              </motion.div>
 
-      {/* Decorative Bottom Line - Teal Gradient */}
-      <div className="h-0.5 bg-gradient-to-r from-transparent via-teal to-transparent"></div>
-    </motion.header>
+              {/* Mobile Language Selection (Horizontal Pills) */}
+              <motion.div 
+                variants={itemVariants}
+                className="mt-16 pt-10 border-t border-gray-100"
+              >
+                <p className="text-xs uppercase tracking-widest text-slate-400 mb-6">{t('Select Language')}</p>
+                <div className="flex flex-wrap gap-3">
+                  {languages.map((lang) => (
+                    <button
+                      key={lang.code}
+                      onClick={() => changeLanguage(lang.code)}
+                      className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all ${
+                        i18n.language === lang.code 
+                        ? 'bg-teal text-white shadow-lg shadow-teal/20' 
+                        : 'bg-slate-50 text-slate-600 hover:bg-slate-100'
+                      }`}
+                    >
+                      {lang.flag} {lang.label}
+                    </button>
+                  ))}
+                </div>
+              </motion.div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
   );
 };
 

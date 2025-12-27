@@ -1,350 +1,190 @@
-import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { 
-  Home, Building, TrendingUp, Target, CheckCircle2, 
-  ArrowRight, Phone, Mail, MapPin, Search, Key, FileText 
+import {
+  Search,
+  ArrowRight,
+  TrendingUp,
+  CheckCircle,
+  Handshake
 } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 const RealEstatePage = () => {
-  const { t } = useTranslation();
 
-  const services = [
+  const coreServices = [
     {
       icon: Search,
-      title: 'Immobilienvermittlung',
-      titleEn: 'Property Brokerage',
-      description: 'Professionelle Vermittlung zwischen Käufern und Verkäufern von Immobilien und Grundstücken',
-      features: ['Akquise von Immobilien', 'Verhandlungen führen', 'Preisklärung', 'Besichtigungen', 'Vertragsverhandlungen']
+      title: 'Immobilienakquise',
+      description: 'Wir suchen aktiv nach potenziellen Verkaufsobjekten durch gezielte Recherche und unser weitreichendes Netzwerk zu Eigentümern und Projektentwicklern.',
     },
     {
-      icon: Target,
-      title: 'Immobilienbewertung',
-      titleEn: 'Property Valuation',
-      description: 'Expertenbewertung von Immobilien mit Kenntnis des lokalen Marktes',
-      features: ['Marktanalyse', 'Bewertung', 'Rechtliche Rahmenbedingungen', 'Verhandlungstechniken']
+      icon: TrendingUp,
+      title: 'Marktgerechte Bewertung',
+      description: 'Fundierte Wertermittlung basierend auf tiefgreifender Kenntnis lokaler Märkte und rechtlicher Rahmenbedingungen.',
     },
     {
-      icon: FileText,
-      title: 'Investmentberatung',
-      titleEn: 'Investment Consulting',
-      description: 'Maßgeschneiderte Immobilien- und Bauinvestitionskonzepte',
-      features: ['Off-Market Zugang', 'Projektmatching', 'Renditeszenarien', 'Risikominimierung']
+      icon: Handshake,
+      title: 'Verhandlungsführung',
+      description: 'Professionelle Koordination zwischen Käufer und Verkäufer zur Klärung von Preisen, Bedingungen und Vertragsdetails.',
     }
   ];
 
-  const locations = [
-    { city: 'Casablanca', country: 'Morocco', type: 'Emerging Market', image: 'https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=800&h=600&fit=crop' },
-    { city: 'Dubai', country: 'UAE', type: 'High Growth', image: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&h=600&fit=crop' },
-    { city: 'Frankfurt', country: 'Germany', type: 'Stable Returns', image: 'https://images.unsplash.com/photo-1564221710304-0b37c8b9d729?w=800&h=600&fit=crop' },
-    { city: 'Pristina', country: 'Kosovo', type: 'First Mover', image: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&h=600&fit=crop' }
-  ];
-
-  const stats = [
-    { value: '€500M+', label: 'Transaction Volume' },
-    { value: '300+', label: 'Properties Sold' },
-    { value: '4', label: 'Global Markets' },
-    { value: '99%', label: 'Client Satisfaction' }
-  ];
-
   return (
-    <div className="bg-white text-black overflow-x-hidden">
-      {/* Hero Section - Gold Themed */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <img 
-            src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1920&h=1080&fit=crop"
-            alt="Real Estate"
-            className="w-full h-full object-cover"
+    <div className="bg-white text-slate-900 font-sans selection:bg-teal selection:text-white">
+
+      {/* --- HERO SECTION --- */}
+      <section className="relative h-[90vh] flex items-center overflow-hidden bg-slate-900">
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop"
+            alt="Modern Architecture"
+            className="w-full h-full object-cover opacity-50 scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-gold/95 via-orange/80 to-black/90" />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/40 to-transparent" />
         </div>
 
-        {/* Content */}
         <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-4xl">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+            className="max-w-3xl"
+          >
+            <div className="flex items-center gap-3 mb-6">
+              <span className="h-px w-12 bg-teal"></span>
+              <span className="text-teal font-bold tracking-[0.3em] uppercase text-sm">AHOX GmbH</span>
+            </div>
+            <h1 className="text-6xl md:text-8xl font-light leading-[0.9] mb-8 text-white">
+              Exzellenz in der <br />
+              <span className="font-bold italic text-teal">Immobilienvermittlung</span>
+            </h1>
+            <p className="text-lg md:text-xl text-slate-300 mb-10 max-w-xl font-light leading-relaxed">
+              Ihr strategischer Partner für die Vermittlung von Immobilien und Grundstücken –
+              professionell, marktorientiert und diskret.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* --- CORE PHILOSOPHY (Using your specific text) --- */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="relative"
             >
-              {/* Logo */}
-              <div className="mb-8">
-                <img 
-                  src="/mnt/user-data/uploads/1766785480981_image.png"
-                  alt="AHOX Real Estate"
-                  className="h-32 w-auto object-contain"
-                />
-              </div>
-
-              <h1 className="text-6xl md:text-8xl font-black text-white mb-6 uppercase tracking-tighter leading-none">
-                Real<br />
-                <span className="text-black">Estate</span>
-              </h1>
-
-              <p className="text-xl md:text-2xl text-white/90 mb-10 max-w-2xl leading-relaxed font-light">
-                Immobilienvermittlung und Investmentberatung für nachhaltige Renditen
-              </p>
-
-              <div className="flex flex-wrap gap-4">
-                <motion.a
-                  href="#services"
-                  whileHover={{ scale: 1.05 }}
-                  className="bg-white text-gold px-8 py-4 font-bold uppercase text-sm flex items-center gap-3 hover:bg-black hover:text-gold transition-all"
-                >
-                  Our Services <ArrowRight className="w-5 h-5" />
-                </motion.a>
-                <motion.a
-                  href="#markets"
-                  whileHover={{ scale: 1.05 }}
-                  className="border-2 border-white text-white px-8 py-4 font-bold uppercase text-sm hover:bg-white hover:text-gold transition-all"
-                >
-                  Explore Markets
-                </motion.a>
+              <div className="absolute -top-10 -left-10 w-32 h-32 bg-teal/5 rounded-full -z-10" />
+              <h2 className="text-4xl font-bold mb-8 leading-tight">
+                Die Brücke zwischen <br />
+                <span className="text-teal">Angebot und Nachfrage</span>
+              </h2>
+              <div className="space-y-6 text-slate-600 leading-relaxed text-lg">
+                <p>
+                  Die Vermittlung von Immobilien ist eine bedeutende Tätigkeit in der Immobilienbranche.
+                  Die <strong>AHOX GmbH</strong> dient als spezialisiertes Vermittlungsunternehmen zwischen
+                  potenziellen Käufern und Verkäufern von Immobilien und Grundstücken.
+                </p>
+                <p>
+                  Unser Ziel ist es, den Verkaufsprozess effizient und reibungslos abzuwickeln.
+                  Dabei stützen wir uns auf fundiertes Fachwissen über lokale Märkte,
+                  rechtliche Rahmenbedingungen und erprobte Verhandlungstechniken.
+                </p>
               </div>
             </motion.div>
-          </div>
-        </div>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10">
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="w-6 h-10 border-2 border-white/50 rounded-full flex items-start justify-center p-2"
-          >
-            <div className="w-1 h-2 bg-white rounded-full" />
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-20 bg-gradient-to-r from-gold to-orange">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: idx * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="text-5xl md:text-6xl font-black text-white mb-2">
-                  {stat.value}
+            <div className="grid grid-cols-2 gap-4">
+              <div className="space-y-4 pt-12">
+                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1000&auto=format&fit=crop" className="rounded-lg shadow-2xl grayscale hover:grayscale-0 transition-all duration-700" alt="Lux" />
+                <div className="bg-teal p-8 rounded-lg text-white">
+                  <p className="text-4xl font-bold mb-1">100%</p>
+                  <p className="text-sm opacity-80 uppercase tracking-widest">Diskretion</p>
                 </div>
-                <div className="text-white/80 uppercase text-xs tracking-widest">
-                  {stat.label}
+              </div>
+              <div className="space-y-4">
+                <div className="bg-slate-900 p-8 rounded-lg text-white">
+                  <p className="text-4xl font-bold mb-1">Expert</p>
+                  <p className="text-sm opacity-80 uppercase tracking-widest">Knowledge</p>
                 </div>
-              </motion.div>
-            ))}
+                <img src="https://images.unsplash.com/photo-1582408921715-18e7806365c1?q=80&w=1000&auto=format&fit=crop" className="rounded-lg shadow-2xl" alt="Architecture" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section id="services" className="py-32 bg-gray-50">
+      {/* --- SERVICES GRID --- */}
+      <section className="py-24 bg-slate-50">
         <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-20"
-          >
-            <h2 className="text-5xl md:text-7xl font-black text-purple mb-6 uppercase tracking-tighter">
-              Our Services
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive real estate services from acquisition to closing
-            </p>
-          </motion.div>
+          <div className="text-center max-w-2xl mx-auto mb-20">
+            <h2 className="text-sm font-bold text-teal uppercase tracking-[0.4em] mb-4">Dienstleistungen</h2>
+            <p className="text-3xl font-bold">Unser Aufgabengebiet in der Vermittlung</p>
+          </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {services.map((service, idx) => (
+          <div className="grid md:grid-cols-3 gap-12">
+            {coreServices.map((service, idx) => (
               <motion.div
                 key={idx}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: idx * 0.2 }}
-                viewport={{ once: true }}
                 whileHover={{ y: -10 }}
-                className="bg-white p-8 border-4 border-purple-light hover:border-gold transition-all duration-500 group"
+                className="bg-white p-10 shadow-sm border-b-4 border-transparent hover:border-teal transition-all group"
               >
-                <div className="flex items-center justify-center w-16 h-16 bg-gold/10 group-hover:bg-gold mb-6 transition-colors">
-                  <service.icon className="w-8 h-8 text-gold group-hover:text-white transition-colors" />
+                <div className="w-14 h-14 bg-teal/10 rounded-full flex items-center justify-center mb-8 group-hover:bg-teal transition-colors">
+                  <service.icon className="w-6 h-6 text-teal group-hover:text-white" />
                 </div>
-                
-                <h3 className="text-2xl font-bold text-purple mb-3 group-hover:text-gold transition-colors">
-                  {service.title}
-                </h3>
-
-                <p className="text-gray-600 mb-6 leading-relaxed">
+                <h3 className="text-xl font-bold mb-4">{service.title}</h3>
+                <p className="text-slate-500 leading-relaxed">
                   {service.description}
                 </p>
-
-                <ul className="space-y-2">
-                  {service.features.map((feature, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-700 text-sm">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Markets Section */}
-      <section id="markets" className="py-32 bg-white">
+      {/* --- PROCESS STEP-BY-STEP --- */}
+      <section className="py-24 bg-white overflow-hidden">
         <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-20"
-          >
-            <h2 className="text-5xl md:text-7xl font-black text-purple mb-6 uppercase tracking-tighter">
-              Global Markets
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Four strategic cities with distinct investment profiles
-            </p>
-          </motion.div>
+          <div className="flex flex-col lg:flex-row gap-20">
+            <div className="lg:w-1/3">
+              <h2 className="text-4xl font-bold mb-6">Der AHOX Weg zum Erfolg.</h2>
+              <p className="text-slate-500 mb-8">
+                Nachdem die Immobilie für Sie gefunden wurde, begleiten wir Sie durch jeden entscheidenden Schritt der Transaktion.
+              </p>
+              <ul className="space-y-4">
+                {[
+                  "Gezielte Akquise von Verkaufsobjekten",
+                  "Professionelle Immobilienbewertung",
+                  "Kooperation mit Bauunternehmen",
+                  "Durchführung von Besichtigungen",
+                  "Finale Vertragsverhandlungen"
+                ].map((item, i) => (
+                  <li key={i} className="flex items-center gap-3 text-sm font-semibold">
+                    <CheckCircle className="w-5 h-5 text-teal" /> {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {locations.map((location, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: idx * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -10 }}
-                className="group relative h-[400px] overflow-hidden"
-              >
-                <Link to={`/${location.city.toLowerCase()}`}>
-                  <img 
-                    src={location.image}
-                    alt={location.city}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
-                  <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                    <span className="text-gold text-xs font-black uppercase tracking-widest mb-2">{location.type}</span>
-                    <h3 className="text-white text-4xl font-black uppercase mb-2 group-hover:text-gold transition-colors">{location.city}</h3>
-                    <p className="text-white/70 text-sm mb-4">{location.country}</p>
-                    <div className="flex items-center gap-2 text-white text-xs font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-                      <span>Explore Market</span> <ArrowRight className="w-4 h-4" />
-                    </div>
+            <div className="lg:w-2/3 grid gap-6 relative">
+              <div className="absolute left-8 top-0 bottom-0 w-px bg-slate-100 lg:hidden" />
+              {[
+                { title: 'Recherche & Akquise', text: 'Wir identifizieren Potenziale durch Kooperationen mit Projektentwicklern.' },
+                { title: 'Bewertung & Marktcheck', text: 'Analyse der lokalen Marktgegebenheiten für eine optimale Preisstrategie.' },
+                { title: 'Verhandlung & Klärung', text: 'Wir führen Verhandlungen mit Eigentümern über Preise und Bedingungen.' },
+                { title: 'Abschlussbegleitung', text: 'Vollständige Begleitung bis zur Protokollierung und Übergabe.' },
+              ].map((step, idx) => (
+                <div key={idx} className="flex gap-8 group">
+                  <div className="flex-shrink-0 w-16 h-16 rounded-full bg-slate-900 text-white flex items-center justify-center font-bold text-xl relative z-10 group-hover:bg-teal transition-colors">
+                    0{idx + 1}
                   </div>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Process Section */}
-      <section className="py-32 bg-gray-50">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-20"
-          >
-            <h2 className="text-5xl md:text-7xl font-black text-purple mb-6 uppercase tracking-tighter">
-              Investment Process
-            </h2>
-          </motion.div>
-
-          <div className="max-w-4xl mx-auto space-y-8">
-            {[
-              { num: '01', title: 'Bedarfsanalyse', desc: 'Analyse Ihrer Investmentziele, Budget und Risikotoleranz' },
-              { num: '02', title: 'Projekt-Matching', desc: 'Auswahl passender Immobilien entsprechend Ihrer Anforderungen' },
-              { num: '03', title: 'Konzeptentwicklung', desc: 'Entwicklung der Investmentstruktur und Renditeszenarien' },
-              { num: '04', title: 'Vermittlung', desc: 'Professionelle Koordination zwischen allen Parteien' },
-              { num: '05', title: 'Abschluss', desc: 'Begleitung bis zur erfolgreichen Transaktion' }
-            ].map((step, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: idx * 0.1 }}
-                viewport={{ once: true }}
-                className="flex gap-6 items-start group"
-              >
-                <div className="text-6xl font-black text-gold/20 group-hover:text-gold transition-colors">
-                  {step.num}
+                  <div className="pt-2">
+                    <h4 className="text-xl font-bold mb-2">{step.title}</h4>
+                    <p className="text-slate-500">{step.text}</p>
+                  </div>
                 </div>
-                <div className="flex-1 pt-2">
-                  <h3 className="text-2xl font-bold text-purple mb-2 group-hover:text-gold transition-colors">
-                    {step.title}
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed">{step.desc}</p>
-                </div>
-              </motion.div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section id="contact" className="py-32 bg-gradient-to-br from-gold via-orange to-purple">
-        <div className="container mx-auto px-6 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-5xl md:text-7xl font-black text-white mb-8 uppercase tracking-tighter">
-              Start Your<br />Investment Journey
-            </h2>
-            <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto">
-              Kontaktieren Sie uns für eine persönliche Investmentanalyse
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-              <motion.a
-                href="mailto:info@ahox-cm.de"
-                whileHover={{ scale: 1.05 }}
-                className="bg-white text-gold px-10 py-5 font-black uppercase text-sm flex items-center gap-3"
-              >
-                <Mail className="w-5 h-5" />
-                Email Us
-              </motion.a>
-              <motion.a
-                href="tel:+496927278761"
-                whileHover={{ scale: 1.05 }}
-                className="border-2 border-white text-white px-10 py-5 font-black uppercase text-sm hover:bg-white hover:text-gold transition-all flex items-center gap-3"
-              >
-                <Phone className="w-5 h-5" />
-                Call Now
-              </motion.a>
-            </div>
-
-            <div className="flex items-center justify-center gap-3 text-white/80">
-              <MapPin className="w-5 h-5" />
-              <span className="text-sm">Ostendstraße 80, 60314 Frankfurt a.M., Germany</span>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Back to Home */}
-      <section className="py-12 bg-black">
-        <div className="container mx-auto px-6 text-center">
-          <Link 
-            to="/"
-            className="inline-flex items-center gap-2 text-white hover:text-gold transition-colors text-sm uppercase tracking-widest font-bold"
-          >
-            <ArrowRight className="w-4 h-4 rotate-180" />
-            Back to Home
-          </Link>
         </div>
       </section>
     </div>
