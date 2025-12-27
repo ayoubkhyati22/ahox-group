@@ -298,11 +298,6 @@ const LocationPage = ({ location }: LocationPageProps) => {
                   </a>
                </div>
             </div>
-
-            <button className="w-full bg-black text-white p-6 uppercase font-bold flex justify-between items-center group mt-12 lg:mt-0 hover:bg-gray-800 transition-colors">
-              {t('locationPage.contact.button')}
-              <ChevronRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
-            </button>
           </div>
         </div>
       </section>
