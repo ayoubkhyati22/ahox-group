@@ -13,7 +13,7 @@ const RealEstatePage = () => {
   const coreServicesIcons = [Search, TrendingUp, Handshake];
 
   return (
-    <div className="bg-white text-slate-900 font-sans selection:bg-teal selection:text-white">
+    <div className="bg-white text-slate-900 font-sans selection:bg-[#E8D700] selection:text-black">
 
       {/* --- HERO SECTION --- */}
       <section className="relative h-[90vh] flex items-center overflow-hidden bg-slate-900">
@@ -34,14 +34,14 @@ const RealEstatePage = () => {
             className="max-w-3xl"
           >
             <div className="flex items-center gap-3 mb-6">
-              <span className="h-px w-12 bg-teal"></span>
-              <span className="text-teal font-bold tracking-[0.3em] uppercase text-sm">
+              <span className="h-px w-12 bg-[#E8D700]"></span>
+              <span className="text-[#E8D700] font-bold tracking-[0.3em] uppercase text-sm">
                 {t('realEstate.hero.tagline')}
               </span>
             </div>
             <h1 className="text-6xl md:text-8xl font-light leading-[0.9] mb-8 text-white">
               {t('realEstate.hero.title')} <br />
-              <span className="font-bold italic text-teal">{t('realEstate.hero.titleBold')}</span>
+              <span className="font-bold italic text-[#E8D700]">{t('realEstate.hero.titleBold')}</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 mb-10 max-w-xl font-light leading-relaxed">
               {t('realEstate.hero.description')}
@@ -60,10 +60,10 @@ const RealEstatePage = () => {
               viewport={{ once: true }}
               className="relative"
             >
-              <div className="absolute -top-10 -left-10 w-32 h-32 bg-teal/5 rounded-full -z-10" />
+              <div className="absolute -top-10 -left-10 w-32 h-32 bg-[#E8D700]/5 rounded-full -z-10" />
               <h2 className="text-4xl font-bold mb-8 leading-tight">
                 {t('realEstate.philosophy.title')} <br />
-                <span className="text-teal">{t('realEstate.philosophy.titleAccent')}</span>
+                <span className="text-[#E8D700]">{t('realEstate.philosophy.titleAccent')}</span>
               </h2>
               <div className="space-y-6 text-slate-600 leading-relaxed text-lg">
                 <p>{t('realEstate.philosophy.text1')}</p>
@@ -74,7 +74,7 @@ const RealEstatePage = () => {
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-4 pt-12">
                 <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1000&auto=format&fit=crop" className="rounded-lg shadow-2xl grayscale hover:grayscale-0 transition-all duration-700" alt="Lux" />
-                <div className="bg-teal p-8 rounded-lg text-white">
+                <div className="bg-[#E8D700] p-8 rounded-lg text-black">
                   <p className="text-4xl font-bold mb-1">100%</p>
                   <p className="text-sm opacity-80 uppercase tracking-widest">{t('realEstate.philosophy.text1').includes('diskret') ? 'Diskretion' : 'Discretion'}</p>
                 </div>
@@ -95,7 +95,7 @@ const RealEstatePage = () => {
       <section className="py-24 bg-slate-50">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-20">
-            <h2 className="text-sm font-bold text-teal uppercase tracking-[0.4em] mb-4">
+            <h2 className="text-sm font-bold text-[#E8D700] uppercase tracking-[0.4em] mb-4">
               {t('realEstate.services.title')}
             </h2>
             <p className="text-3xl font-bold">{t('realEstate.services.subtitle')}</p>
@@ -108,10 +108,10 @@ const RealEstatePage = () => {
                 <motion.div
                   key={idx}
                   whileHover={{ y: -10 }}
-                  className="bg-white p-10 shadow-sm border-b-4 border-transparent hover:border-teal transition-all group"
+                  className="bg-white p-10 shadow-sm border-b-4 border-transparent hover:border-[#E8D700] transition-all group"
                 >
-                  <div className="w-14 h-14 bg-teal/10 rounded-full flex items-center justify-center mb-8 group-hover:bg-teal transition-colors">
-                    <Icon className="w-6 h-6 text-teal group-hover:text-white" />
+                  <div className="w-14 h-14 bg-[#E8D700]/10 rounded-full flex items-center justify-center mb-8 group-hover:bg-[#E8D700] transition-colors">
+                    <Icon className="w-6 h-6 text-[#E8D700] group-hover:text-black" />
                   </div>
                   <h3 className="text-xl font-bold mb-4">{service.title}</h3>
                   <p className="text-slate-500 leading-relaxed">{service.description}</p>
@@ -132,7 +132,7 @@ const RealEstatePage = () => {
               <ul className="space-y-4">
                 {(t('realEstate.process.checklist', { returnObjects: true }) as string[]).map((item, i) => (
                   <li key={i} className="flex items-center gap-3 text-sm font-semibold">
-                    <CheckCircle className="w-5 h-5 text-teal" /> {item}
+                    <CheckCircle className="w-5 h-5 text-[#E8D700]" /> {item}
                   </li>
                 ))}
               </ul>
@@ -142,7 +142,7 @@ const RealEstatePage = () => {
               <div className="absolute left-8 top-0 bottom-0 w-px bg-slate-100 lg:hidden" />
               {(t('realEstate.process.steps', { returnObjects: true }) as any[]).map((step, idx) => (
                 <div key={idx} className="flex gap-8 group">
-                  <div className="flex-shrink-0 w-16 h-16 rounded-full bg-slate-900 text-white flex items-center justify-center font-bold text-xl relative z-10 group-hover:bg-teal transition-colors">
+                  <div className="flex-shrink-0 w-16 h-16 rounded-full bg-slate-900 text-white flex items-center justify-center font-bold text-xl relative z-10 group-hover:bg-[#E8D700] group-hover:text-black transition-colors">
                     0{idx + 1}
                   </div>
                   <div className="pt-2">

@@ -1,44 +1,13 @@
 // src/pages/Home.tsx
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  ChevronRight, TrendingUp, Shield, Globe2, Target, 
-  ArrowRight, CheckCircle2, Building2, Palmtree, 
-  Landmark, Mountain 
+import {
+  ChevronRight, TrendingUp, Shield, Globe2, Target,
+  ArrowRight, CheckCircle2, Building2, Palmtree,
+  Landmark, Mountain
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-
-// --- Sub-component for the Bento Grid Cards ---
-const BenefitCard = ({ index, icon: Icon, title, desc, className, isLarge = false }) => (
-  <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ delay: index * 0.1, duration: 0.8 }}
-    viewport={{ once: true }}
-    className={`group relative p-8 border border-white/10 overflow-hidden flex flex-col justify-between hover:border-gold/40 transition-all duration-700 ${className}`}
-  >
-    {/* Animated background glow */}
-    <div className="absolute inset-0 bg-gradient-to-br from-gold/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-    
-    <div className="relative z-10">
-      <div className={`mb-6 flex items-center justify-center rounded-full border border-gold/20 group-hover:border-gold/50 transition-all duration-500 bg-black/40 backdrop-blur-sm ${isLarge ? 'w-16 h-16' : 'w-12 h-12'}`}>
-        <Icon className={`${isLarge ? 'w-8 h-8' : 'w-5 h-5'} text-gold group-hover:scale-110 transition-transform`} />
-      </div>
-      <h3 className={`${isLarge ? 'text-2xl' : 'text-lg'} font-bold text-white mb-3 uppercase tracking-wider group-hover:text-gold transition-colors duration-500`}>
-        {title}
-      </h3>
-      <p className={`text-zinc-400 font-light leading-relaxed ${isLarge ? 'text-base' : 'text-xs line-clamp-3 group-hover:line-clamp-none'}`}>
-        {desc}
-      </p>
-    </div>
-
-    {/* Background Numbering */}
-    <div className="absolute bottom-4 right-6 text-5xl font-black text-white/[0.02] group-hover:text-gold/[0.05] transition-colors pointer-events-none">
-      0{index + 1}
-    </div>
-  </motion.div>
-);
 
 const HomePage = () => {
   const { t } = useTranslation();
@@ -59,23 +28,22 @@ const HomePage = () => {
     { name: 'pristina', icon: Mountain, tag: 'First Mover', image: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&h=600&fit=crop' },
   ];
 
-  // Three divisions with logo URLs from the uploaded images
   const divisions = [
     {
       id: 'construction',
-      logo: '/images/ahox-construction-management-logo.svg', // Teal Construction logo
+      logo: '/images/ahox-construction-management-logo.svg',
       color: '#14B3AA',
       link: '/construction'
     },
     {
       id: 'realEstate',
-      logo: '/images/ahox-real-estate-logo.svg', // Yellow Real Estate logo (using same for now)
+      logo: '/images/ahox-real-estate-logo.svg',
       color: '#E8D700',
       link: '/real-estate'
     },
     {
       id: 'security',
-      logo: '/images/ahox-security-logo.svg', // Red Security logo (using same for now)
+      logo: '/images/ahox-security-logo.svg',
       color: '#D10A11',
       link: '/security'
     }
@@ -116,7 +84,7 @@ const HomePage = () => {
             <div className="inline-block mb-6 px-5 py-2 bg-gold/5 backdrop-blur-xl border border-gold/30 rounded-full">
               <span className="text-gold font-bold text-[10px] uppercase tracking-[0.4em]">{t('about.tagline')}</span>
             </div>
-            
+
             <h1 className="text-5xl md:text-8xl font-black text-white mb-8 leading-[0.9] tracking-tighter uppercase">
               {t('hero.title')}
             </h1>
@@ -138,7 +106,7 @@ const HomePage = () => {
           </motion.div>
         </div>
 
-        {/* Right Side Vertical Luxury Slider Indicators */}
+        {/* Right Side Vertical Slider */}
         <div className="absolute right-8 top-1/2 -translate-y-1/2 flex flex-col items-end gap-6 z-20">
           {heroImages.map((_, index) => (
             <button
@@ -151,7 +119,7 @@ const HomePage = () => {
               </span>
               <div className={`h-12 w-[1px] transition-all duration-700 relative overflow-hidden ${index === currentImageIndex ? 'bg-gold w-[2px]' : 'bg-white/10 group-hover:bg-white/30'}`}>
                 {index === currentImageIndex && (
-                  <motion.div 
+                  <motion.div
                     layoutId="activeSlide"
                     className="absolute inset-0 bg-white"
                     animate={{ y: ["-100%", "100%"] }}
@@ -165,17 +133,17 @@ const HomePage = () => {
 
         {/* Scroll Indicator */}
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-3">
-           <div className="w-[1px] h-12 bg-gradient-to-b from-transparent via-gold to-transparent" />
-           <span className="text-[9px] uppercase tracking-[0.5em] text-gold font-black opacity-60">{t('hero.scrollDown')}</span>
+          <div className="w-[1px] h-12 bg-gradient-to-b from-transparent via-gold to-transparent" />
+          <span className="text-[9px] uppercase tracking-[0.5em] text-gold font-black opacity-60">{t('hero.scrollDown')}</span>
         </div>
       </section>
 
       {/* Philosophy Section */}
       <section className="py-24 bg-white text-black">
         <div className="container mx-auto px-6 text-center">
-          <motion.div 
-            initial={{ opacity: 0, y: 40 }} 
-            whileInView={{ opacity: 1, y: 0 }} 
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
@@ -185,11 +153,10 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Three Divisions Section - NEW */}
+      {/* Three Divisions Section */}
       <section className="py-32 bg-gradient-to-br from-gray-50 via-white to-gray-50">
         <div className="container mx-auto px-6">
-          {/* Section Header */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -203,7 +170,6 @@ const HomePage = () => {
             </p>
           </motion.div>
 
-          {/* Three Logo Cards */}
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {divisions.map((division, index) => (
               <motion.div
@@ -218,52 +184,42 @@ const HomePage = () => {
                 <Link
                   to={division.link}
                   className="group block bg-white p-10 border-4 border-purple-light hover:border-gold transition-all duration-500 overflow-hidden cursor-pointer"
-                  style={{
-                    boxShadow: '0 10px 40px rgba(0,0,0,0.05)'
-                  }}
+                  style={{ boxShadow: '0 10px 40px rgba(0,0,0,0.05)' }}
                 >
-                  {/* Animated background gradient */}
-                  <div 
+                  <div
                     className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500"
                     style={{ background: `linear-gradient(135deg, ${division.color}20 0%, transparent 100%)` }}
                   />
 
-                  {/* Logo */}
                   <div className="relative z-10 flex flex-col items-center gap-6">
                     <div className="w-32 h-32 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
-                      <img 
+                      <img
                         src={division.logo}
                         alt={t(`divisions.${division.id}.title`)}
                         className="w-full h-full object-contain"
                       />
                     </div>
 
-                    {/* Title */}
-                    <h3 
+                    <h3
                       className="text-2xl font-bold text-center uppercase tracking-wide transition-colors duration-500"
                       style={{ color: division.color }}
                     >
                       {t(`divisions.${division.id}.title`)}
                     </h3>
 
-                    {/* Description */}
                     <p className="text-gray-600 text-center leading-relaxed font-light">
                       {t(`divisions.${division.id}.description`)}
                     </p>
 
-                    {/* Learn More Link */}
                     <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-500">
                       <span style={{ color: division.color }}>Learn More</span>
                       <ArrowRight className="w-4 h-4" style={{ color: division.color }} />
                     </div>
                   </div>
 
-                  {/* Corner accent */}
-                  <div 
+                  <div
                     className="absolute top-0 right-0 w-20 h-20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                    style={{
-                      background: `linear-gradient(135deg, transparent 50%, ${division.color}15 50%)`
-                    }}
+                    style={{ background: `linear-gradient(135deg, transparent 50%, ${division.color}15 50%)` }}
                   />
                 </Link>
               </motion.div>
@@ -272,57 +228,131 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Bento Grid: Why Invest With Us */}
-      <section className="py-32 bg-[#050505] relative overflow-hidden">
+      {/* --- WHY INVEST WITH US: DISPLAY-TIER VERSION --- */}
+      <section className="py-32 bg-[#f8fafc] relative overflow-hidden">
+
+        {/* Architectural Background Grid */}
+        <div className="absolute inset-0 z-0 pointer-events-none opacity-[0.4]">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `radial-gradient(#cbd5e1 1px, transparent 1px)`,
+              backgroundSize: '40px 40px'
+            }}
+          />
+        </div>
+
         <div className="container mx-auto px-6 relative z-10">
-          {/* Section Header */}
-          <div className="flex flex-col md:flex-row items-end justify-between mb-20 gap-8">
-            <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="max-w-2xl">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-[1px] bg-gold"></div>
-                <span className="text-gold font-bold text-[10px] uppercase tracking-[0.4em]">Strategic Excellence</span>
-              </div>
-              <h2 className="text-4xl md:text-6xl font-black text-white leading-none uppercase tracking-tighter">
-                Why <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold via-white to-gold/50">Invest</span> <br />
-                With AHOX?
-              </h2>
+          <div className="max-w-4xl mb-24">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="flex items-center gap-4 mb-8"
+            >
+              <div className="w-12 h-[2px] bg-[#14B3AA]" />
+              <span className="text-slate-400 font-bold text-[10px] uppercase tracking-[0.5em]">
+                Value Engineering
+              </span>
             </motion.div>
-            <p className="text-zinc-500 text-lg max-w-sm font-light border-l border-gold/20 pl-6 leading-relaxed">
-              {t('value.subtitle')}
-            </p>
+
+            <motion.h2
+              className="text-6xl md:text-8xl font-black text-slate-900 leading-[0.9] uppercase tracking-tighter"
+            >
+              Proven <br />
+              <span className="text-[#14B3AA]">Frameworks</span>
+            </motion.h2>
           </div>
 
-          {/* Creative Bento Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-6 gap-4 auto-rows-[250px]">
-            {/* Row 1 */}
-            <BenefitCard 
-              index={0} icon={Target} title={t('value.benefits.0.title')} desc={t('value.benefits.0.description')}
-              className="md:col-span-3 md:row-span-2 bg-gradient-to-br from-white/[0.05] to-transparent" isLarge
-            />
-            <BenefitCard 
-              index={1} icon={Shield} title={t('value.benefits.1.title')} desc={t('value.benefits.1.description')}
-              className="md:col-span-3 md:row-span-1 bg-white/[0.02]"
-            />
-            
-            {/* Row 2 */}
-            <BenefitCard 
-              index={2} icon={TrendingUp} title={t('value.benefits.2.title')} desc={t('value.benefits.2.description')}
-              className="md:col-span-2 md:row-span-1 bg-white/[0.02]"
-            />
-            <BenefitCard 
-              index={3} icon={Globe2} title={t('value.benefits.3.title')} desc={t('value.benefits.3.description')}
-              className="md:col-span-2 md:row-span-2 border-gold/10 bg-gold/[0.01]" isLarge
-            />
-            
-            {/* Row 3 */}
-            <BenefitCard 
-              index={4} icon={CheckCircle2} title={t('value.benefits.4.title')} desc={t('value.benefits.4.description')}
-              className="md:col-span-2 md:row-span-1 bg-white/[0.02]"
-            />
-            <BenefitCard 
-              index={5} icon={Building2} title={t('value.benefits.5.title')} desc={t('value.benefits.5.description')}
-              className="md:col-span-2 md:row-span-1 bg-white/[0.02]"
-            />
+          {/* Luxury Tile Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {(t('value.benefits', { returnObjects: true }) as any[]).map((benefit, index) => {
+              const icons = [Target, Shield, TrendingUp, Globe2, CheckCircle2, Building2];
+              const Icon = icons[index % icons.length];
+              const romanNumerals = ["I", "II", "III", "IV", "V", "VI"];
+
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  whileHover={{ y: -8 }}
+                  viewport={{ once: true }}
+                  className="group relative"
+                >
+                  {/* The "Display" Card Body */}
+                  <div className={`
+                    relative h-full p-10 
+                    bg-white 
+                    border border-slate-200/60
+                    shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)]
+                    rounded-sm overflow-hidden
+                    transition-all duration-500
+                    group-hover:shadow-[0_30px_60px_-15px_rgba(20,179,170,0.15)]
+                    group-hover:border-[#14B3AA]/30
+                  `}>
+
+                    {/* Interior Subtle Gradient Shine */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-slate-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                    {/* Header: Roman & Icon */}
+                    <div className="flex justify-between items-center mb-12 relative z-10">
+                      <div className="flex flex-col">
+                        <span className="text-[#14B3AA] text-xs font-black mb-1">{romanNumerals[index]}</span>
+                        <div className="w-4 h-[2px] bg-slate-200 group-hover:w-8 group-hover:bg-[#14B3AA] transition-all" />
+                      </div>
+                      <div className="p-3 bg-slate-50 group-hover:bg-[#14B3AA]/5 rounded-lg transition-colors">
+                        <Icon className="w-6 h-6 text-slate-400 group-hover:text-[#14B3AA] transition-all duration-500" />
+                      </div>
+                    </div>
+
+                    {/* Content Section */}
+                    <div className="relative z-10">
+                      <h3 className="text-xl font-bold text-slate-900 mb-4 uppercase tracking-tight">
+                        {benefit.title}
+                      </h3>
+                      <p className="text-slate-500 text-sm leading-relaxed font-light">
+                        {benefit.description}
+                      </p>
+                    </div>
+
+                    {/* Footer Graphic - Active line */}
+                    <div className="absolute bottom-0 left-0 w-full h-[3px] bg-slate-100 group-hover:bg-[#14B3AA] transition-colors duration-500" />
+                  </div>
+
+                  {/* Aesthetic Shadow Mirror (makes the card 'pop' off the page) */}
+                  <div className="absolute -z-10 inset-4 bg-slate-400/5 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
+                </motion.div>
+              );
+            })}
+          </div>
+
+          {/* Integrated Trust-Bar */}
+          <div className="mt-24 p-1 rounded-sm bg-gradient-to-r from-slate-200 via-white to-slate-200">
+            <div className="flex flex-wrap justify-between items-center gap-10 py-10 px-12 bg-white">
+              <div className="flex items-center gap-6">
+                <div className="w-12 h-12 bg-slate-900 flex items-center justify-center">
+                  <Shield className="text-[#14B3AA] w-6 h-6" />
+                </div>
+                <div>
+                  <p className="text-[10px] text-slate-400 font-bold uppercase tracking-[0.2em]">Risk Profile</p>
+                  <p className="text-xl font-black text-slate-900 uppercase">Minimized Exposure</p>
+                </div>
+              </div>
+
+              <div className="hidden lg:block w-px h-10 bg-slate-100" />
+
+              <div className="flex items-center gap-6">
+                <div className="w-12 h-12 bg-slate-900 flex items-center justify-center">
+                  <TrendingUp className="text-[#14B3AA] w-6 h-6" />
+                </div>
+                <div>
+                  <p className="text-[10px] text-slate-400 font-bold uppercase tracking-[0.2em]">Asset Growth</p>
+                  <p className="text-xl font-black text-slate-900 uppercase">Precision Targets</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
