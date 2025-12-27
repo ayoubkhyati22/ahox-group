@@ -1,4 +1,213 @@
 {
+  "nav": {
+    "home": "Startseite",
+    "casablanca": "Casablanca",
+    "dubai": "Dubai",
+    "frankfurt": "Frankfurt",
+    "pristina": "Pristina"
+  },
+  "hero": {
+    "title": "KAPITAL MIT CHANCEN VERBINDEN",
+    "subtitle": "Ihr Zugang zu renditestarken Immobilienmärkten von morgen",
+    "cta": "Investmentchancen Entdecken",
+    "scrollDown": "Nach unten scrollen"
+  },
+  "about": {
+    "tagline": "Internationaler Investment- & Immobilien-Connect",
+    "text": "Als unabhängiger Investment-Facilitator verknüpfen wir Investoren mit geprüften Bauunternehmen und Immobilienverkäufern in ausgewählten Wachstumsstädten. Unser Ziel: maßgeschneiderte Immobilien- und Bau-Investmentkonzepte mit nachhaltigen Renditen."
+  },
+  "divisions": {
+    "title": "UNSERE DIENSTLEISTUNGEN",
+    "subtitle": "Wir sind die Experten für Bauleistungen, Immobilien und Sicherheit",
+    "construction": {
+      "title": "Bauwesen & Management",
+      "description": "Professionelle Bauleistungen und Projektmanagement"
+    },
+    "realEstate": {
+      "title": "Immobilien",
+      "description": "Immobilienvermittlung und Investmentberatung"
+    },
+    "security": {
+      "title": "Sicherheit",
+      "description": "Umfassende Sicherheitsdienstleistungen"
+    },
+    "learnMore": "Mehr Erfahren"
+  },
+  "value": {
+    "title": "WARUM MIT UNS INVESTIEREN",
+    "subtitle": "Wir verkaufen keine Immobilien – wir strukturieren Investments.",
+    "benefits": [
+      {
+        "title": "Off-Market-Zugang",
+        "description": "Exklusiver Zugang zu Projekten, die nicht auf dem öffentlichen Markt verfügbar sind"
+      },
+      {
+        "title": "Lokale Partner",
+        "description": "Geprüfte Bauunternehmen und Partner vor Ort in jeder Stadt"
+      },
+      {
+        "title": "Maßgeschneiderte Konzepte",
+        "description": "Investmentstrategien zugeschnitten auf Ihre spezifischen Ziele und Ihr Risikoprofil"
+      },
+      {
+        "title": "Risikoreduktion",
+        "description": "Reduziertes Risiko durch gründlich geprüfte Strukturen und Prozesse"
+      },
+      {
+        "title": "Zeiteffizienz",
+        "description": "Zeit sparen mit klarer Entscheidungsunterstützung und Expertenberatung"
+      },
+      {
+        "title": "Strategische Vermittlung",
+        "description": "Ihr vertrauenswürdiger Partner vom Konzept bis zum Abschluss"
+      }
+    ],
+    "engineering": "Wertschöpfung",
+    "proven": "Bewährte",
+    "frameworks": "Strukturen"
+  },
+  "services": {
+    "title": "UNSER INVESTMENTPROZESS",
+    "subtitle": "Ein Ansprechpartner – mehrere Märkte",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Investoren-Bedarfsanalyse",
+        "description": "Wir analysieren Ihr Budget, Ihre Renditeziele, Risikotoleranz und bevorzugte Standorte, um Ihre Investmentziele zu verstehen."
+      },
+      {
+        "number": "02",
+        "title": "Projekt-Matching",
+        "description": "Auswahl geeigneter Bauunternehmen und Verkäufer, die Ihren Anforderungen entsprechen."
+      },
+      {
+        "number": "03",
+        "title": "Konzeptentwicklung",
+        "description": "Wir entwickeln die Investmentstruktur, das Bau- oder Kaufmodell und Rendite-Szenarien."
+      },
+      {
+        "number": "04",
+        "title": "Vermittlung & Koordination",
+        "description": "Professionelle Koordination zwischen Investor, Bauunternehmen und Verkäufer."
+      },
+      {
+        "number": "05",
+        "title": "Unterstützung bis zum Abschluss",
+        "description": "Kontinuierliche Unterstützung und Begleitung während des gesamten Investmentprozesses."
+      }
+    ]
+  },
+  "cities": {
+    "title": "INVESTMENTMÄRKTE",
+    "subtitle": "Vier strategische Städte mit unterschiedlichen Investment-Profilen"
+  },
+  "cta": {
+    "title": "Bereit, Ihr Portfolio aufzubauen?",
+    "subtitle": "Für Menschen, die wollen, dass ihr Kapital arbeitet, nicht nur ruht.",
+    "button": "Persönliche Investment-Analyse Anfordern",
+    "secondaryButton": "Zugang zu Exklusiven Projekten"
+  },
+  "footer": {
+    "rights": "Alle Rechte vorbehalten",
+    "tagline": "Intelligentes Kapital. Starke Verbindungen.",
+    "contact": "Kontaktieren Sie uns",
+    "locations": "Unsere Standorte",
+    "services": "Unsere Dienstleistungen",
+    "readyToStart": "Bereit, Ihr Projekt zu starten?",
+    "getInTouch": "Kontakt Aufnehmen",
+    "privacy": "Datenschutz",
+    "terms": "Nutzungsbedingungen",
+    "impressum": "Impressum",
+    "datenschutz": "Datenschutzerklärung",
+    "ceo": "Geschäftsführer",
+    "address": "Adresse",
+    "phone": "Telefon",
+    "email": "E-Mail",
+    "website": "Webseite"
+  },
+  "whatsapp": {
+    "message": "Hallo, ich interessiere mich für Investmentmöglichkeiten."
+  },
+  "locations": {
+    "casablanca": {
+      "title": "Casablanca",
+      "subtitle": "Aufstrebender Markt mit starkem Wachstumspotenzial",
+      "description": "Casablanca bietet Chancen dort, wo Märkte gerade erst entstehen. Schnelle Urbanisierung und steigende Nachfrage nach Wohn- und Gewerbeimmobilien schaffen attraktive Einstiegspreise.",
+      "idealFor": "Ideal für",
+      "features": [
+        "Frühphaseninvestitionen",
+        "Projektentwicklungen",
+        "Langfristige Wachstumschancen"
+      ],
+      "highlights": [
+        "Schnelle Urbanisierung",
+        "Steigende Immobiliennachfrage",
+        "Attraktive Einstiegspreise",
+        "Wachsender Gewerbesektor"
+      ]
+    },
+    "dubai": {
+      "title": "Dubai",
+      "subtitle": "Dynamisches Wachstum & Überdurchschnittliche Renditen",
+      "description": "Dubai steht für Geschwindigkeit, Wachstum und globalen Kapitalfluss. Mit steuerfreiem Einkommen und internationaler Nachfrage ist es der perfekte Markt für Cashflow-orientierte Investments.",
+      "idealFor": "Ideal für",
+      "features": [
+        "Cashflow-orientierte Investments",
+        "Kurz- & mittelfristige Renditen",
+        "Internationale Portfolios"
+      ],
+      "highlights": [
+        "Steuerfreies Einkommen",
+        "Internationale Nachfrage",
+        "Moderne Neubauten",
+        "Schnelle Projektzyklen"
+      ]
+    },
+    "frankfurt": {
+      "title": "Frankfurt",
+      "subtitle": "Stabilität & Langfristige Sicherheit",
+      "description": "Frankfurt steht für Sicherheit, Stabilität und vorhersehbare Renditen. Als Europas Finanzzentrum bietet es hohe Nachfrage nach Wohn- und Gewerbeimmobilien mit starkem Mietmarkt.",
+      "idealFor": "Ideal für",
+      "features": [
+        "Kapitalerhalt",
+        "Langfristige Renditen",
+        "Core & Core+ Investments"
+      ],
+      "highlights": [
+        "Europas Finanzzentrum",
+        "Hohe Immobiliennachfrage",
+        "Starker Mietmarkt",
+        "Stabiles Wirtschaftsumfeld"
+      ]
+    },
+    "pristina": {
+      "title": "Pristina",
+      "subtitle": "Unterbewerteter Markt mit Hohem Aufwärtspotenzial",
+      "description": "Pristina ist ein Markt für Investoren, die vorausdenken. Mit junger Bevölkerung, niedrigen Einstiegskosten und wenigen professionellen Investoren bietet es First-Mover-Vorteile.",
+      "idealFor": "Ideal für",
+      "features": [
+        "Entwickler",
+        "Bauinvestitionen",
+        "Chancen mit höheren Margen"
+      ],
+      "highlights": [
+        "Junge Bevölkerung",
+        "Niedrige Einstiegskosten",
+        "Steigende Nachfrage nach Neubauten",
+        "First-Mover-Vorteil"
+      ]
+    }
+  },
+  "targetAudience": {
+    "title": "MIT WEM WIR ARBEITEN",
+    "investors": [
+      "Privatinvestoren",
+      "Unternehmer",
+      "Family Offices",
+      "Kapitalanleger",
+      "Vermögensaufbauer & Diversifizierer"
+    ]
+  },
   "construction": {
     "hero": {
       "tagline": "AHOX GmbH",
@@ -227,6 +436,21 @@
       "team": "Teammitglieder",
       "experience": "Jahre Erfahrung",
       "satisfaction": "Kundenzufriedenheit"
-    }
+    },
+    "officeLocation": "Bürostandort",
+    "enterMarket": "Markt Betreten",
+    "viewPhase": "Phase Ansehen"
+  },
+  "common": {
+    "selectLanguage": "Sprache Wählen",
+    "constructionManagement": "Baumanagement",
+    "discretion": "Diskretion",
+    "knowledge": "Expertenwissen",
+    "quality": "Qualität",
+    "projectManagement": "Projektmanagement",
+    "riskProfile": "Risikoprofil",
+    "minimizedExposure": "Minimierte Exposition",
+    "assetGrowth": "Vermögenswachstum",
+    "precisionTargets": "Präzisionsziele"
   }
 }

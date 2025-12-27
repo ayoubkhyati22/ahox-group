@@ -30,7 +30,8 @@
     "security": {
       "title": "Security",
       "description": "Comprehensive security services"
-    }
+    },
+    "learnMore": "Learn More"
   },
   "value": {
     "title": "WHY INVEST WITH US",
@@ -60,7 +61,10 @@
         "title": "Strategic Facilitation",
         "description": "Your trusted partner from concept to closing"
       }
-    ]
+    ],
+    "engineering": "Value Engineering",
+    "proven": "Proven",
+    "frameworks": "Frameworks"
   },
   "services": {
     "title": "OUR INVESTMENT PROCESS",
@@ -105,7 +109,21 @@
   },
   "footer": {
     "rights": "All rights reserved",
-    "tagline": "Smart Capital. Strong Connections."
+    "tagline": "Smart Capital. Strong Connections.",
+    "contact": "Contact Us",
+    "locations": "Our Locations",
+    "services": "Our Services",
+    "readyToStart": "Ready to start your project?",
+    "getInTouch": "Get in Touch",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "impressum": "Impressum",
+    "datenschutz": "Datenschutz",
+    "ceo": "CEO",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "website": "Website"
   },
   "whatsapp": {
     "message": "Hello, I'm interested in investment opportunities."
@@ -418,6 +436,21 @@
       "team": "Team Members",
       "experience": "Years Experience",
       "satisfaction": "Client Satisfaction"
-    }
+    },
+    "officeLocation": "Office Location",
+    "enterMarket": "Enter Market",
+    "viewPhase": "View Phase"
+  },
+  "common": {
+    "selectLanguage": "Select Language",
+    "constructionManagement": "Construction Management",
+    "discretion": "Discretion",
+    "knowledge": "Expert Knowledge",
+    "quality": "Quality",
+    "projectManagement": "Project Management",
+    "riskProfile": "Risk Profile",
+    "minimizedExposure": "Minimized Exposure",
+    "assetGrowth": "Asset Growth",
+    "precisionTargets": "Precision Targets"
   }
 }

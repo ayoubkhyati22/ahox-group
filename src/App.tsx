@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useEffect } from 'react';
 import Header from './components/Header';
@@ -10,6 +10,21 @@ import ConstructionManagementPage from './pages/ConstructionManagementPage';
 import RealEstatePage from './pages/RealEstatePage';
 import SecurityPage from './pages/SecurityPage';
 
+// Scroll to top component
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'instant' // Use 'instant' for immediate scroll, or 'smooth' for smooth scroll
+    });
+  }, [pathname]);
+
+  return null;
+}
+
 function App() {
   const { i18n } = useTranslation();
 
@@ -19,6 +34,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen">
         <Header />
         <Routes>

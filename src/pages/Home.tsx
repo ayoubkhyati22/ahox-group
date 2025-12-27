@@ -22,10 +22,10 @@ const HomePage = () => {
   ];
 
   const cities = [
-    { name: 'casablanca', icon: Building2, tag: 'Emerging Market', image: 'https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=800&h=600&fit=crop' },
-    { name: 'dubai', icon: Palmtree, tag: 'High Growth', image: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&h=600&fit=crop' },
-    { name: 'frankfurt', icon: Landmark, tag: 'Stable Returns', image: 'https://images.unsplash.com/photo-1564221710304-0b37c8b9d729?w=800&h=600&fit=crop' },
-    { name: 'pristina', icon: Mountain, tag: 'First Mover', image: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&h=600&fit=crop' },
+    { name: 'casablanca', icon: Building2, tag: t('locations.casablanca.subtitle'), image: 'https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=800&h=600&fit=crop' },
+    { name: 'dubai', icon: Palmtree, tag: t('locations.dubai.subtitle'), image: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&h=600&fit=crop' },
+    { name: 'frankfurt', icon: Landmark, tag: t('locations.frankfurt.subtitle'), image: 'https://images.unsplash.com/photo-1564221710304-0b37c8b9d729?w=800&h=600&fit=crop' },
+    { name: 'pristina', icon: Mountain, tag: t('locations.pristina.subtitle'), image: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&h=600&fit=crop' },
   ];
 
   const divisions = [
@@ -147,7 +147,7 @@ const HomePage = () => {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <span className="text-gold font-black text-[11px] uppercase tracking-[0.5em] mb-8 block">Investment Philosophy</span>
+            <span className="text-gold font-black text-[11px] uppercase tracking-[0.5em] mb-8 block">{t('about.tagline')}</span>
             <p className="text-2xl md:text-4xl leading-snug font-light italic">"{t('about.text')}"</p>
           </motion.div>
         </div>
@@ -212,7 +212,7 @@ const HomePage = () => {
                     </p>
 
                     <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-500">
-                      <span style={{ color: division.color }}>Learn More</span>
+                      <span style={{ color: division.color }}>{t('divisions.learnMore')}</span>
                       <ArrowRight className="w-4 h-4" style={{ color: division.color }} />
                     </div>
                   </div>
@@ -252,15 +252,15 @@ const HomePage = () => {
             >
               <div className="w-12 h-[2px] bg-[#14B3AA]" />
               <span className="text-slate-400 font-bold text-[10px] uppercase tracking-[0.5em]">
-                Value Engineering
+                {t('value.engineering')}
               </span>
             </motion.div>
 
             <motion.h2
               className="text-6xl md:text-8xl font-black text-slate-900 leading-[0.9] uppercase tracking-tighter"
             >
-              Proven <br />
-              <span className="text-[#14B3AA]">Frameworks</span>
+              {t('value.proven')} <br />
+              <span className="text-[#14B3AA]">{t('value.frameworks')}</span>
             </motion.h2>
           </div>
 
@@ -336,8 +336,8 @@ const HomePage = () => {
                   <Shield className="text-[#14B3AA] w-6 h-6" />
                 </div>
                 <div>
-                  <p className="text-[10px] text-slate-400 font-bold uppercase tracking-[0.2em]">Risk Profile</p>
-                  <p className="text-xl font-black text-slate-900 uppercase">Minimized Exposure</p>
+                  <p className="text-[10px] text-slate-400 font-bold uppercase tracking-[0.2em]">{t('common.riskProfile')}</p>
+                  <p className="text-xl font-black text-slate-900 uppercase">{t('common.minimizedExposure')}</p>
                 </div>
               </div>
 
@@ -348,8 +348,8 @@ const HomePage = () => {
                   <TrendingUp className="text-[#14B3AA] w-6 h-6" />
                 </div>
                 <div>
-                  <p className="text-[10px] text-slate-400 font-bold uppercase tracking-[0.2em]">Asset Growth</p>
-                  <p className="text-xl font-black text-slate-900 uppercase">Precision Targets</p>
+                  <p className="text-[10px] text-slate-400 font-bold uppercase tracking-[0.2em]">{t('common.assetGrowth')}</p>
+                  <p className="text-xl font-black text-slate-900 uppercase">{t('common.precisionTargets')}</p>
                 </div>
               </div>
             </div>
@@ -377,7 +377,7 @@ const HomePage = () => {
                     <span className="text-gold text-[10px] font-black uppercase tracking-[0.3em] mb-2">{city.tag}</span>
                     <h3 className="text-white text-4xl font-black uppercase mb-4 group-hover:text-gold transition-colors">{t(`nav.${city.name}`)}</h3>
                     <div className="flex items-center gap-2 text-white text-[10px] font-black uppercase tracking-widest opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-                      <span>Enter Market</span> <ArrowRight className="w-4 h-4" />
+                      <span>{t('locationPage.enterMarket')}</span> <ArrowRight className="w-4 h-4" />
                     </div>
                   </div>
                 </Link>

@@ -24,13 +24,14 @@
       "description": "Services de construction professionnels et gestion de projet"
     },
     "realEstate": {
-      "title": "Real Estate",
+      "title": "Immobilier",
       "description": "Courtage immobilier et conseil en investissement"
     },
     "security": {
-      "title": "Security",
+      "title": "Sécurité",
       "description": "Services de sécurité complets"
-    }
+    },
+    "learnMore": "En Savoir Plus"
   },
   "value": {
     "title": "POURQUOI INVESTIR AVEC NOUS",
@@ -60,7 +61,10 @@
         "title": "Facilitation Stratégique",
         "description": "Votre partenaire de confiance du concept à la clôture"
       }
-    ]
+    ],
+    "engineering": "Ingénierie de Valeur",
+    "proven": "Cadres",
+    "frameworks": "Éprouvés"
   },
   "services": {
     "title": "NOTRE PROCESSUS D'INVESTISSEMENT",
@@ -105,7 +109,21 @@
   },
   "footer": {
     "rights": "Tous droits réservés",
-    "tagline": "Capital Intelligent. Connexions Fortes."
+    "tagline": "Capital Intelligent. Connexions Fortes.",
+    "contact": "Nous Contacter",
+    "locations": "Nos Emplacements",
+    "services": "Nos Services",
+    "readyToStart": "Prêt à démarrer votre projet?",
+    "getInTouch": "Prendre Contact",
+    "privacy": "Politique de Confidentialité",
+    "terms": "Conditions d'Utilisation",
+    "impressum": "Mentions Légales",
+    "datenschutz": "Protection des Données",
+    "ceo": "Directeur Général",
+    "address": "Adresse",
+    "phone": "Téléphone",
+    "email": "Email",
+    "website": "Site Web"
   },
   "whatsapp": {
     "message": "Bonjour, je suis intéressé par les opportunités d'investissement."
@@ -418,6 +436,21 @@
       "team": "Membres de l'Équipe",
       "experience": "Années d'Expérience",
       "satisfaction": "Satisfaction Client"
-    }
+    },
+    "officeLocation": "Bureau",
+    "enterMarket": "Entrer sur le Marché",
+    "viewPhase": "Voir la Phase"
+  },
+  "common": {
+    "selectLanguage": "Sélectionner la Langue",
+    "constructionManagement": "Gestion de la Construction",
+    "discretion": "Discrétion",
+    "knowledge": "Expertise",
+    "quality": "Qualité",
+    "projectManagement": "Gestion de Projet",
+    "riskProfile": "Profil de Risque",
+    "minimizedExposure": "Exposition Minimisée",
+    "assetGrowth": "Croissance des Actifs",
+    "precisionTargets": "Objectifs de Précision"
   }
 }

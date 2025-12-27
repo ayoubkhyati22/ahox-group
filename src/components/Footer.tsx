@@ -8,38 +8,38 @@ const Footer = () => {
   const contactInfo = [
     {
       icon: MapPin,
-      title: 'Address',
+      title: t('footer.address'),
       content: ['AHOX GmbH', 'Ostendstraße 80', '60314 Frankfurt a.M.', 'Germany'],
     },
     {
       icon: Phone,
-      title: 'Phone',
+      title: t('footer.phone'),
       content: ['+49 69 272 787 61', '+49 157 33 44 88 98'],
     },
     {
       icon: Mail,
-      title: 'Email',
+      title: t('footer.email'),
       content: ['info@ahox-cm.de'],
     },
     {
       icon: Globe,
-      title: 'Website',
+      title: t('footer.website'),
       content: ['www.ahox-cm.de'],
     },
   ];
 
   const locations = [
-    { name: 'Frankfurt', region: 'Germany' },
-    { name: 'Casablanca', region: 'Morocco' },
-    { name: 'Dubai', region: 'UAE' },
-    { name: 'Pristina', region: 'Kosovo' },
+    { name: 'frankfurt', region: 'Germany' },
+    { name: 'casablanca', region: 'Morocco' },
+    { name: 'dubai', region: 'UAE' },
+    { name: 'pristina', region: 'Kosovo' },
   ];
 
   const services = [
-    'Construction Management',
-    'Real Estate Development',
-    'Security Solutions',
-    'Project Consulting',
+    t('divisions.construction.title'),
+    t('divisions.realEstate.title'),
+    t('divisions.security.title'),
+    t('common.projectManagement'),
   ];
 
   return (
@@ -62,7 +62,7 @@ const Footer = () => {
               className="h-22 w-auto object-contain mb-6"
             />
             <p className="text-gray-400 leading-relaxed mb-6">
-              Premium construction, real estate, and security solutions across four continents. Building excellence since day one.
+              {t('about.text')}
             </p>
             <div className="flex gap-4">
               <a href="#" className="w-10 h-10 bg-gold/10 hover:bg-gold rounded-lg flex items-center justify-center transition-colors">
@@ -84,7 +84,7 @@ const Footer = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-xl font-bold text-gold mb-6">Contact Us</h3>
+            <h3 className="text-xl font-bold text-gold mb-6">{t('footer.contact')}</h3>
             <div className="space-y-4">
               {contactInfo.map((item, index) => {
                 const Icon = item.icon;
@@ -95,15 +95,15 @@ const Footer = () => {
                       <p className="text-sm font-semibold text-gray-300 mb-1">{item.title}</p>
                       {item.content.map((line, i) => (
                         <p key={i} className="text-sm text-gray-400">
-                          {item.title === 'Email' ? (
+                          {item.title === t('footer.email') ? (
                             <a href={`mailto:${line}`} className="hover:text-gold transition-colors">
                               {line}
                             </a>
-                          ) : item.title === 'Website' ? (
+                          ) : item.title === t('footer.website') ? (
                             <a href={`https://${line}`} target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">
                               {line}
                             </a>
-                          ) : item.title === 'Phone' ? (
+                          ) : item.title === t('footer.phone') ? (
                             <a href={`tel:${line.replace(/\s/g, '')}`} className="hover:text-gold transition-colors">
                               {line}
                             </a>
@@ -126,16 +126,16 @@ const Footer = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-xl font-bold text-gold mb-6">Our Locations</h3>
+            <h3 className="text-xl font-bold text-gold mb-6">{t('footer.locations')}</h3>
             <ul className="space-y-3">
               {locations.map((location, index) => (
                 <li key={index}>
                   <a 
-                    href={`/${location.name.toLowerCase()}`}
+                    href={`/${location.name}`}
                     className="flex items-center gap-2 text-gray-400 hover:text-gold transition-colors group"
                   >
                     <span className="w-2 h-2 bg-gold rounded-full group-hover:scale-125 transition-transform"></span>
-                    <span className="font-medium">{location.name}</span>
+                    <span className="font-medium">{t(`nav.${location.name}`)}</span>
                     <span className="text-sm text-gray-500">({location.region})</span>
                   </a>
                 </li>
@@ -143,7 +143,7 @@ const Footer = () => {
             </ul>
             
             <div className="mt-8 p-4 bg-gold/10 rounded-lg border border-gold/20">
-              <p className="text-sm text-gray-300 font-semibold mb-1">Geschäftsführer</p>
+              <p className="text-sm text-gray-300 font-semibold mb-1">{t('footer.ceo')}</p>
               <p className="text-gold font-bold">Armend Hoxhaj</p>
             </div>
           </motion.div>
@@ -155,7 +155,7 @@ const Footer = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-xl font-bold text-gold mb-6">Our Services</h3>
+            <h3 className="text-xl font-bold text-gold mb-6">{t('footer.services')}</h3>
             <ul className="space-y-3 mb-8">
               {services.map((service, index) => (
                 <li key={index} className="flex items-center gap-2 text-gray-400 hover:text-gold transition-colors cursor-pointer">
@@ -166,12 +166,12 @@ const Footer = () => {
             </ul>
 
             <div className="p-4 bg-gradient-to-br from-gold/20 to-orange/20 rounded-lg border border-gold/30">
-              <p className="text-sm font-semibold mb-2">Ready to start your project?</p>
+              <p className="text-sm font-semibold mb-2">{t('footer.readyToStart')}</p>
               <a 
                 href="mailto:info@ahox-cm.de"
                 className="inline-flex items-center gap-2 bg-gold text-black px-4 py-2 rounded-lg font-bold hover:bg-orange transition-colors text-sm"
               >
-                Get in Touch
+                {t('footer.getInTouch')}
                 <span>→</span>
               </a>
             </div>
@@ -187,10 +187,10 @@ const Footer = () => {
               © {new Date().getFullYear()} AHOX GmbH. {t('footer.rights')}
             </p>
             <div className="flex flex-wrap justify-center gap-6 text-sm">
-              <a href="#" className="text-gray-400 hover:text-gold transition-colors">Privacy Policy</a>
-              <a href="#" className="text-gray-400 hover:text-gold transition-colors">Terms of Service</a>
-              <a href="#" className="text-gray-400 hover:text-gold transition-colors">Impressum</a>
-              <a href="#" className="text-gray-400 hover:text-gold transition-colors">Datenschutz</a>
+              <a href="#" className="text-gray-400 hover:text-gold transition-colors">{t('footer.privacy')}</a>
+              <a href="#" className="text-gray-400 hover:text-gold transition-colors">{t('footer.terms')}</a>
+              <a href="#" className="text-gray-400 hover:text-gold transition-colors">{t('footer.impressum')}</a>
+              <a href="#" className="text-gray-400 hover:text-gold transition-colors">{t('footer.datenschutz')}</a>
             </div>
           </div>
         </div>

@@ -30,7 +30,8 @@
     "security": {
       "title": "الأمن",
       "description": "خدمات أمنية شاملة"
-    }
+    },
+    "learnMore": "عرف أكثر"
   },
   "value": {
     "title": "علاش تستثمر معانا",
@@ -60,7 +61,10 @@
         "title": "تسهيل استراتيجي",
         "description": "شريكك الموثوق من الفكرة حتى الإغلاق"
       }
-    ]
+    ],
+    "engineering": "هندسة القيمة",
+    "proven": "أطر",
+    "frameworks": "مثبتة"
   },
   "services": {
     "title": "عملية الاستثمار ديالنا",
@@ -105,7 +109,21 @@
   },
   "footer": {
     "rights": "جميع الحقوق محفوظة",
-    "tagline": "رأس مال ذكي. اتصالات قوية."
+    "tagline": "رأس مال ذكي. اتصالات قوية.",
+    "contact": "اتصل بنا",
+    "locations": "المواقع ديالنا",
+    "services": "الخدمات ديالنا",
+    "readyToStart": "واجد باش تبدا المشروع ديالك؟",
+    "getInTouch": "تواصل معانا",
+    "privacy": "سياسة الخصوصية",
+    "terms": "شروط الاستخدام",
+    "impressum": "معلومات قانونية",
+    "datenschutz": "حماية البيانات",
+    "ceo": "المدير التنفيذي",
+    "address": "العنوان",
+    "phone": "التليفون",
+    "email": "البريد الإلكتروني",
+    "website": "الموقع الإلكتروني"
   },
   "whatsapp": {
     "message": "السلام عليكم، أنا مهتم بفرص الاستثمار."
@@ -185,7 +203,7 @@
     "investors": [
       "المستثمرون الخواص",
       "رجال الأعمال",
-      "Family Offices",
+      "العائلات المستثمرة",
       "مستثمرو رأس المال",
       "بناة الثروة والمنوعون"
     ]
@@ -418,6 +436,21 @@
       "team": "أعضاء الفريق",
       "experience": "سنوات الخبرة",
       "satisfaction": "رضا العملاء"
-    }
+    },
+    "officeLocation": "موقع المكتب",
+    "enterMarket": "دخول السوق",
+    "viewPhase": "عرض المرحلة"
+  },
+  "common": {
+    "selectLanguage": "اختر اللغة",
+    "constructionManagement": "إدارة البناء",
+    "discretion": "السرية",
+    "knowledge": "الخبرة",
+    "quality": "الجودة",
+    "projectManagement": "إدارة المشاريع",
+    "riskProfile": "ملف المخاطر",
+    "minimizedExposure": "تعرض مخفض",
+    "assetGrowth": "نمو الأصول",
+    "precisionTargets": "أهداف دقيقة"
   }
 }
