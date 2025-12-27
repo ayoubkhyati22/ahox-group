@@ -3,7 +3,10 @@ import { useTranslation } from 'react-i18next';
 import { useEffect } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import WhatsAppButton from './components/WhatsAppButton';
+
+// Option 2: Radial arc menu
+import FloatingContactButtonAlt from './components/FloatingContactButtonAlt';
+
 import HomePage from './pages/Home';
 import LocationPage from './pages/LocationPage';
 import ConstructionManagementPage from './pages/ConstructionManagementPage';
@@ -18,7 +21,7 @@ function ScrollToTop() {
     window.scrollTo({
       top: 0,
       left: 0,
-      behavior: 'instant' // Use 'instant' for immediate scroll, or 'smooth' for smooth scroll
+      behavior: 'instant'
     });
   }, [pathname]);
 
@@ -37,6 +40,7 @@ function App() {
       <ScrollToTop />
       <div className="min-h-screen">
         <Header />
+        
         <Routes>
           <Route path="/" element={<HomePage />} />
           
@@ -51,8 +55,11 @@ function App() {
           <Route path="/real-estate" element={<RealEstatePage />} />
           <Route path="/security" element={<SecurityPage />} />
         </Routes>
+        
         <Footer />
-        <WhatsAppButton />
+        
+        {/* Floating Contact Button - Shows on ALL pages */}
+        <FloatingContactButtonAlt />
       </div>
     </Router>
   );
