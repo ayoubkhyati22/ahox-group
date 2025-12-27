@@ -72,7 +72,7 @@ const Header = () => {
         <div className="container mx-auto px-6 h-20 flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="z-[70]">
-            <img src="/src/images/ahox-group-main-logo.svg" alt="AHOX" className="h-12 w-auto" />
+            <img src="/images/ahox-group-main-logo.svg" alt="AHOX" className="h-12 w-auto" />
           </Link>
 
           {/* Desktop Nav */}
