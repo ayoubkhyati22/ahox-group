@@ -59,6 +59,28 @@ const HomePage = () => {
     { name: 'pristina', icon: Mountain, tag: 'First Mover', image: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&h=600&fit=crop' },
   ];
 
+  // Three divisions with logo URLs from the uploaded images
+  const divisions = [
+    {
+      id: 'construction',
+      logo: '/mnt/user-data/uploads/1766785480981_image.png', // Teal Construction logo
+      color: '#14B3AA',
+      link: '/construction'
+    },
+    {
+      id: 'realEstate',
+      logo: '/mnt/user-data/uploads/1766785480981_image.png', // Yellow Real Estate logo (using same for now)
+      color: '#E8D700',
+      link: '/real-estate'
+    },
+    {
+      id: 'security',
+      logo: '/mnt/user-data/uploads/1766785480981_image.png', // Red Security logo (using same for now)
+      color: '#D10A11',
+      link: '/security'
+    }
+  ];
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prev) => (prev === heroImages.length - 1 ? 0 : prev + 1));
@@ -160,6 +182,93 @@ const HomePage = () => {
             <span className="text-gold font-black text-[11px] uppercase tracking-[0.5em] mb-8 block">Investment Philosophy</span>
             <p className="text-2xl md:text-4xl leading-snug font-light italic">"{t('about.text')}"</p>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Three Divisions Section - NEW */}
+      <section className="py-32 bg-gradient-to-br from-gray-50 via-white to-gray-50">
+        <div className="container mx-auto px-6">
+          {/* Section Header */}
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-20"
+          >
+            <h2 className="text-5xl md:text-7xl font-black text-purple mb-6 uppercase tracking-tighter">
+              {t('divisions.title')}
+            </h2>
+            <p className="text-xl text-gray-600 font-light max-w-3xl mx-auto">
+              {t('divisions.subtitle')}
+            </p>
+          </motion.div>
+
+          {/* Three Logo Cards */}
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {divisions.map((division, index) => (
+              <motion.div
+                key={division.id}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.2, duration: 0.8 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -10, scale: 1.02 }}
+                className="relative"
+              >
+                <Link
+                  to={division.link}
+                  className="group block bg-white p-10 border-4 border-purple-light hover:border-gold transition-all duration-500 overflow-hidden cursor-pointer"
+                  style={{
+                    boxShadow: '0 10px 40px rgba(0,0,0,0.05)'
+                  }}
+                >
+                  {/* Animated background gradient */}
+                  <div 
+                    className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500"
+                    style={{ background: `linear-gradient(135deg, ${division.color}20 0%, transparent 100%)` }}
+                  />
+
+                  {/* Logo */}
+                  <div className="relative z-10 flex flex-col items-center gap-6">
+                    <div className="w-32 h-32 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                      <img 
+                        src={division.logo}
+                        alt={t(`divisions.${division.id}.title`)}
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+
+                    {/* Title */}
+                    <h3 
+                      className="text-2xl font-bold text-center uppercase tracking-wide transition-colors duration-500"
+                      style={{ color: division.color }}
+                    >
+                      {t(`divisions.${division.id}.title`)}
+                    </h3>
+
+                    {/* Description */}
+                    <p className="text-gray-600 text-center leading-relaxed font-light">
+                      {t(`divisions.${division.id}.description`)}
+                    </p>
+
+                    {/* Learn More Link */}
+                    <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-500">
+                      <span style={{ color: division.color }}>Learn More</span>
+                      <ArrowRight className="w-4 h-4" style={{ color: division.color }} />
+                    </div>
+                  </div>
+
+                  {/* Corner accent */}
+                  <div 
+                    className="absolute top-0 right-0 w-20 h-20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                    style={{
+                      background: `linear-gradient(135deg, transparent 50%, ${division.color}15 50%)`
+                    }}
+                  />
+                </Link>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 

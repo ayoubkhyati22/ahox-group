@@ -16,6 +16,22 @@
     "tagline": "International Investment & Real Estate Connect",
     "text": "Als unabhängiger Investment-Vermittler verbinden wir Investoren mit geprüften Bauunternehmen und Immobilienverkäufern in ausgewählten Wachstumsstädten. Unser Ziel: maßgeschneiderte Immobilien- und Bauinvestitionskonzepte mit nachhaltigen Renditen."
   },
+  "divisions": {
+    "title": "UNSERE LEISTUNGEN",
+    "subtitle": "Wir sind die Experten für Baudienstleistungen, Immobilien und Sicherheit",
+    "construction": {
+      "title": "Construction & Management",
+      "description": "Professionelle Baudienstleistungen und Projektmanagement"
+    },
+    "realEstate": {
+      "title": "Real Estate",
+      "description": "Immobilienvermittlung und Investmentberatung"
+    },
+    "security": {
+      "title": "Security",
+      "description": "Umfassende Sicherheitsdienstleistungen"
+    }
+  },
   "value": {
     "title": "WARUM MIT UNS INVESTIEREN",
     "subtitle": "Wir verkaufen keine Immobilien – wir strukturieren Investments.",

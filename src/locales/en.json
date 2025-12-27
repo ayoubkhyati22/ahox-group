@@ -16,6 +16,22 @@
     "tagline": "International Investment & Real Estate Connect",
     "text": "As an independent investment facilitator, we link investors with vetted construction companies and real estate sellers in selected growth cities. Our goal: tailored real estate and construction investment concepts with sustainable returns."
   },
+  "divisions": {
+    "title": "OUR SERVICES",
+    "subtitle": "We are the experts for construction services, real estate and security",
+    "construction": {
+      "title": "Construction & Management",
+      "description": "Professional construction services and project management"
+    },
+    "realEstate": {
+      "title": "Real Estate",
+      "description": "Real estate brokerage and investment consulting"
+    },
+    "security": {
+      "title": "Security",
+      "description": "Comprehensive security services"
+    }
+  },
   "value": {
     "title": "WHY INVEST WITH US",
     "subtitle": "We don't sell real estate – we structure investments.",

@@ -16,6 +16,22 @@
     "tagline": "Connexion Internationale d'Investissement & Immobilier",
     "text": "En tant que facilitateur d'investissement indépendant, nous relions les investisseurs avec des entreprises de construction vérifiées et des vendeurs immobiliers dans des villes de croissance sélectionnées. Notre objectif : des concepts d'investissement immobilier et de construction sur mesure avec des rendements durables."
   },
+  "divisions": {
+    "title": "NOS SERVICES",
+    "subtitle": "Nous sommes les experts pour les services de construction, l'immobilier et la sécurité",
+    "construction": {
+      "title": "Construction & Management",
+      "description": "Services de construction professionnels et gestion de projet"
+    },
+    "realEstate": {
+      "title": "Real Estate",
+      "description": "Courtage immobilier et conseil en investissement"
+    },
+    "security": {
+      "title": "Security",
+      "description": "Services de sécurité complets"
+    }
+  },
   "value": {
     "title": "POURQUOI INVESTIR AVEC NOUS",
     "subtitle": "Nous ne vendons pas de l'immobilier – nous structurons des investissements.",
