@@ -189,5 +189,235 @@
       "Capital Investors",
       "Wealth Builders & Diversifiers"
     ]
+  },
+  "construction": {
+    "hero": {
+      "tagline": "AHOX GmbH",
+      "title": "Efficiency at",
+      "titleBold": "Construction Site",
+      "description": "Professional brokerage of construction services – We connect builders with the most qualified professionals in the industry."
+    },
+    "philosophy": {
+      "title": "Strategic Brokerage for",
+      "titleAccent": "highest quality standards",
+      "text1": "The brokerage of construction services plays a crucial role in the modern construction industry. We at AHOX GmbH support builders in finding the right partners for planning, execution and completion.",
+      "text2": "We place the greatest emphasis on checking references, experience and certifications. Our goal is a smooth and efficient implementation of your construction projects - from residential buildings to commercial projects.",
+      "quote": "We promote collaboration and efficiency in the construction industry through qualified selection."
+    },
+    "services": {
+      "title": "Our Area of Responsibility",
+      "subtitle": "Comprehensive Construction Services",
+      "categories": {
+        "interior": {
+          "title": "Interior Finishing & Craftsmanship",
+          "items": ["Flooring Works", "Painting & Plastering", "Drywall & Wallpapering", "Door & Frame Installation"]
+        },
+        "energy": {
+          "title": "Energy & Renovation",
+          "items": ["Energy Modernization", "Facade Construction & Roofing", "Solar Energy", "Efficient Heating Technology"]
+        },
+        "technical": {
+          "title": "Technology & Exterior",
+          "items": ["Electrical Work", "Heating / Plumbing", "Garden & Landscaping", "Windows & Awnings"]
+        },
+        "logistics": {
+          "title": "Logistics & Management",
+          "items": ["Demolition Work", "Moving Coordination", "Building Cleaning", "Interior & Exterior Design"]
+        }
+      }
+    },
+    "value": {
+      "title": "Added Value through",
+      "titleAccent": "Professional Management.",
+      "benefits": [
+        {
+          "title": "Contract & Condition Negotiation",
+          "description": "We support in the preparation of contracts and clarify financial agreements to avoid misunderstandings and disputes."
+        },
+        {
+          "title": "Quality Assurance",
+          "description": "The selection of service providers is based on strict criteria regarding certification and project experience."
+        },
+        {
+          "title": "Benefits for Service Providers",
+          "description": "We increase the visibility and reach of our partner companies and thus enable the expansion of their business field."
+        }
+      ],
+      "promise": {
+        "title": "Our Promise",
+        "text": "Whether it's the construction of residential buildings, commercial buildings or infrastructure projects - AHOX GmbH is your central anchor point for the success and quality of your construction projects.",
+        "signature": "AHOX Team"
+      }
+    }
+  },
+  "realEstate": {
+    "hero": {
+      "tagline": "AHOX GmbH",
+      "title": "Excellence in",
+      "titleBold": "Real Estate Brokerage",
+      "description": "Your strategic partner for the brokerage of real estate and land - professional, market-oriented and discreet."
+    },
+    "philosophy": {
+      "title": "The Bridge between",
+      "titleAccent": "Supply and Demand",
+      "text1": "The brokerage of real estate is a significant activity in the real estate industry. AHOX GmbH serves as a specialized brokerage company between potential buyers and sellers of real estate and land.",
+      "text2": "Our goal is to handle the sales process efficiently and smoothly. We rely on sound expertise about local markets, legal frameworks and proven negotiation techniques."
+    },
+    "services": {
+      "title": "Services",
+      "subtitle": "Our Area of Responsibility in Brokerage",
+      "items": [
+        {
+          "title": "Real Estate Acquisition",
+          "description": "We actively search for potential sale objects through targeted research and our extensive network of owners and project developers."
+        },
+        {
+          "title": "Market-Based Valuation",
+          "description": "Sound valuation based on in-depth knowledge of local markets and legal frameworks."
+        },
+        {
+          "title": "Negotiation Management",
+          "description": "Professional coordination between buyer and seller to clarify prices, conditions and contract details."
+        }
+      ]
+    },
+    "process": {
+      "title": "The AHOX Way to Success.",
+      "description": "After the property has been found for you, we accompany you through every crucial step of the transaction.",
+      "checklist": [
+        "Targeted acquisition of sale objects",
+        "Professional real estate valuation",
+        "Cooperation with construction companies",
+        "Conducting viewings",
+        "Final contract negotiations"
+      ],
+      "steps": [
+        {
+          "title": "Research & Acquisition",
+          "text": "We identify potentials through cooperations with project developers."
+        },
+        {
+          "title": "Valuation & Market Check",
+          "text": "Analysis of local market conditions for an optimal pricing strategy."
+        },
+        {
+          "title": "Negotiation & Clarification",
+          "text": "We conduct negotiations with owners about prices and conditions."
+        },
+        {
+          "title": "Completion Support",
+          "text": "Complete support until protocol and handover."
+        }
+      ]
+    }
+  },
+  "security": {
+    "hero": {
+      "tagline": "AHOX GmbH",
+      "title": "Security through",
+      "titleBold": "Competence",
+      "description": "Your specialized partner for the brokerage of professional security services - Customized, reliable and at the highest level."
+    },
+    "philosophy": {
+      "title": "Brokerage of",
+      "titleAccent": "Security Solutions",
+      "text1": "AHOX GmbH specializes in the brokerage of professional security services. We serve as a strategic link between customers and first-class security companies.",
+      "text2": "We work closely with a variety of certified partners to offer you customized solutions. Whether banks, office buildings, retail or exclusive residential complexes - we find the right experts for your protection.",
+      "values": [
+        {
+          "title": "Careful Selection",
+          "description": "Regularly trained personnel"
+        },
+        {
+          "title": "Highest Standards",
+          "description": "Quality in every scenario"
+        }
+      ]
+    },
+    "services": {
+      "title": "Service Portfolio",
+      "subtitle": "Comprehensive Security Concepts",
+      "items": [
+        {
+          "title": "Security Services",
+          "description": "Armed or unarmed security forces to protect persons, events or facilities."
+        },
+        {
+          "title": "Surveillance Systems",
+          "description": "Installation and maintenance of alarm systems, video surveillance and state-of-the-art access control systems."
+        },
+        {
+          "title": "Security Consulting",
+          "description": "Expert analysis and development of customized security concepts for companies and private individuals."
+        },
+        {
+          "title": "Cybersecurity",
+          "description": "Identification and defense against online threats such as hacking, data leaks and digital fraud."
+        },
+        {
+          "title": "Security Training",
+          "description": "Professional training in first aid, self-defense and fire protection for hazard prevention."
+        },
+        {
+          "title": "Detective Services",
+          "description": "Private detectives for the investigation of crimes, fraud cases or other legal matters."
+        },
+        {
+          "title": "Risk Management",
+          "description": "Risk assessment and creation of action plans for effective risk minimization."
+        },
+        {
+          "title": "Event Protection",
+          "description": "Comprehensive security for concerts, fairs or sporting events through qualified personnel."
+        }
+      ]
+    },
+    "sectors": {
+      "title": "Values & Focus.",
+      "description": "We place great value on reliability and customer satisfaction. Our focus is on sectors that require the highest precision.",
+      "items": [
+        "Banks & Financial Sector",
+        "Office Buildings & Industry",
+        "Retail & Department Stores",
+        "Residential Complexes & Private Estates"
+      ],
+      "values": [
+        {
+          "title": "Reliability",
+          "description": "We guarantee constant availability and on-time execution of all security services."
+        },
+        {
+          "title": "Competence",
+          "description": "Through our network, we only access certified specialists with many years of experience."
+        },
+        {
+          "title": "Transparency",
+          "description": "Clear communication and detailed deployment planning are the basis of our brokerage activities."
+        },
+        {
+          "title": "Quality Assurance",
+          "description": "Constant control of brokered services according to the most modern quality standards."
+        }
+      ]
+    }
+  },
+  "locationPage": {
+    "elevated": "ELEVATED",
+    "structures": "STRUCTURES.",
+    "description": "Through sharp execution and zero-tolerance for compromise, we've defined the skyline of {{location}}. Our process combines architectural integrity with commercial precision.",
+    "features": ["Concept Analysis", "Strategic Sourcing", "Structural Management"],
+    "contact": {
+      "title": "PARTNER WITH US IN",
+      "description": "Bring professional engineering and construction management to your next venture. We operate with radical transparency.",
+      "email": "Electronic Mail",
+      "phone": "Telephone Connection",
+      "button": "Request Details"
+    },
+    "stats": {
+      "projects": "Projects Completed",
+      "team": "Team Members",
+      "experience": "Years Experience",
+      "satisfaction": "Client Satisfaction"
+    }
   }
 }

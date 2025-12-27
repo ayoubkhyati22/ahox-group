@@ -189,5 +189,235 @@
       "Investisseurs en Capital",
       "Constructeurs de Patrimoine & Diversificateurs"
     ]
+  },
+  "construction": {
+    "hero": {
+      "tagline": "AHOX GmbH",
+      "title": "Efficacité au",
+      "titleBold": "Chantier de Construction",
+      "description": "Courtage professionnel de services de construction – Nous connectons les maîtres d'ouvrage avec les professionnels les plus qualifiés de l'industrie."
+    },
+    "philosophy": {
+      "title": "Courtage Stratégique pour",
+      "titleAccent": "les normes de qualité les plus élevées",
+      "text1": "Le courtage de services de construction joue un rôle crucial dans l'industrie de la construction moderne. Chez AHOX GmbH, nous aidons les maîtres d'ouvrage à trouver les bons partenaires pour la planification, l'exécution et l'achèvement.",
+      "text2": "Nous accordons la plus grande importance à la vérification des références, de l'expérience et des certifications. Notre objectif est une mise en œuvre fluide et efficace de vos projets de construction - des bâtiments résidentiels aux projets commerciaux.",
+      "quote": "Nous favorisons la collaboration et l'efficacité dans l'industrie de la construction grâce à une sélection qualifiée."
+    },
+    "services": {
+      "title": "Notre Domaine de Responsabilité",
+      "subtitle": "Services de Construction Complets",
+      "categories": {
+        "interior": {
+          "title": "Finitions Intérieures & Artisanat",
+          "items": ["Travaux de Revêtement de Sol", "Peinture & Plâtrerie", "Cloisons Sèches & Tapisserie", "Installation de Portes & Cadres"]
+        },
+        "energy": {
+          "title": "Énergie & Rénovation",
+          "items": ["Modernisation Énergétique", "Construction de Façades & Toiture", "Énergie Solaire", "Technologie de Chauffage Efficace"]
+        },
+        "technical": {
+          "title": "Technologie & Extérieur",
+          "items": ["Travaux Électriques", "Chauffage / Plomberie", "Jardinage & Aménagement Paysager", "Fenêtres & Stores"]
+        },
+        "logistics": {
+          "title": "Logistique & Gestion",
+          "items": ["Travaux de Démolition", "Coordination de Déménagement", "Nettoyage de Bâtiments", "Design Intérieur & Extérieur"]
+        }
+      }
+    },
+    "value": {
+      "title": "Valeur Ajoutée par",
+      "titleAccent": "Gestion Professionnelle.",
+      "benefits": [
+        {
+          "title": "Négociation de Contrats & Conditions",
+          "description": "Nous vous assistons dans la préparation des contrats et clarifions les accords financiers pour éviter les malentendus et les litiges."
+        },
+        {
+          "title": "Assurance Qualité",
+          "description": "La sélection des prestataires de services est basée sur des critères stricts concernant la certification et l'expérience de projet."
+        },
+        {
+          "title": "Avantages pour les Prestataires",
+          "description": "Nous augmentons la visibilité et la portée de nos entreprises partenaires, permettant ainsi l'expansion de leur champ d'activité."
+        }
+      ],
+      "promise": {
+        "title": "Notre Promesse",
+        "text": "Qu'il s'agisse de la construction de bâtiments résidentiels, de bâtiments commerciaux ou de projets d'infrastructure - AHOX GmbH est votre point d'ancrage central pour le succès et la qualité de vos projets de construction.",
+        "signature": "Équipe AHOX"
+      }
+    }
+  },
+  "realEstate": {
+    "hero": {
+      "tagline": "AHOX GmbH",
+      "title": "Excellence en",
+      "titleBold": "Courtage Immobilier",
+      "description": "Votre partenaire stratégique pour le courtage immobilier et foncier - professionnel, orienté marché et discret."
+    },
+    "philosophy": {
+      "title": "Le Pont entre",
+      "titleAccent": "l'Offre et la Demande",
+      "text1": "Le courtage immobilier est une activité importante dans le secteur immobilier. AHOX GmbH sert de société de courtage spécialisée entre les acheteurs et vendeurs potentiels de biens immobiliers et de terrains.",
+      "text2": "Notre objectif est de gérer le processus de vente de manière efficace et fluide. Nous nous appuyons sur une expertise solide des marchés locaux, des cadres juridiques et des techniques de négociation éprouvées."
+    },
+    "services": {
+      "title": "Services",
+      "subtitle": "Notre Domaine de Responsabilité en Courtage",
+      "items": [
+        {
+          "title": "Acquisition Immobilière",
+          "description": "Nous recherchons activement des objets de vente potentiels grâce à des recherches ciblées et notre vaste réseau de propriétaires et de promoteurs."
+        },
+        {
+          "title": "Évaluation Basée sur le Marché",
+          "description": "Évaluation fondée basée sur une connaissance approfondie des marchés locaux et des cadres juridiques."
+        },
+        {
+          "title": "Gestion des Négociations",
+          "description": "Coordination professionnelle entre acheteur et vendeur pour clarifier les prix, conditions et détails du contrat."
+        }
+      ]
+    },
+    "process": {
+      "title": "La Voie AHOX vers le Succès.",
+      "description": "Après que la propriété ait été trouvée pour vous, nous vous accompagnons à travers chaque étape cruciale de la transaction.",
+      "checklist": [
+        "Acquisition ciblée d'objets de vente",
+        "Évaluation immobilière professionnelle",
+        "Coopération avec les entreprises de construction",
+        "Conduite de visites",
+        "Négociations contractuelles finales"
+      ],
+      "steps": [
+        {
+          "title": "Recherche & Acquisition",
+          "text": "Nous identifions les potentiels grâce à des coopérations avec des promoteurs."
+        },
+        {
+          "title": "Évaluation & Vérification du Marché",
+          "text": "Analyse des conditions de marché locales pour une stratégie de prix optimale."
+        },
+        {
+          "title": "Négociation & Clarification",
+          "text": "Nous menons des négociations avec les propriétaires sur les prix et conditions."
+        },
+        {
+          "title": "Accompagnement jusqu'à la Clôture",
+          "text": "Support complet jusqu'au protocole et à la remise."
+        }
+      ]
+    }
+  },
+  "security": {
+    "hero": {
+      "tagline": "AHOX GmbH",
+      "title": "Sécurité par",
+      "titleBold": "Compétence",
+      "description": "Votre partenaire spécialisé pour le courtage de services de sécurité professionnels - Sur mesure, fiable et au plus haut niveau."
+    },
+    "philosophy": {
+      "title": "Courtage de",
+      "titleAccent": "Solutions de Sécurité",
+      "text1": "AHOX GmbH est spécialisée dans le courtage de services de sécurité professionnels. Nous servons de lien stratégique entre les clients et les entreprises de sécurité de première classe.",
+      "text2": "Nous travaillons en étroite collaboration avec une variété de partenaires certifiés pour vous offrir des solutions sur mesure. Que ce soit pour les banques, les immeubles de bureaux, le commerce de détail ou les complexes résidentiels exclusifs - nous trouvons les bons experts pour votre protection.",
+      "values": [
+        {
+          "title": "Sélection Minutieuse",
+          "description": "Personnel régulièrement formé"
+        },
+        {
+          "title": "Normes les Plus Élevées",
+          "description": "Qualité dans chaque scénario"
+        }
+      ]
+    },
+    "services": {
+      "title": "Portfolio de Services",
+      "subtitle": "Concepts de Sécurité Complets",
+      "items": [
+        {
+          "title": "Services de Sécurité",
+          "description": "Forces de sécurité armées ou non armées pour protéger les personnes, événements ou installations."
+        },
+        {
+          "title": "Systèmes de Surveillance",
+          "description": "Installation et maintenance de systèmes d'alarme, vidéosurveillance et systèmes de contrôle d'accès de pointe."
+        },
+        {
+          "title": "Conseil en Sécurité",
+          "description": "Analyse experte et développement de concepts de sécurité sur mesure pour les entreprises et les particuliers."
+        },
+        {
+          "title": "Cybersécurité",
+          "description": "Identification et défense contre les menaces en ligne telles que le piratage, les fuites de données et la fraude numérique."
+        },
+        {
+          "title": "Formation en Sécurité",
+          "description": "Formation professionnelle aux premiers secours, à l'autodéfense et à la protection incendie pour la prévention des dangers."
+        },
+        {
+          "title": "Services de Détective",
+          "description": "Détectives privés pour l'investigation de crimes, cas de fraude ou autres affaires juridiques."
+        },
+        {
+          "title": "Gestion des Risques",
+          "description": "Évaluation des dangers et création de plans d'action pour une minimisation efficace des risques."
+        },
+        {
+          "title": "Protection d'Événements",
+          "description": "Sécurité complète pour concerts, foires ou événements sportifs par du personnel qualifié."
+        }
+      ]
+    },
+    "sectors": {
+      "title": "Valeurs & Focus.",
+      "description": "Nous accordons une grande importance à la fiabilité et à la satisfaction client. Notre focus est sur les secteurs qui nécessitent la plus haute précision.",
+      "items": [
+        "Banques & Secteur Financier",
+        "Immeubles de Bureaux & Industrie",
+        "Commerce de Détail & Grands Magasins",
+        "Complexes Résidentiels & Propriétés Privées"
+      ],
+      "values": [
+        {
+          "title": "Fiabilité",
+          "description": "Nous garantissons une disponibilité constante et une exécution ponctuelle de tous les services de sécurité."
+        },
+        {
+          "title": "Compétence",
+          "description": "Grâce à notre réseau, nous n'accédons qu'à des spécialistes certifiés avec de nombreuses années d'expérience."
+        },
+        {
+          "title": "Transparence",
+          "description": "Une communication claire et une planification détaillée du déploiement sont la base de nos activités de courtage."
+        },
+        {
+          "title": "Assurance Qualité",
+          "description": "Contrôle constant des services courtés selon les normes de qualité les plus modernes."
+        }
+      ]
+    }
+  },
+  "locationPage": {
+    "elevated": "STRUCTURES",
+    "structures": "ÉLEVÉES.",
+    "description": "Grâce à une exécution précise et une qualité sans compromis, nous avons façonné l'horizon de {{location}}. Notre processus combine intégrité architecturale et précision commerciale.",
+    "features": ["Analyse de Concept", "Approvisionnement Stratégique", "Gestion Structurelle"],
+    "contact": {
+      "title": "PARTENARIAT AVEC NOUS À",
+      "description": "Apportez l'ingénierie professionnelle et la gestion de construction à votre prochaine entreprise. Nous opérons avec une transparence radicale.",
+      "email": "Courrier Électronique",
+      "phone": "Connexion Téléphonique",
+      "button": "Demander des Détails"
+    },
+    "stats": {
+      "projects": "Projets Réalisés",
+      "team": "Membres de l'Équipe",
+      "experience": "Années d'Expérience",
+      "satisfaction": "Satisfaction Client"
+    }
   }
 }
