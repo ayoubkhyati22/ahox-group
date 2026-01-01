@@ -157,12 +157,6 @@ const LocationPage = ({ location }: LocationPageProps) => {
             {t('locationPage.contact.button')} <ArrowRight className="w-4 h-4" />
           </motion.a>
         </div>
-
-        <div className="hidden lg:block absolute top-10 right-10 z-10 pointer-events-none">
-          <span className="text-[12rem] leading-none font-black text-white/10 select-none transform rotate-180 [writing-mode:vertical-lr]">
-            AHOX-CM
-          </span>
-        </div>
       </section>
 
       {/* STATS SECTION */}

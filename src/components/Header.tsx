@@ -20,9 +20,9 @@ const Header = () => {
 
   const navLinks = [
     { path: '/', label: t('nav.home') },
-    { path: '/casablanca', label: t('nav.casablanca') },
     { path: '/dubai', label: t('nav.dubai') },
     { path: '/frankfurt', label: t('nav.frankfurt') },
+    { path: '/casablanca', label: t('nav.casablanca') },
     { path: '/pristina', label: t('nav.pristina') },
   ];
 
