@@ -57,7 +57,7 @@ const Footer = () => {
             className="lg:col-span-1"
           >
             <img 
-              src="/images/ahox-group-main-logo.svg" 
+              src="/images/ahox-group-main-logo-white.png" 
               alt="AHOX Logo" 
               className="h-22 w-auto object-contain mb-6"
             />

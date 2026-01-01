@@ -87,9 +87,13 @@ const Header = () => {
       >
         <div className="container mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
           
-          {/* Logo - Made Bigger */}
+          {/* Logo - Made Bigger - Switches based on scroll */}
           <Link to="/" onClick={handleLogoClick} className="relative z-[80]">
-            <img src="/images/ahox-group-main-logo.svg" alt="AHOX" className="h-16 sm:h-20 w-auto" />
+            <img 
+              src={isScrolled ? "/images/ahox-group-main-logo.svg" : "/images/ahox-group-main-logo-white.png"} 
+              alt="AHOX" 
+              className="h-16 sm:h-20 w-auto transition-opacity duration-300" 
+            />
           </Link>
 
           {/* Desktop Navigation */}
