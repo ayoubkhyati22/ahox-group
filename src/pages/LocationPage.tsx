@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { Building2, Users, Award, TrendingUp, ChevronRight, ArrowRight } from 'lucide-react';
+import { Building2, Users, Award, TrendingUp, ArrowRight } from 'lucide-react';
 
 interface LocationPageProps {
   location: 'casablanca' | 'dubai' | 'frankfurt' | 'pristina';
@@ -27,10 +27,10 @@ const LocationPage = ({ location }: LocationPageProps) => {
       ],
       accentColor: '#2563eb',
       stats: [
-        { icon: Building2, value: '50+', labelKey: 'projects' },
-        { icon: Users, value: '200+', labelKey: 'team' },
-        { icon: Award, value: '15+', labelKey: 'experience' },
-        { icon: TrendingUp, value: '95%', labelKey: 'satisfaction' },
+        { icon: TrendingUp, value: '€120K – €2.5M', labelKey: 'investmentRange' },
+        { icon: Award, value: '#1', labelKey: 'economicCapital' },
+        { icon: Building2, value: '5+', labelKey: 'growthDistricts' },
+        { icon: Users, value: '60%+', labelKey: 'demandConcentration' },
       ],
     },
     dubai: {
@@ -45,10 +45,10 @@ const LocationPage = ({ location }: LocationPageProps) => {
       ],
       accentColor: '#f59e0b',
       stats: [
-        { icon: Building2, value: '80+', labelKey: 'projects' },
-        { icon: Users, value: '300+', labelKey: 'team' },
-        { icon: Award, value: '20+', labelKey: 'experience' },
-        { icon: TrendingUp, value: '98%', labelKey: 'satisfaction' },
+        { icon: TrendingUp, value: '€300K – €10M', labelKey: 'investmentRange' },
+        { icon: Award, value: '0%', labelKey: 'personalTax' },
+        { icon: Users, value: '200+', labelKey: 'investorNationalities' },
+        { icon: Building2, value: 'Top 5', labelKey: 'globalCities' },
       ],
     },
     frankfurt: {
@@ -63,10 +63,10 @@ const LocationPage = ({ location }: LocationPageProps) => {
       ],
       accentColor: '#9333ea',
       stats: [
-        { icon: Building2, value: '120+', labelKey: 'projects' },
-        { icon: Users, value: '400+', labelKey: 'team' },
-        { icon: Award, value: '25+', labelKey: 'experience' },
-        { icon: TrendingUp, value: '99%', labelKey: 'satisfaction' },
+        { icon: TrendingUp, value: '€250K – €5M', labelKey: 'investmentRange' },
+        { icon: Award, value: 'Top 3', labelKey: 'germanCities' },
+        { icon: Building2, value: '300+', labelKey: 'financialInstitutions' },
+        { icon: Users, value: '70+', labelKey: 'investorNationalities' },
       ],
     },
     pristina: {
@@ -81,10 +81,10 @@ const LocationPage = ({ location }: LocationPageProps) => {
       ],
       accentColor: '#10b981',
       stats: [
-        { icon: Building2, value: '35+', labelKey: 'projects' },
-        { icon: Users, value: '150+', labelKey: 'team' },
-        { icon: Award, value: '10+', labelKey: 'experience' },
-        { icon: TrendingUp, value: '96%', labelKey: 'satisfaction' },
+        { icon: TrendingUp, value: '€80K – €1.5M', labelKey: 'investmentRange' },
+        { icon: Award, value: '#1', labelKey: 'fastestGrowing' },
+        { icon: Users, value: '30%+', labelKey: 'diasporaDemand' },
+        { icon: Building2, value: 'Emerging', labelKey: 'residentialMarket' },
       ],
     },
   };
@@ -146,16 +146,6 @@ const LocationPage = ({ location }: LocationPageProps) => {
           >
             {t(`locations.${location}.description`)}
           </motion.p>
-
-          <motion.a
-            href="#contact"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.4 }}
-            className="px-10 py-5 bg-white text-black font-bold uppercase text-sm flex items-center gap-4 hover:bg-gray-200 transition-colors"
-          >
-            {t('locationPage.contact.button')} <ArrowRight className="w-4 h-4" />
-          </motion.a>
         </div>
       </section>
 
@@ -188,23 +178,49 @@ const LocationPage = ({ location }: LocationPageProps) => {
         <div className="grid lg:grid-cols-12 gap-12 items-start">
           
           <div className="lg:col-span-5 flex flex-col gap-10">
-            <h2 className="text-5xl md:text-7xl font-bold tracking-tight">
-              {t('locationPage.elevated')} <br />
-              <span className="text-gray-400">{t('locationPage.structures')}</span>
-            </h2>
-            <p className="text-gray-600 text-lg leading-loose font-light">
-              {t('locationPage.description', { location })}
-            </p>
             
-            <div className="flex flex-col border-t border-black pt-10 gap-6">
-              {(t('locationPage.features', { returnObjects: true }) as string[]).map((item) => (
-                <div key={item} className="flex justify-between items-center group cursor-default">
-                  <span className="text-xl font-bold uppercase group-hover:translate-x-4 transition-transform duration-300">
-                    {item}
-                  </span>
-                  <div className="w-12 h-[2px] bg-black group-hover:w-20 transition-all duration-300" />
+            {/* Market Profile Title */}
+            <div className="border-l-4 border-black pl-6">
+              <h3 className="text-2xl font-bold mb-2">
+                {t(`locations.${location}.title`)}
+              </h3>
+              <p className="text-lg text-gray-600 italic">
+                {t(`locations.${location}.subtitle`)}
+              </p>
+            </div>
+
+            {/* Investor-Friendly Text */}
+            <p className="text-gray-600 text-lg leading-loose font-light">
+              {t(`locations.${location}.description`)}
+            </p>
+
+            {/* Highlights */}
+            <div className="space-y-3">
+              {(t(`locations.${location}.highlights`, { returnObjects: true }) as string[]).map((highlight, index) => (
+                <div key={index} className="flex items-center gap-3">
+                  <div className="w-1.5 h-1.5 bg-black rounded-full" />
+                  <span className="text-gray-700">{highlight}</span>
                 </div>
               ))}
+            </div>
+
+            {/* Ideal For Section */}
+            <div className="border-t border-black pt-8">
+              <h4 className="text-sm font-bold uppercase tracking-widest mb-4 text-gray-500">
+                {t(`locations.${location}.idealFor`)}
+              </h4>
+              <div className="space-y-3">
+                {(t(`locations.${location}.features`, { returnObjects: true }) as string[]).map((feature, index) => (
+                  <div key={index} className="flex items-center gap-3">
+                    <div className="w-5 h-5 border-2 border-black rounded-sm flex items-center justify-center flex-shrink-0">
+                      <svg className="w-3 h-3" viewBox="0 0 12 12" fill="none">
+                        <path d="M2 6L5 9L10 3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </div>
+                    <span className="font-medium">{feature}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
@@ -213,7 +229,7 @@ const LocationPage = ({ location }: LocationPageProps) => {
                whileInView={{ opacity: [0, 1], y: [40, 0] }}
                className="aspect-[3/4] bg-gray-100 relative"
             >
-               <img src={data.gallery[0]} className="w-full h-full object-cover grayscale" />
+               <img src={data.gallery[0]} className="w-full h-full object-cover grayscale" alt={`${location} view 1`} />
                <div className="absolute inset-0 border border-black/5" />
             </motion.div>
             <motion.div 
@@ -221,7 +237,7 @@ const LocationPage = ({ location }: LocationPageProps) => {
                transition={{ delay: 0.2 }}
                className="aspect-[3/4] bg-gray-100 mt-12"
             >
-               <img src={data.gallery[1]} className="w-full h-full object-cover" />
+               <img src={data.gallery[1]} className="w-full h-full object-cover" alt={`${location} view 2`} />
             </motion.div>
           </div>
 

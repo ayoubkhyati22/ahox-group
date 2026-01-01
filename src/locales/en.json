@@ -1,20 +1,19 @@
 {
   "nav": {
-    "home": "Home",
     "casablanca": "Casablanca",
     "dubai": "Dubai",
     "frankfurt": "Frankfurt",
     "pristina": "Pristina"
   },
   "hero": {
-    "title": "CONNECTING CAPITAL WITH OPPORTUNITY",
+    "title": "INTERNATIONAL INVESTMENT & REAL ESTATE CONNECT",
     "subtitle": "Your Access to High-Yield Real Estate Markets of Tomorrow",
     "cta": "Discover Investment Opportunities",
     "scrollDown": "Scroll down"
   },
   "about": {
     "tagline": "International Investment & Real Estate Connect",
-    "text": "As an independent investment facilitator, we link investors with vetted construction companies and real estate sellers in selected growth cities. Our goal: tailored real estate and construction investment concepts with sustainable returns."
+    "text": "We connect capital with opportunity. As an independent investment facilitator, we link investors with vetted construction companies and real estate sellers in selected growth cities. Our goal: tailored real estate and construction investment concepts with sustainable returns."
   },
   "divisions": {
     "title": "OUR SERVICES",
@@ -131,29 +130,28 @@
   "locations": {
     "casablanca": {
       "title": "Casablanca",
-      "subtitle": "Emerging Market with Strong Growth Potential",
-      "description": "Casablanca offers opportunities where markets are just emerging. Rapid urbanization and increasing demand for residential and commercial properties create attractive entry prices.",
-      "idealFor": "Ideal For",
+      "subtitle": "Emerging market with strong growth potential",
+      "description": "Casablanca offers opportunities where markets are just emerging.",
+      "idealFor": "Ideal for:",
       "features": [
         "Early-stage investments",
         "Project developments",
-        "Long-term growth opportunities"
+        "Long-term growth"
       ],
       "highlights": [
         "Rapid urbanization",
-        "Increasing property demand",
-        "Attractive entry prices",
-        "Growing commercial sector"
+        "Increasing demand for residential & commercial properties",
+        "Attractive entry prices"
       ]
     },
     "dubai": {
       "title": "Dubai",
-      "subtitle": "Dynamic Growth & Above-Average Returns",
-      "description": "Dubai represents speed, growth, and global capital flow. With tax-free income and international demand, it's the perfect market for cash-flow oriented investments.",
-      "idealFor": "Ideal For",
+      "subtitle": "Dynamic growth & above-average returns",
+      "description": "Dubai represents speed, growth, and global capital flow.",
+      "idealFor": "Ideal for:",
       "features": [
         "Cash-flow oriented investments",
-        "Short & medium-term returns",
+        "Short- & medium-term returns",
         "International portfolios"
       ],
       "highlights": [
@@ -164,10 +162,10 @@
       ]
     },
     "frankfurt": {
-      "title": "Frankfurt",
-      "subtitle": "Stability & Long-Term Security",
-      "description": "Frankfurt stands for security, stability, and predictable returns. As Europe's financial hub, it offers high demand for residential and commercial real estate with a strong rental market.",
-      "idealFor": "Ideal For",
+      "title": "Frankfurt am Main",
+      "subtitle": "Stability & long-term security",
+      "description": "Frankfurt stands for security, stability, and predictable returns.",
+      "idealFor": "Ideal for:",
       "features": [
         "Capital preservation",
         "Long-term returns",
@@ -175,16 +173,15 @@
       ],
       "highlights": [
         "Europe's financial hub",
-        "High property demand",
-        "Strong rental market",
-        "Stable economic environment"
+        "High demand for residential & commercial real estate",
+        "Strong rental market"
       ]
     },
     "pristina": {
       "title": "Pristina",
-      "subtitle": "Undervalued Market with High Upside",
-      "description": "Pristina is a market for investors who think ahead. With a young population, low entry costs, and few professional investors, it offers first-mover advantage.",
-      "idealFor": "Ideal For",
+      "subtitle": "Undervalued market with high upside potential",
+      "description": "Pristina is a market for investors who think ahead.",
+      "idealFor": "Ideal for:",
       "features": [
         "Developers",
         "Construction investments",
@@ -194,7 +191,7 @@
         "Young population",
         "Low entry costs",
         "Rising demand for new builds",
-        "First-mover advantage"
+        "Few professional investors (first-mover advantage)"
       ]
     }
   },
@@ -432,10 +429,18 @@
       "button": "Request Details"
     },
     "stats": {
-      "projects": "Projects Completed",
-      "team": "Team Members",
-      "experience": "Years Experience",
-      "satisfaction": "Client Satisfaction"
+      "investmentRange": "Investment Range",
+      "germanCities": "German Cities for Real-Estate Investment",
+      "financialInstitutions": "Financial Institutions",
+      "investorNationalities": "Investor Nationalities",
+      "economicCapital": "Economic Capital of Morocco",
+      "growthDistricts": "High-Growth Urban Districts",
+      "demandConcentration": "National Real-Estate Demand Concentration",
+      "personalTax": "Personal Income Tax",
+      "globalCities": "Global Real-Estate Investment Cities",
+      "fastestGrowing": "Fastest-Growing Market in Kosovo",
+      "diasporaDemand": "Diaspora-Driven Demand",
+      "residentialMarket": "High-Growth Residential Market"
     },
     "officeLocation": "Office Location",
     "enterMarket": "Enter Market",
