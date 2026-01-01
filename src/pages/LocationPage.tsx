@@ -1,6 +1,54 @@
 import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 import { Building2, Users, Award, TrendingUp, ArrowRight } from 'lucide-react';
+import { useState, useEffect, useRef } from 'react';
+
+// Animated Counter Component
+const AnimatedCounter = ({ value, duration = 2000 }: { value: string; duration?: number }) => {
+  const [displayValue, setDisplayValue] = useState('0');
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true });
+  
+  useEffect(() => {
+    if (!isInView) return;
+
+    // Extract numeric part from value (e.g., "€120K" -> "120", "60%+" -> "60", "Top 3" -> "3")
+    const numericMatch = value.match(/[\d.]+/);
+    if (!numericMatch) {
+      setDisplayValue(value);
+      return;
+    }
+
+    const targetNumber = parseFloat(numericMatch[0]);
+    const prefix = value.substring(0, value.indexOf(numericMatch[0]));
+    const suffix = value.substring(value.indexOf(numericMatch[0]) + numericMatch[0].length);
+    
+    const startTime = Date.now();
+    const timer = setInterval(() => {
+      const elapsed = Date.now() - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      
+      // Easing function for smooth animation
+      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+      const current = targetNumber * easeOutQuart;
+      
+      if (progress === 1) {
+        setDisplayValue(value);
+        clearInterval(timer);
+      } else {
+        // Format based on whether it's a decimal or integer
+        const formattedNumber = numericMatch[0].includes('.') 
+          ? current.toFixed(1)
+          : Math.floor(current).toString();
+        setDisplayValue(prefix + formattedNumber + suffix);
+      }
+    }, 16); // ~60fps
+
+    return () => clearInterval(timer);
+  }, [isInView, value, duration]);
+
+  return <div ref={ref}>{displayValue}</div>;
+};
 
 interface LocationPageProps {
   location: 'casablanca' | 'dubai' | 'frankfurt' | 'pristina';
@@ -11,20 +59,11 @@ const LocationPage = ({ location }: LocationPageProps) => {
 
   const locationData: Record<string, {
     heroImage: string;
-    gallery: string[];
     accentColor: string;
     stats: { icon: any; value: string; labelKey: string }[];
   }> = {
     casablanca: {
       heroImage: 'https://images.unsplash.com/photo-1539037116277-4db20889f2d4?auto=format&fit=crop&q=80',
-      gallery: [
-        'https://images.unsplash.com/photo-1558011687-e93c5c49e0c7?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1555881400-74d7acaacd8b?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1551918120-9739cb430c6d?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80',
-      ],
       accentColor: '#2563eb',
       stats: [
         { icon: TrendingUp, value: '€120K – €2.5M', labelKey: 'investmentRange' },
@@ -35,14 +74,6 @@ const LocationPage = ({ location }: LocationPageProps) => {
     },
     dubai: {
       heroImage: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&q=80',
-      gallery: [
-        'https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1546412414-e1885259563a?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1512632578888-169bbbc64f33?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1559827260-dc66d52bef19?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1587922546307-776227941871?auto=format&fit=crop&q=80',
-      ],
       accentColor: '#f59e0b',
       stats: [
         { icon: TrendingUp, value: '€300K – €10M', labelKey: 'investmentRange' },
@@ -53,14 +84,6 @@ const LocationPage = ({ location }: LocationPageProps) => {
     },
     frankfurt: {
       heroImage: 'https://images.unsplash.com/photo-1564221710304-0b37c8b9d729?auto=format&fit=crop&q=80',
-      gallery: [
-        'https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1460472178825-e5240623afd5?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80',
-      ],
       accentColor: '#9333ea',
       stats: [
         { icon: TrendingUp, value: '€250K – €5M', labelKey: 'investmentRange' },
@@ -71,14 +94,6 @@ const LocationPage = ({ location }: LocationPageProps) => {
     },
     pristina: {
       heroImage: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&q=80',
-      gallery: [
-        'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1448630360428-65456885c650?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1541976590-713941681591?auto=format&fit=crop&q=80',
-      ],
       accentColor: '#10b981',
       stats: [
         { icon: TrendingUp, value: '€80K – €1.5M', labelKey: 'investmentRange' },
@@ -146,6 +161,16 @@ const LocationPage = ({ location }: LocationPageProps) => {
           >
             {t(`locations.${location}.description`)}
           </motion.p>
+
+          <motion.a
+            href="#contact"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.4 }}
+            className="px-10 py-5 bg-white text-black font-bold uppercase text-sm flex items-center gap-4 hover:bg-gray-200 transition-colors"
+          >
+            {t('locationPage.contact.button')} <ArrowRight className="w-4 h-4" />
+          </motion.a>
         </div>
       </section>
 
@@ -159,13 +184,13 @@ const LocationPage = ({ location }: LocationPageProps) => {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="p-16 flex flex-col gap-4 group hover:bg-white transition-all duration-500"
+              className="p-16 flex flex-col gap-4 group"
             >
-              <stat.icon className="w-6 h-6 text-white group-hover:text-black transition-colors" />
-              <div className="text-5xl font-bold text-white group-hover:text-black transition-colors">
-                {stat.value}
+              <stat.icon className="w-6 h-6 text-white transition-all duration-500 group-hover:scale-110" />
+              <div className="text-5xl font-bold text-white transition-all duration-500">
+                <AnimatedCounter value={stat.value} duration={2000} />
               </div>
-              <div className="text-white/40 group-hover:text-black/60 uppercase tracking-widest text-xs transition-colors">
+              <div className="text-white/40 uppercase tracking-widest text-xs transition-colors duration-500 group-hover:text-white/60">
                 {t(`locationPage.stats.${stat.labelKey}`)}
               </div>
             </motion.div>
@@ -178,6 +203,10 @@ const LocationPage = ({ location }: LocationPageProps) => {
         <div className="grid lg:grid-cols-12 gap-12 items-start">
           
           <div className="lg:col-span-5 flex flex-col gap-10">
+            <h2 className="text-5xl md:text-7xl font-bold tracking-tight">
+              {t('locationPage.elevated')} <br />
+              <span className="text-gray-400">{t('locationPage.structures')}</span>
+            </h2>
             
             {/* Market Profile Title */}
             <div className="border-l-4 border-black pl-6">
@@ -224,48 +253,7 @@ const LocationPage = ({ location }: LocationPageProps) => {
             </div>
           </div>
 
-          <div className="lg:col-span-7 grid grid-cols-2 gap-4">
-            <motion.div 
-               whileInView={{ opacity: [0, 1], y: [40, 0] }}
-               className="aspect-[3/4] bg-gray-100 relative"
-            >
-               <img src={data.gallery[0]} className="w-full h-full object-cover grayscale" alt={`${location} view 1`} />
-               <div className="absolute inset-0 border border-black/5" />
-            </motion.div>
-            <motion.div 
-               whileInView={{ opacity: [0, 1], y: [100, 0] }}
-               transition={{ delay: 0.2 }}
-               className="aspect-[3/4] bg-gray-100 mt-12"
-            >
-               <img src={data.gallery[1]} className="w-full h-full object-cover" alt={`${location} view 2`} />
-            </motion.div>
-          </div>
 
-        </div>
-      </section>
-
-      {/* GALLERY SECTION */}
-      <section className="bg-[#f2f2f2] py-24 px-6 overflow-hidden">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-0 border-t border-l border-black/10">
-            {data.gallery.slice(2).map((img, i) => (
-              <motion.div
-                key={i}
-                whileHover={{ scale: 0.98 }}
-                className="aspect-square relative overflow-hidden group border-b border-r border-black/10"
-              >
-                <img 
-                  src={img} 
-                  className="w-full h-full object-cover transition-transform duration-1000 grayscale group-hover:grayscale-0 group-hover:scale-110" 
-                />
-                <div className="absolute bottom-0 left-0 bg-white p-4 opacity-0 group-hover:opacity-100 transition-all duration-500">
-                  <span className="font-bold uppercase text-[10px] tracking-widest tracking-[0.2em]">
-                    View Phase 0{i+1}
-                  </span>
-                </div>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 

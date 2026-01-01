@@ -138,17 +138,97 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Philosophy Section */}
-      <section className="py-24 bg-white text-black">
-        <div className="container mx-auto px-6 text-center">
+      {/* Philosophy Section - Redesigned */}
+      <section className="py-32 bg-gradient-to-br from-slate-50 via-white to-slate-50 relative overflow-hidden">
+        {/* Decorative Background Elements */}
+        <div className="absolute inset-0 opacity-[0.03]">
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-gold rounded-full blur-3xl" />
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-teal rounded-full blur-3xl" />
+        </div>
+
+        <div className="container mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="max-w-4xl mx-auto"
+            transition={{ duration: 0.8 }}
+            className="max-w-6xl mx-auto"
           >
-            <span className="text-gold font-black text-[11px] uppercase tracking-[0.5em] mb-8 block">{t('about.tagline')}</span>
-            <p className="text-2xl md:text-4xl leading-snug font-light italic">"{t('about.text')}"</p>
+            {/* Premium Tagline Badge */}
+            <div className="flex justify-center mb-12">
+              <div className="inline-flex items-center gap-3 px-8 py-4 bg-black rounded-full shadow-xl">
+                <div className="flex gap-1">
+                  <div className="w-2 h-2 bg-gold rounded-full animate-pulse" />
+                  <div className="w-2 h-2 bg-teal rounded-full animate-pulse" style={{ animationDelay: '0.2s' }} />
+                  <div className="w-2 h-2 bg-gold rounded-full animate-pulse" style={{ animationDelay: '0.4s' }} />
+                </div>
+                <span className="text-white font-black text-xs uppercase tracking-[0.3em]">
+                  {t('about.tagline')}
+                </span>
+                <div className="flex gap-1">
+                  <div className="w-2 h-2 bg-gold rounded-full animate-pulse" style={{ animationDelay: '0.1s' }} />
+                  <div className="w-2 h-2 bg-teal rounded-full animate-pulse" style={{ animationDelay: '0.3s' }} />
+                  <div className="w-2 h-2 bg-gold rounded-full animate-pulse" style={{ animationDelay: '0.5s' }} />
+                </div>
+              </div>
+            </div>
+
+            {/* Main Quote */}
+            <div className="relative">
+              {/* Decorative Quote Marks */}
+              <div className="absolute -top-8 -left-4 md:-left-12 text-9xl font-serif text-gold/10 leading-none select-none">
+                "
+              </div>
+              <div className="absolute -bottom-16 -right-4 md:-right-12 text-9xl font-serif text-gold/10 leading-none select-none">
+                "
+              </div>
+
+              <blockquote className="relative text-center">
+                <p className="text-3xl md:text-5xl lg:text-6xl leading-tight font-light text-slate-900 mb-8">
+                  {t('about.text')}
+                </p>
+              </blockquote>
+            </div>
+
+            {/* Accent Line */}
+            <div className="flex items-center justify-center gap-4 mt-16">
+              <div className="h-px w-24 bg-gradient-to-r from-transparent via-gold to-transparent" />
+              <div className="w-3 h-3 rotate-45 border-2 border-gold" />
+              <div className="h-px w-24 bg-gradient-to-r from-transparent via-gold to-transparent" />
+            </div>
+
+            {/* Key Points Grid */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="grid md:grid-cols-3 gap-8 mt-20"
+            >
+              <div className="text-center group">
+                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-gold to-yellow-600 rounded-lg flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <Globe2 className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="font-bold text-lg mb-2 text-slate-900">Global Network</h3>
+                <p className="text-slate-600 text-sm">Connecting investors across four strategic markets</p>
+              </div>
+
+              <div className="text-center group">
+                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-teal to-cyan-600 rounded-lg flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <Shield className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="font-bold text-lg mb-2 text-slate-900">Verified Partners</h3>
+                <p className="text-slate-600 text-sm">Vetted construction companies and real estate professionals</p>
+              </div>
+
+              <div className="text-center group">
+                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-purple-600 to-purple-800 rounded-lg flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <TrendingUp className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="font-bold text-lg mb-2 text-slate-900">Sustainable Returns</h3>
+                <p className="text-slate-600 text-sm">Tailored investment concepts with long-term value</p>
+              </div>
+            </motion.div>
           </motion.div>
         </div>
       </section>
@@ -353,6 +433,176 @@ const HomePage = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* --- INVESTMENT PROCESS SECTION --- */}
+      <section className="py-32 bg-white relative overflow-hidden">
+        <div className="container mx-auto px-6">
+          {/* Section Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-20"
+          >
+            <div className="inline-flex items-center gap-3 px-6 py-3 bg-black/5 rounded-full mb-6">
+              <div className="w-2 h-2 bg-teal rounded-full" />
+              <span className="text-sm font-bold uppercase tracking-[0.3em] text-slate-600">
+                How We Work
+              </span>
+              <div className="w-2 h-2 bg-teal rounded-full" />
+            </div>
+            <h2 className="text-5xl md:text-7xl font-black text-slate-900 mb-6 uppercase tracking-tighter">
+              {t('services.title')}
+            </h2>
+            <p className="text-xl text-slate-600 max-w-2xl mx-auto font-light">
+              {t('services.subtitle')}
+            </p>
+          </motion.div>
+
+          {/* Process Timeline */}
+          <div className="max-w-5xl mx-auto relative">
+            {/* Vertical Line */}
+            <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-teal via-gold to-teal opacity-20" />
+
+            {/* Steps */}
+            <div className="space-y-16">
+              {(t('services.steps', { returnObjects: true }) as any[]).map((step, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className={`flex items-center gap-8 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
+                >
+                  {/* Content */}
+                  <div className={`flex-1 ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
+                    <div className="bg-white border-2 border-slate-100 rounded-lg p-8 hover:border-teal/30 hover:shadow-xl transition-all duration-300 group">
+                      <div className={`flex items-center gap-4 mb-4 ${index % 2 === 0 ? 'md:justify-end' : 'md:justify-start'}`}>
+                        <div className="px-4 py-1 bg-teal/10 rounded-full">
+                          <span className="text-teal font-black text-sm">{step.number}</span>
+                        </div>
+                        <h3 className="text-2xl font-bold text-slate-900 group-hover:text-teal transition-colors">
+                          {step.title}
+                        </h3>
+                      </div>
+                      <p className="text-slate-600 leading-relaxed">
+                        {step.description}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Center Node */}
+                  <div className="relative z-10 flex-shrink-0">
+                    <div className="w-16 h-16 bg-gradient-to-br from-teal to-cyan-600 rounded-full flex items-center justify-center shadow-lg shadow-teal/20">
+                      <span className="text-white font-black text-xl">{step.number}</span>
+                    </div>
+                  </div>
+
+                  {/* Spacer for alternating layout */}
+                  <div className="flex-1 hidden md:block" />
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
+          {/* Bottom CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mt-20"
+          >
+            <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-teal/10 to-gold/10 rounded-full border border-teal/20">
+              <CheckCircle2 className="w-5 h-5 text-teal" />
+              <span className="text-slate-700 font-semibold">Structured Process · Professional Support · Proven Results</span>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* --- TARGET AUDIENCE SECTION --- */}
+      <section className="py-32 bg-gradient-to-br from-slate-900 via-black to-slate-900 relative overflow-hidden">
+        {/* Decorative Background */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gold rounded-full blur-3xl" />
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-teal rounded-full blur-3xl" />
+        </div>
+
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="max-w-4xl mx-auto">
+            {/* Header */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-5xl md:text-7xl font-black text-white mb-8 uppercase tracking-tighter">
+                {t('targetAudience.title')}
+              </h2>
+              <div className="h-px w-32 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mb-8" />
+              <p className="text-2xl md:text-3xl text-white/80 font-light italic leading-relaxed">
+                "{t('targetAudience.subtitle')}"
+              </p>
+            </motion.div>
+
+            {/* Investor Types Grid */}
+            <div className="grid md:grid-cols-2 gap-6">
+              {(t('targetAudience.investors', { returnObjects: true }) as string[]).map((investor, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  whileHover={{ scale: 1.02, x: 5 }}
+                  className="group"
+                >
+                  <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6 hover:bg-white/10 hover:border-gold/50 transition-all duration-300">
+                    {/* Corner accent */}
+                    <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-gold/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-lg" />
+                    
+                    <div className="flex items-center gap-4">
+                      <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-gold to-yellow-600 rounded-lg flex items-center justify-center">
+                        <span className="text-black font-black text-lg">{index + 1}</span>
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold text-white group-hover:text-gold transition-colors">
+                          {investor}
+                        </h3>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Bottom Statement */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.6 }}
+              className="mt-16 text-center"
+            >
+              <div className="inline-flex flex-col gap-4 px-8 py-6 bg-gradient-to-r from-gold/10 to-teal/10 backdrop-blur-xl border border-gold/20 rounded-2xl">
+                <div className="flex items-center justify-center gap-2">
+                  <div className="w-2 h-2 bg-gold rounded-full animate-pulse" />
+                  <span className="text-gold font-black text-xs uppercase tracking-[0.3em]">
+                    Your Investment Partner
+                  </span>
+                  <div className="w-2 h-2 bg-gold rounded-full animate-pulse" />
+                </div>
+                <p className="text-white/90 text-lg font-light">
+                  International real estate investments. <br />
+                  <span className="font-semibold">Personally facilitated. Strategically structured.</span>
+                </p>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>

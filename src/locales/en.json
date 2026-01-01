@@ -6,14 +6,14 @@
     "pristina": "Pristina"
   },
   "hero": {
-    "title": "INTERNATIONAL INVESTMENT & REAL ESTATE CONNECT",
+    "title": "CONNECTING CAPITAL WITH OPPORTUNITY",
     "subtitle": "Your Access to High-Yield Real Estate Markets of Tomorrow",
     "cta": "Discover Investment Opportunities",
     "scrollDown": "Scroll down"
   },
   "about": {
     "tagline": "International Investment & Real Estate Connect",
-    "text": "We connect capital with opportunity. As an independent investment facilitator, we link investors with vetted construction companies and real estate sellers in selected growth cities. Our goal: tailored real estate and construction investment concepts with sustainable returns."
+    "text": "As an independent investment facilitator, we link investors with vetted construction companies and real estate sellers in selected growth cities. Our goal: tailored real estate and construction investment concepts with sustainable returns."
   },
   "divisions": {
     "title": "OUR SERVICES",
@@ -197,6 +197,7 @@
   },
   "targetAudience": {
     "title": "WHO WE WORK WITH",
+    "subtitle": "For people who want their capital to work, not just sit idle.",
     "investors": [
       "Private Investors",
       "Entrepreneurs",

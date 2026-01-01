@@ -19,12 +19,12 @@ const Footer = () => {
     {
       icon: Mail,
       title: t('footer.email'),
-      content: ['info@ahox-cm.de'],
+      content: ['info@ahox-group.com'],
     },
     {
       icon: Globe,
       title: t('footer.website'),
-      content: ['www.ahox-cm.de'],
+      content: ['www.ahox-group.com'],
     },
   ];
 
@@ -61,10 +61,7 @@ const Footer = () => {
               alt="AHOX Logo" 
               className="h-22 w-auto object-contain mb-6"
             />
-            <p className="text-gray-400 leading-relaxed mb-6">
-              {t('about.text')}
-            </p>
-            <div className="flex gap-4">
+            {/* <div className="flex gap-4">
               <a href="#" className="w-10 h-10 bg-gold/10 hover:bg-gold rounded-lg flex items-center justify-center transition-colors">
                 <span className="text-gold hover:text-white text-xl">f</span>
               </a>
@@ -74,7 +71,7 @@ const Footer = () => {
               <a href="#" className="w-10 h-10 bg-gold/10 hover:bg-gold rounded-lg flex items-center justify-center transition-colors">
                 <span className="text-gold hover:text-white text-xl">𝕏</span>
               </a>
-            </div>
+            </div> */}
           </motion.div>
 
           {/* Contact Information */}
@@ -142,10 +139,6 @@ const Footer = () => {
               ))}
             </ul>
             
-            <div className="mt-8 p-4 bg-gold/10 rounded-lg border border-gold/20">
-              <p className="text-sm text-gray-300 font-semibold mb-1">{t('footer.ceo')}</p>
-              <p className="text-gold font-bold">Armend Hoxhaj</p>
-            </div>
           </motion.div>
 
           {/* Services */}
@@ -164,17 +157,6 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-
-            <div className="p-4 bg-gradient-to-br from-gold/20 to-orange/20 rounded-lg border border-gold/30">
-              <p className="text-sm font-semibold mb-2">{t('footer.readyToStart')}</p>
-              <a 
-                href="mailto:info@ahox-cm.de"
-                className="inline-flex items-center gap-2 bg-gold text-black px-4 py-2 rounded-lg font-bold hover:bg-orange transition-colors text-sm"
-              >
-                {t('footer.getInTouch')}
-                <span>→</span>
-              </a>
-            </div>
           </motion.div>
         </div>
       </div>
@@ -183,15 +165,15 @@ const Footer = () => {
       <div className="border-t border-gray-800">
         <div className="container mx-auto px-6 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-400 text-sm text-center md:text-left">
+            {/* <p className="text-gray-400 text-sm text-center md:text-left">
               © {new Date().getFullYear()} AHOX GmbH. {t('footer.rights')}
-            </p>
-            <div className="flex flex-wrap justify-center gap-6 text-sm">
+            </p> */}
+            {/* <div className="flex flex-wrap justify-center gap-6 text-sm">
               <a href="#" className="text-gray-400 hover:text-gold transition-colors">{t('footer.privacy')}</a>
               <a href="#" className="text-gray-400 hover:text-gold transition-colors">{t('footer.terms')}</a>
               <a href="#" className="text-gray-400 hover:text-gold transition-colors">{t('footer.impressum')}</a>
               <a href="#" className="text-gray-400 hover:text-gold transition-colors">{t('footer.datenschutz')}</a>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
