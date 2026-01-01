@@ -1,65 +1,65 @@
 {
   "nav": {
-    "home": "Startseite",
+    "home": "Start",
     "casablanca": "Casablanca",
     "dubai": "Dubai",
     "frankfurt": "Frankfurt",
     "pristina": "Pristina"
   },
   "hero": {
-    "title": "KAPITAL MIT CHANCEN VERBINDEN",
-    "subtitle": "Ihr Zugang zu renditestarken Immobilienmärkten von morgen",
-    "cta": "Investmentchancen Entdecken",
-    "scrollDown": "Nach unten scrollen"
+    "title": "KAPITAL & CHANCEN",
+    "subtitle": "Ihr Zugang zu renditestarken Immobilienmärkten",
+    "cta": "Chancen Entdecken",
+    "scrollDown": "Mehr"
   },
   "about": {
-    "tagline": "Internationaler Investment- & Immobilien-Connect",
+    "tagline": "Investment & Immobilien-Connect",
     "text": "Als unabhängiger Investment-Facilitator verknüpfen wir Investoren mit geprüften Bauunternehmen und Immobilienverkäufern in ausgewählten Wachstumsstädten. Unser Ziel: maßgeschneiderte Immobilien- und Bau-Investmentkonzepte mit nachhaltigen Renditen."
   },
   "divisions": {
-    "title": "UNSERE DIENSTLEISTUNGEN",
-    "subtitle": "Wir sind die Experten für Bauleistungen, Immobilien und Sicherheit",
+    "title": "DIENSTLEISTUNGEN",
+    "subtitle": "Experten für Bau, Immobilien und Sicherheit",
     "construction": {
-      "title": "Bauwesen & Management",
-      "description": "Professionelle Bauleistungen und Projektmanagement"
+      "title": "Bau & Management",
+      "description": "Bauleistungen und Projektmanagement"
     },
     "realEstate": {
       "title": "Immobilien",
-      "description": "Immobilienvermittlung und Investmentberatung"
+      "description": "Vermittlung und Investmentberatung"
     },
     "security": {
       "title": "Sicherheit",
       "description": "Umfassende Sicherheitsdienstleistungen"
     },
-    "learnMore": "Mehr Erfahren"
+    "learnMore": "Mehr"
   },
   "value": {
-    "title": "WARUM MIT UNS INVESTIEREN",
-    "subtitle": "Wir verkaufen keine Immobilien – wir strukturieren Investments.",
+    "title": "IHRE VORTEILE",
+    "subtitle": "Wir strukturieren Investments.",
     "benefits": [
       {
-        "title": "Off-Market-Zugang",
-        "description": "Exklusiver Zugang zu Projekten, die nicht auf dem öffentlichen Markt verfügbar sind"
+        "title": "Off-Market",
+        "description": "Exklusiver Zugang zu nicht-öffentlichen Projekten"
       },
       {
         "title": "Lokale Partner",
-        "description": "Geprüfte Bauunternehmen und Partner vor Ort in jeder Stadt"
+        "description": "Geprüfte Partner vor Ort in jeder Stadt"
       },
       {
-        "title": "Maßgeschneiderte Konzepte",
-        "description": "Investmentstrategien zugeschnitten auf Ihre spezifischen Ziele und Ihr Risikoprofil"
+        "title": "Maßgeschneidert",
+        "description": "Strategien für Ihre Ziele und Ihr Risikoprofil"
       },
       {
         "title": "Risikoreduktion",
-        "description": "Reduziertes Risiko durch gründlich geprüfte Strukturen und Prozesse"
+        "description": "Geprüfte Strukturen und Prozesse"
       },
       {
         "title": "Zeiteffizienz",
-        "description": "Zeit sparen mit klarer Entscheidungsunterstützung und Expertenberatung"
+        "description": "Klare Entscheidungsunterstützung"
       },
       {
-        "title": "Strategische Vermittlung",
-        "description": "Ihr vertrauenswürdiger Partner vom Konzept bis zum Abschluss"
+        "title": "Vermittlung",
+        "description": "Ihr Partner bis zum Abschluss"
       }
     ],
     "engineering": "Wertschöpfung",
@@ -67,54 +67,54 @@
     "frameworks": "Strukturen"
   },
   "services": {
-    "title": "UNSER INVESTMENTPROZESS",
-    "subtitle": "Ein Ansprechpartner – mehrere Märkte",
+    "title": "INVESTMENTPROZESS",
+    "subtitle": "Ein Partner – mehrere Märkte",
     "steps": [
       {
         "number": "01",
-        "title": "Investoren-Bedarfsanalyse",
-        "description": "Wir analysieren Ihr Budget, Ihre Renditeziele, Risikotoleranz und bevorzugte Standorte, um Ihre Investmentziele zu verstehen."
+        "title": "Bedarfsanalyse",
+        "description": "Wir analysieren Budget, Renditeziele und Risikotoleranz."
       },
       {
         "number": "02",
         "title": "Projekt-Matching",
-        "description": "Auswahl geeigneter Bauunternehmen und Verkäufer, die Ihren Anforderungen entsprechen."
+        "description": "Auswahl passender Partner für Ihre Anforderungen."
       },
       {
         "number": "03",
         "title": "Konzeptentwicklung",
-        "description": "Wir entwickeln die Investmentstruktur, das Bau- oder Kaufmodell und Rendite-Szenarien."
+        "description": "Investmentstruktur und Rendite-Szenarien."
       },
       {
         "number": "04",
-        "title": "Vermittlung & Koordination",
-        "description": "Professionelle Koordination zwischen Investor, Bauunternehmen und Verkäufer."
+        "title": "Koordination",
+        "description": "Vermittlung zwischen allen Parteien."
       },
       {
         "number": "05",
-        "title": "Unterstützung bis zum Abschluss",
-        "description": "Kontinuierliche Unterstützung und Begleitung während des gesamten Investmentprozesses."
+        "title": "Bis zum Abschluss",
+        "description": "Kontinuierliche Begleitung des Prozesses."
       }
     ]
   },
   "cities": {
     "title": "INVESTMENTMÄRKTE",
-    "subtitle": "Vier strategische Städte mit unterschiedlichen Investment-Profilen"
+    "subtitle": "Vier strategische Städte"
   },
   "cta": {
-    "title": "Bereit, Ihr Portfolio aufzubauen?",
-    "subtitle": "Für Menschen, die wollen, dass ihr Kapital arbeitet, nicht nur ruht.",
-    "button": "Persönliche Investment-Analyse Anfordern",
-    "secondaryButton": "Zugang zu Exklusiven Projekten"
+    "title": "Portfolio aufbauen?",
+    "subtitle": "Für Menschen, die ihr Kapital arbeiten lassen.",
+    "button": "Investment-Analyse",
+    "secondaryButton": "Exklusive Projekte"
   },
   "footer": {
     "rights": "Alle Rechte vorbehalten",
     "tagline": "Intelligentes Kapital. Starke Verbindungen.",
-    "contact": "Kontaktieren Sie uns",
-    "locations": "Unsere Standorte",
-    "services": "Unsere Dienstleistungen",
-    "readyToStart": "Bereit, Ihr Projekt zu starten?",
-    "getInTouch": "Kontakt Aufnehmen",
+    "contact": "Kontakt",
+    "locations": "Standorte",
+    "services": "Dienstleistungen",
+    "readyToStart": "Projekt starten?",
+    "getInTouch": "Kontakt",
     "privacy": "Datenschutz",
     "terms": "Nutzungsbedingungen",
     "impressum": "Impressum",
@@ -131,81 +131,81 @@
   "locations": {
     "casablanca": {
       "title": "Casablanca",
-      "subtitle": "Aufstrebender Markt mit starkem Wachstumspotenzial",
+      "subtitle": "Starkes Wachstumspotenzial",
       "description": "Casablanca bietet Chancen dort, wo Märkte gerade erst entstehen. Schnelle Urbanisierung und steigende Nachfrage nach Wohn- und Gewerbeimmobilien schaffen attraktive Einstiegspreise.",
       "idealFor": "Ideal für",
       "features": [
         "Frühphaseninvestitionen",
         "Projektentwicklungen",
-        "Langfristige Wachstumschancen"
+        "Langfristige Chancen"
       ],
       "highlights": [
         "Schnelle Urbanisierung",
-        "Steigende Immobiliennachfrage",
-        "Attraktive Einstiegspreise",
+        "Steigende Nachfrage",
+        "Attraktive Preise",
         "Wachsender Gewerbesektor"
       ]
     },
     "dubai": {
       "title": "Dubai",
-      "subtitle": "Dynamisches Wachstum & Überdurchschnittliche Renditen",
+      "subtitle": "Wachstum & Renditen",
       "description": "Dubai steht für Geschwindigkeit, Wachstum und globalen Kapitalfluss. Mit steuerfreiem Einkommen und internationaler Nachfrage ist es der perfekte Markt für Cashflow-orientierte Investments.",
       "idealFor": "Ideal für",
       "features": [
-        "Cashflow-orientierte Investments",
-        "Kurz- & mittelfristige Renditen",
+        "Cashflow-Investments",
+        "Kurz- & mittelfristig",
         "Internationale Portfolios"
       ],
       "highlights": [
-        "Steuerfreies Einkommen",
+        "Steuerfrei",
         "Internationale Nachfrage",
         "Moderne Neubauten",
-        "Schnelle Projektzyklen"
+        "Schnelle Zyklen"
       ]
     },
     "frankfurt": {
       "title": "Frankfurt",
-      "subtitle": "Stabilität & Langfristige Sicherheit",
+      "subtitle": "Stabilität & Sicherheit",
       "description": "Frankfurt steht für Sicherheit, Stabilität und vorhersehbare Renditen. Als Europas Finanzzentrum bietet es hohe Nachfrage nach Wohn- und Gewerbeimmobilien mit starkem Mietmarkt.",
       "idealFor": "Ideal für",
       "features": [
         "Kapitalerhalt",
         "Langfristige Renditen",
-        "Core & Core+ Investments"
+        "Core Investments"
       ],
       "highlights": [
-        "Europas Finanzzentrum",
-        "Hohe Immobiliennachfrage",
+        "Finanzzentrum",
+        "Hohe Nachfrage",
         "Starker Mietmarkt",
-        "Stabiles Wirtschaftsumfeld"
+        "Stabiles Umfeld"
       ]
     },
     "pristina": {
       "title": "Pristina",
-      "subtitle": "Unterbewerteter Markt mit Hohem Aufwärtspotenzial",
+      "subtitle": "Hohes Aufwärtspotenzial",
       "description": "Pristina ist ein Markt für Investoren, die vorausdenken. Mit junger Bevölkerung, niedrigen Einstiegskosten und wenigen professionellen Investoren bietet es First-Mover-Vorteile.",
       "idealFor": "Ideal für",
       "features": [
         "Entwickler",
         "Bauinvestitionen",
-        "Chancen mit höheren Margen"
+        "Höhere Margen"
       ],
       "highlights": [
         "Junge Bevölkerung",
-        "Niedrige Einstiegskosten",
-        "Steigende Nachfrage nach Neubauten",
-        "First-Mover-Vorteil"
+        "Niedrige Kosten",
+        "Steigende Nachfrage",
+        "First-Mover"
       ]
     }
   },
   "targetAudience": {
-    "title": "MIT WEM WIR ARBEITEN",
+    "title": "ZIELGRUPPE",
     "investors": [
       "Privatinvestoren",
       "Unternehmer",
       "Family Offices",
       "Kapitalanleger",
-      "Vermögensaufbauer & Diversifizierer"
+      "Vermögensaufbauer"
     ]
   },
   "construction": {
@@ -213,57 +213,57 @@
       "tagline": "AHOX GmbH",
       "title": "Effizienz am",
       "titleBold": "Bauprojekt",
-      "description": "Professionelle Vermittlung von Baudienstleistungen – Wir verbinden Bauherren mit den qualifiziertesten Fachkräften der Industrie."
+      "description": "Vermittlung von Baudienstleistungen – Wir verbinden Bauherren mit qualifizierten Fachkräften."
     },
     "philosophy": {
-      "title": "Strategische Vermittlung für",
-      "titleAccent": "höchste Qualitätsstandards",
+      "title": "Vermittlung für",
+      "titleAccent": "Qualitätsstandards",
       "text1": "Die Vermittlung von Baudienstleistungen spielt eine entscheidende Rolle in der modernen Bauindustrie. Wir von der AHOX GmbH unterstützen Bauherren dabei, die richtigen Partner für Planung, Ausführung und Fertigstellung zu finden.",
       "text2": "Dabei legen wir größten Wert auf die Prüfung von Referenzen, Erfahrungen und Zertifizierungen. Unser Ziel ist eine reibungslose und effiziente Durchführung Ihrer Bauvorhaben – vom Wohnhaus bis zum Gewerbeprojekt.",
-      "quote": "Wir fördern die Zusammenarbeit und Effizienz in der Bauindustrie durch qualifizierte Selektion."
+      "quote": "Wir fördern Zusammenarbeit und Effizienz durch qualifizierte Selektion."
     },
     "services": {
-      "title": "Unser Aufgabengebiet",
+      "title": "Aufgabengebiet",
       "subtitle": "Umfassende Baudienstleistungen",
       "categories": {
         "interior": {
-          "title": "Innenausbau & Handwerk",
-          "items": ["Bodenbelagsarbeiten", "Maler- und Putzarbeiten", "Trockenbau & Tapezieren", "Türen- & Zargeneinbau"]
+          "title": "Innenausbau",
+          "items": ["Bodenbeläge", "Maler & Putz", "Trockenbau", "Türen & Zargen"]
         },
         "energy": {
-          "title": "Energetik & Sanierung",
-          "items": ["Energetische Modernisierung", "Fassadenbau & Dach", "Solarenergie", "Effiziente Heiztechnik"]
+          "title": "Energetik",
+          "items": ["Modernisierung", "Fassade & Dach", "Solarenergie", "Heiztechnik"]
         },
         "technical": {
-          "title": "Technik & Außenanlagen",
-          "items": ["Elektroarbeiten", "Heizung / Sanitär", "Garten- & Landschaftsbau", "Fenster & Markisen"]
+          "title": "Technik",
+          "items": ["Elektroarbeiten", "Heizung / Sanitär", "Gartenbau", "Fenster"]
         },
         "logistics": {
-          "title": "Logistik & Management",
-          "items": ["Abbrucharbeiten", "Umzugskoordination", "Gebäudereinigung", "Innen- & Außeninterieur"]
+          "title": "Logistik",
+          "items": ["Abbruch", "Umzug", "Reinigung", "Interieur"]
         }
       }
     },
     "value": {
       "title": "Mehrwert durch",
-      "titleAccent": "Professionelles Management.",
+      "titleAccent": "Management.",
       "benefits": [
         {
-          "title": "Vertrags- & Konditionsverhandlung",
-          "description": "Wir unterstützen bei der Erstellung von Verträgen und klären finanzielle Vereinbarungen, um Missverständnisse und Streitigkeiten zu vermeiden."
+          "title": "Vertragsverhandlung",
+          "description": "Unterstützung bei Verträgen und Konditionen."
         },
         {
           "title": "Qualitätssicherung",
-          "description": "Die Auswahl der Dienstleister erfolgt nach strengen Kriterien hinsichtlich Zertifizierung und Projekterfahrung."
+          "description": "Auswahl nach strengen Kriterien."
         },
         {
-          "title": "Vorteile für Dienstleister",
-          "description": "Wir erhöhen die Sichtbarkeit und Reichweite unserer Partnerunternehmen und ermöglichen so den Ausbau ihres Geschäftsfeldes."
+          "title": "Für Dienstleister",
+          "description": "Erhöhte Sichtbarkeit und Reichweite."
         }
       ],
       "promise": {
         "title": "Unser Versprechen",
-        "text": "Ob es um den Bau von Wohnhäusern, Gewerbegebäuden oder Infrastrukturprojekten geht – die AHOX GmbH ist Ihr zentraler Ankerpunkt für den Erfolg und die Qualität Ihrer Bauvorhaben.",
+        "text": "Ob Wohnhäuser, Gewerbegebäude oder Infrastruktur – die AHOX GmbH ist Ihr Ankerpunkt für Erfolg und Qualität.",
         "signature": "AHOX Team"
       }
     }
@@ -273,58 +273,58 @@
       "tagline": "AHOX GmbH",
       "title": "Exzellenz in der",
       "titleBold": "Immobilienvermittlung",
-      "description": "Ihr strategischer Partner für die Vermittlung von Immobilien und Grundstücken – professionell, marktorientiert und diskret."
+      "description": "Ihr Partner für Immobilien und Grundstücke – professionell und diskret."
     },
     "philosophy": {
-      "title": "Die Brücke zwischen",
-      "titleAccent": "Angebot und Nachfrage",
+      "title": "Die Brücke",
+      "titleAccent": "Angebot & Nachfrage",
       "text1": "Die Vermittlung von Immobilien ist eine bedeutende Tätigkeit in der Immobilienbranche. Die AHOX GmbH dient als spezialisiertes Vermittlungsunternehmen zwischen potenziellen Käufern und Verkäufern von Immobilien und Grundstücken.",
       "text2": "Unser Ziel ist es, den Verkaufsprozess effizient und reibungslos abzuwickeln. Dabei stützen wir uns auf fundiertes Fachwissen über lokale Märkte, rechtliche Rahmenbedingungen und erprobte Verhandlungstechniken."
     },
     "services": {
       "title": "Dienstleistungen",
-      "subtitle": "Unser Aufgabengebiet in der Vermittlung",
+      "subtitle": "Unser Aufgabengebiet",
       "items": [
         {
-          "title": "Immobilienakquise",
-          "description": "Wir suchen aktiv nach potenziellen Verkaufsobjekten durch gezielte Recherche und unser weitreichendes Netzwerk zu Eigentümern und Projektentwicklern."
+          "title": "Akquise",
+          "description": "Aktive Suche nach Verkaufsobjekten."
         },
         {
-          "title": "Marktgerechte Bewertung",
-          "description": "Fundierte Wertermittlung basierend auf tiefgreifender Kenntnis lokaler Märkte und rechtlicher Rahmenbedingungen."
+          "title": "Bewertung",
+          "description": "Fundierte Wertermittlung."
         },
         {
-          "title": "Verhandlungsführung",
-          "description": "Professionelle Koordination zwischen Käufer und Verkäufer zur Klärung von Preisen, Bedingungen und Vertragsdetails."
+          "title": "Verhandlung",
+          "description": "Koordination zwischen Parteien."
         }
       ]
     },
     "process": {
-      "title": "Der AHOX Weg zum Erfolg.",
-      "description": "Nachdem die Immobilie für Sie gefunden wurde, begleiten wir Sie durch jeden entscheidenden Schritt der Transaktion.",
+      "title": "Der AHOX Weg.",
+      "description": "Begleitung durch jeden Schritt der Transaktion.",
       "checklist": [
-        "Gezielte Akquise von Verkaufsobjekten",
-        "Professionelle Immobilienbewertung",
-        "Kooperation mit Bauunternehmen",
-        "Durchführung von Besichtigungen",
-        "Finale Vertragsverhandlungen"
+        "Gezielte Akquise",
+        "Bewertung",
+        "Kooperation",
+        "Besichtigungen",
+        "Verhandlungen"
       ],
       "steps": [
         {
-          "title": "Recherche & Akquise",
-          "text": "Wir identifizieren Potenziale durch Kooperationen mit Projektentwicklern."
+          "title": "Recherche",
+          "text": "Wir identifizieren Potenziale."
         },
         {
-          "title": "Bewertung & Marktcheck",
-          "text": "Analyse der lokalen Marktgegebenheiten für eine optimale Preisstrategie."
+          "title": "Marktcheck",
+          "text": "Analyse für optimale Preisstrategie."
         },
         {
-          "title": "Verhandlung & Klärung",
-          "text": "Wir führen Verhandlungen mit Eigentümern über Preise und Bedingungen."
+          "title": "Verhandlung",
+          "text": "Klärung von Preisen und Bedingungen."
         },
         {
-          "title": "Abschlussbegleitung",
-          "text": "Vollständige Begleitung bis zur Protokollierung und Übergabe."
+          "title": "Abschluss",
+          "text": "Begleitung bis zur Übergabe."
         }
       ]
     }
@@ -334,7 +334,7 @@
       "tagline": "AHOX GmbH",
       "title": "Sicherheit durch",
       "titleBold": "Kompetenz",
-      "description": "Ihr spezialisierter Partner für die Vermittlung professioneller Sicherheitsdienstleistungen – Maßgeschneidert, zuverlässig und auf höchstem Niveau."
+      "description": "Ihr Partner für Sicherheitsdienstleistungen – Maßgeschneidert und zuverlässig."
     },
     "philosophy": {
       "title": "Vermittlung von",
@@ -343,78 +343,78 @@
       "text2": "Wir arbeiten eng mit einer Vielzahl zertifizierter Partner zusammen, um Ihnen maßgeschneiderte Lösungen zu bieten. Ob Banken, Bürogebäude, Einzelhandel oder exklusive Wohnanlagen – wir finden die passenden Experten für Ihren Schutz.",
       "values": [
         {
-          "title": "Sorgfältige Auswahl",
-          "description": "Regelmäßig geschultes Personal"
+          "title": "Sorgfalt",
+          "description": "Geschultes Personal"
         },
         {
-          "title": "Höchste Standards",
+          "title": "Standards",
           "description": "Qualität in jedem Szenario"
         }
       ]
     },
     "services": {
-      "title": "Dienstleistungsportfolio",
+      "title": "Portfolio",
       "subtitle": "Umfassende Sicherheitskonzepte",
       "items": [
         {
           "title": "Sicherheitsdienste",
-          "description": "Bewaffnete oder unbewaffnete Sicherheitskräfte zum Schutz von Personen, Veranstaltungen oder Einrichtungen."
+          "description": "Schutz von Personen und Einrichtungen."
         },
         {
-          "title": "Überwachungssysteme",
-          "description": "Installation und Wartung von Alarmanlagen, Videoüberwachung und modernsten Zugangskontrollsystemen."
+          "title": "Überwachung",
+          "description": "Installation von Alarmanlagen und Videoüberwachung."
         },
         {
-          "title": "Sicherheitsberatung",
-          "description": "Expertenanalyse und Entwicklung maßgeschneiderter Sicherheitskonzepte für Unternehmen und Privatpersonen."
+          "title": "Beratung",
+          "description": "Maßgeschneiderte Sicherheitskonzepte."
         },
         {
           "title": "Cybersecurity",
-          "description": "Identifizierung und Abwehr von Online-Bedrohungen wie Hacking, Datenlecks und digitalem Betrug."
+          "description": "Abwehr von Online-Bedrohungen."
         },
         {
-          "title": "Sicherheitstraining",
-          "description": "Professionelle Schulungen in Erster Hilfe, Selbstverteidigung und Brandschutz zur Gefahrenprävention."
+          "title": "Training",
+          "description": "Schulungen zur Gefahrenprävention."
         },
         {
           "title": "Detektivdienste",
-          "description": "Privatdetektive zur Aufklärung von Straftaten, Betrugsfällen oder anderen rechtlichen Angelegenheiten."
+          "description": "Aufklärung von Straftaten."
         },
         {
           "title": "Risikomanagement",
-          "description": "Gefahrenbewertung und Erstellung von Maßnahmenplänen zur effektiven Risikominimierung."
+          "description": "Gefahrenbewertung und Maßnahmenpläne."
         },
         {
-          "title": "Veranstaltungsschutz",
-          "description": "Umfassende Sicherheit für Konzerte, Messen oder Sportveranstaltungen durch qualifiziertes Personal."
+          "title": "Veranstaltungen",
+          "description": "Umfassende Sicherheit für Events."
         }
       ]
     },
     "sectors": {
       "title": "Werte & Fokus.",
-      "description": "Wir legen großen Wert auf Zuverlässigkeit und Kundenzufriedenheit. Unser Fokus liegt auf Sektoren, die höchste Präzision erfordern.",
+      "description": "Wir legen großen Wert auf Zuverlässigkeit. Unser Fokus liegt auf Sektoren, die höchste Präzision erfordern.",
       "items": [
-        "Banken & Finanzsektor",
-        "Bürogebäude & Industrie",
-        "Einzelhandel & Warenhäuser",
-        "Wohnanlagen & Private Estates"
+        "Banken & Finanzen",
+        "Büros & Industrie",
+        "Einzelhandel",
+        "Wohnanlagen"
       ],
       "values": [
         {
           "title": "Zuverlässigkeit",
-          "description": "Wir garantieren ständige Erreichbarkeit und termingerechte Ausführung aller Sicherheitsleistungen."
+          "description": "Ständige Erreichbarkeit."
         },
         {
           "title": "Kompetenz",
-          "description": "Durch unser Netzwerk greifen wir nur auf zertifizierte Fachkräfte mit langjähriger Erfahrung zurück."
+          "description": "Zertifizierte Fachkräfte."
         },
         {
           "title": "Transparenz",
-          "description": "Klare Kommunikation und detaillierte Einsatzplanung sind die Basis unserer Vermittlungstätigkeit."
+          "description": "Klare Kommunikation."
         },
         {
-          "title": "Qualitätssicherung",
-          "description": "Ständige Kontrolle der vermittelten Leistungen nach modernsten Qualitätsstandards."
+          "title": "Qualität",
+          "description": "Moderne Standards."
         }
       ]
     }
@@ -423,34 +423,34 @@
     "elevated": "ERHÖHTE",
     "structures": "STRUKTUREN.",
     "description": "Durch präzise Ausführung und kompromisslose Qualität haben wir die Skyline von {{location}} geprägt. Unser Prozess kombiniert architektonische Integrität mit kommerzieller Präzision.",
-    "features": ["Konzeptanalyse", "Strategische Beschaffung", "Strukturmanagement"],
+    "features": ["Konzeptanalyse", "Beschaffung", "Management"],
     "contact": {
-      "title": "PARTNERSCHAFT MIT UNS IN",
-      "description": "Bringen Sie professionelles Engineering und Baumanagement in Ihr nächstes Vorhaben. Wir arbeiten mit radikaler Transparenz.",
-      "email": "Elektronische Post",
-      "phone": "Telefonverbindung",
-      "button": "Details Anfordern"
+      "title": "PARTNERSCHAFT IN",
+      "description": "Bringen Sie Engineering und Baumanagement in Ihr Vorhaben. Wir arbeiten mit radikaler Transparenz.",
+      "email": "E-Post",
+      "phone": "Telefon",
+      "button": "Details"
     },
     "stats": {
-      "projects": "Abgeschlossene Projekte",
-      "team": "Teammitglieder",
-      "experience": "Jahre Erfahrung",
-      "satisfaction": "Kundenzufriedenheit"
+      "projects": "Projekte",
+      "team": "Team",
+      "experience": "Jahre",
+      "satisfaction": "Zufriedenheit"
     },
-    "officeLocation": "Bürostandort",
-    "enterMarket": "Markt Betreten",
-    "viewPhase": "Phase Ansehen"
+    "officeLocation": "Büro",
+    "enterMarket": "Markt",
+    "viewPhase": "Phase"
   },
   "common": {
-    "selectLanguage": "Sprache Wählen",
+    "selectLanguage": "Sprache",
     "constructionManagement": "Baumanagement",
     "discretion": "Diskretion",
-    "knowledge": "Expertenwissen",
+    "knowledge": "Expertise",
     "quality": "Qualität",
-    "projectManagement": "Projektmanagement",
+    "projectManagement": "Management",
     "riskProfile": "Risikoprofil",
-    "minimizedExposure": "Minimierte Exposition",
-    "assetGrowth": "Vermögenswachstum",
+    "minimizedExposure": "Minimiert",
+    "assetGrowth": "Wachstum",
     "precisionTargets": "Präzisionsziele"
   }
 }
