@@ -8,42 +8,38 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { useImages, getCityImage, getLogo } from '../hooks/useImages';
 
 const HomePage = () => {
   const { t } = useTranslation();
+  const images = useImages();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const heroImages = [
-    'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&h=1080&fit=crop',
-    'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1920&h=1080&fit=crop',
-    'https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1920&h=1080&fit=crop',
-    'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1920&h=1080&fit=crop',
-    'https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=1920&h=1080&fit=crop',
-  ];
+  const heroImages = images.hero.slides;
 
   const cities = [
-    { name: 'casablanca', icon: Building2, tag: t('locations.casablanca.subtitle'), image: 'https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=800&h=600&fit=crop' },
-    { name: 'dubai', icon: Palmtree, tag: t('locations.dubai.subtitle'), image: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&h=600&fit=crop' },
-    { name: 'frankfurt', icon: Landmark, tag: t('locations.frankfurt.subtitle'), image: 'https://images.unsplash.com/photo-1564221710304-0b37c8b9d729?w=800&h=600&fit=crop' },
-    { name: 'pristina', icon: Mountain, tag: t('locations.pristina.subtitle'), image: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&h=600&fit=crop' },
+    { name: 'casablanca', icon: Building2, tag: t('locations.casablanca.subtitle'), image: getCityImage('casablanca', 'thumbnail') },
+    { name: 'dubai', icon: Palmtree, tag: t('locations.dubai.subtitle'), image: getCityImage('dubai', 'thumbnail') },
+    { name: 'frankfurt', icon: Landmark, tag: t('locations.frankfurt.subtitle'), image: getCityImage('frankfurt', 'thumbnail') },
+    { name: 'pristina', icon: Mountain, tag: t('locations.pristina.subtitle'), image: getCityImage('pristina', 'thumbnail') },
   ];
 
   const divisions = [
     {
       id: 'construction',
-      logo: '/images/ahox-construction-management-logo.svg',
+      logo: getLogo('construction'),
       color: '#14B3AA',
       link: '/construction'
     },
     {
       id: 'realEstate',
-      logo: '/images/ahox-real-estate-logo.svg',
+      logo: getLogo('realEstate'),
       color: '#E8D700',
       link: '/real-estate'
     },
     {
       id: 'security',
-      logo: '/images/ahox-security-logo.svg',
+      logo: getLogo('security'),
       color: '#D10A11',
       link: '/security'
     }
@@ -54,7 +50,7 @@ const HomePage = () => {
       setCurrentImageIndex((prev) => (prev === heroImages.length - 1 ? 0 : prev + 1));
     }, 6000);
     return () => clearInterval(interval);
-  }, []);
+  }, [heroImages.length]);
 
   const scrollToContent = () => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
 
@@ -71,7 +67,7 @@ const HomePage = () => {
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 1.5 }}
               className="absolute inset-0"
-              style={{ backgroundImage: `url(${heroImages[currentImageIndex]})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+              style={{ backgroundImage: `url(${heroImages[currentImageIndex].url})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-black/95 via-black/60 to-black/90" />
             </motion.div>

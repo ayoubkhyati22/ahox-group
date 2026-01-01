@@ -6,9 +6,16 @@ import {
   Handshake,
   CheckCircle
 } from 'lucide-react';
+import { getImage } from '../hooks/useImages';
 
 const RealEstatePage = () => {
   const { t } = useTranslation();
+
+  const heroImage = getImage('realEstate', 'hero');
+  const galleryImages = [
+    getImage('realEstate', 'gallery'),
+    getImage('realEstate', 'gallery')
+  ];
 
   const coreServicesIcons = [Search, TrendingUp, Handshake];
 
@@ -19,7 +26,7 @@ const RealEstatePage = () => {
       <section className="relative h-[90vh] flex items-center overflow-hidden bg-slate-900">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop"
+            src={heroImage}
             alt="Modern Architecture"
             className="w-full h-full object-cover opacity-50 scale-105"
           />
@@ -73,7 +80,7 @@ const RealEstatePage = () => {
 
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-4 pt-12">
-                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1000&auto=format&fit=crop" className="rounded-lg shadow-2xl grayscale hover:grayscale-0 transition-all duration-700" alt="Lux" />
+                <img src={galleryImages[0]} className="rounded-lg shadow-2xl grayscale hover:grayscale-0 transition-all duration-700" alt="Lux" />
                 <div className="bg-[#E8D700] p-8 rounded-lg text-black">
                   <p className="text-4xl font-bold mb-1">100%</p>
                   <p className="text-sm opacity-80 uppercase tracking-widest">{t('realEstate.philosophy.text1').includes('diskret') ? 'Diskretion' : 'Discretion'}</p>
@@ -84,7 +91,7 @@ const RealEstatePage = () => {
                   <p className="text-4xl font-bold mb-1">Expert</p>
                   <p className="text-sm opacity-80 uppercase tracking-widest">Knowledge</p>
                 </div>
-                <img src="https://images.unsplash.com/photo-1582408921715-18e7806365c1?q=80&w=1000&auto=format&fit=crop" className="rounded-lg shadow-2xl" alt="Architecture" />
+                <img src={galleryImages[1]} className="rounded-lg shadow-2xl" alt="Architecture" />
               </div>
             </div>
           </div>

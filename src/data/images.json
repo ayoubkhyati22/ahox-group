@@ -1,0 +1,94 @@
+{
+    "logos": {
+      "mainWhite": "/images/ahox-group-main-logo-white.png",
+      "mainColor": "/images/ahox-group-main-logo.svg",
+      "construction": "/images/ahox-construction-management-logo.svg",
+      "realEstate": "/images/ahox-real-estate-logo.svg",
+      "security": "/images/ahox-security-logo.svg"
+    },
+    "hero": {
+      "slides": [
+        {
+          "id": "modern-building-1",
+          "url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&h=1080&fit=crop",
+          "alt": "Modern Office Building"
+        },
+        {
+          "id": "residential-complex",
+          "url": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1920&h=1080&fit=crop",
+          "alt": "Residential Complex"
+        },
+        {
+          "id": "office-interior",
+          "url": "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1920&h=1080&fit=crop",
+          "alt": "Modern Office Interior"
+        },
+        {
+          "id": "construction-site",
+          "url": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1920&h=1080&fit=crop",
+          "alt": "Construction Site"
+        },
+        {
+          "id": "architecture-detail",
+          "url": "https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=1920&h=1080&fit=crop",
+          "alt": "Modern Architecture Detail"
+        }
+      ]
+    },
+    "cities": {
+      "casablanca": {
+        "hero": "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?auto=format&fit=crop&q=80",
+        "thumbnail": "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=800&h=600&fit=crop",
+        "alt": "Casablanca Skyline"
+      },
+      "dubai": {
+        "hero": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&q=80",
+        "thumbnail": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&h=600&fit=crop",
+        "alt": "Dubai Skyline"
+      },
+      "frankfurt": {
+        "hero": "https://images.unsplash.com/photo-1564221710304-0b37c8b9d729?auto=format&fit=crop&q=80",
+        "thumbnail": "https://images.unsplash.com/photo-1564221710304-0b37c8b9d729?w=800&h=600&fit=crop",
+        "alt": "Frankfurt Skyline"
+      },
+      "pristina": {
+        "hero": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&q=80",
+        "thumbnail": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&h=600&fit=crop",
+        "alt": "Pristina Mountain View"
+      }
+    },
+    "construction": {
+      "hero": "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop",
+      "gallery": [
+        {
+          "id": "architecture-1",
+          "url": "https://images.unsplash.com/photo-1503387762-592dea58ef23?q=80&w=1000&auto=format&fit=crop",
+          "alt": "Modern Architecture Design"
+        },
+        {
+          "id": "engineering-1",
+          "url": "https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=1000&auto=format&fit=crop",
+          "alt": "Engineering Excellence"
+        }
+      ]
+    },
+    "realEstate": {
+      "hero": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop",
+      "gallery": [
+        {
+          "id": "luxury-home",
+          "url": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1000&auto=format&fit=crop",
+          "alt": "Luxury Property"
+        },
+        {
+          "id": "modern-architecture",
+          "url": "https://images.unsplash.com/photo-1582408921715-18e7806365c1?q=80&w=1000&auto=format&fit=crop",
+          "alt": "Modern Architecture"
+        }
+      ]
+    },
+    "security": {
+      "hero": "https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=2070&auto=format&fit=crop",
+      "consulting": "https://images.unsplash.com/photo-1454165833767-027eeef1596e?q=80&w=1000&auto=format&fit=crop"
+    }
+  }

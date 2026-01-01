@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Globe, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState, useRef } from 'react';
+import { getLogo } from '../hooks/useImages';
 
 const Header = () => {
   const { t, i18n } = useTranslation();
@@ -74,6 +75,9 @@ const Header = () => {
     }
   };
 
+  // Get the appropriate logo based on scroll state
+  const logoSrc = isScrolled ? getLogo('mainColor') : getLogo('mainWhite');
+
   return (
     <>
       <motion.header
@@ -90,7 +94,7 @@ const Header = () => {
           {/* Logo - Made Bigger - Switches based on scroll */}
           <Link to="/" onClick={handleLogoClick} className="relative z-[80]">
             <img 
-              src={isScrolled ? "/images/ahox-group-main-logo.svg" : "/images/ahox-group-main-logo-white.png"} 
+              src={logoSrc} 
               alt="AHOX" 
               className="h-16 sm:h-20 w-auto transition-opacity duration-300" 
             />

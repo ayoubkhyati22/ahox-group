@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { motion, useInView } from 'framer-motion';
 import { Building2, Users, Award, TrendingUp, ArrowRight } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
+import { getCityImage } from '../hooks/useImages';
 
 // Animated Counter Component
 const AnimatedCounter = ({ value, duration = 2000 }: { value: string; duration?: number }) => {
@@ -12,7 +13,6 @@ const AnimatedCounter = ({ value, duration = 2000 }: { value: string; duration?:
   useEffect(() => {
     if (!isInView) return;
 
-    // Extract numeric part from value (e.g., "€120K" -> "120", "60%+" -> "60", "Top 3" -> "3")
     const numericMatch = value.match(/[\d.]+/);
     if (!numericMatch) {
       setDisplayValue(value);
@@ -28,7 +28,6 @@ const AnimatedCounter = ({ value, duration = 2000 }: { value: string; duration?:
       const elapsed = Date.now() - startTime;
       const progress = Math.min(elapsed / duration, 1);
       
-      // Easing function for smooth animation
       const easeOutQuart = 1 - Math.pow(1 - progress, 4);
       const current = targetNumber * easeOutQuart;
       
@@ -36,13 +35,12 @@ const AnimatedCounter = ({ value, duration = 2000 }: { value: string; duration?:
         setDisplayValue(value);
         clearInterval(timer);
       } else {
-        // Format based on whether it's a decimal or integer
         const formattedNumber = numericMatch[0].includes('.') 
           ? current.toFixed(1)
           : Math.floor(current).toString();
         setDisplayValue(prefix + formattedNumber + suffix);
       }
-    }, 16); // ~60fps
+    }, 16);
 
     return () => clearInterval(timer);
   }, [isInView, value, duration]);
@@ -63,7 +61,7 @@ const LocationPage = ({ location }: LocationPageProps) => {
     stats: { icon: any; value: string; labelKey: string }[];
   }> = {
     casablanca: {
-      heroImage: 'https://images.unsplash.com/photo-1539037116277-4db20889f2d4?auto=format&fit=crop&q=80',
+      heroImage: getCityImage('casablanca', 'hero'),
       accentColor: '#2563eb',
       stats: [
         { icon: TrendingUp, value: '€120K – €2.5M', labelKey: 'investmentRange' },
@@ -73,7 +71,7 @@ const LocationPage = ({ location }: LocationPageProps) => {
       ],
     },
     dubai: {
-      heroImage: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&q=80',
+      heroImage: getCityImage('dubai', 'hero'),
       accentColor: '#f59e0b',
       stats: [
         { icon: TrendingUp, value: '€300K – €10M', labelKey: 'investmentRange' },
@@ -83,7 +81,7 @@ const LocationPage = ({ location }: LocationPageProps) => {
       ],
     },
     frankfurt: {
-      heroImage: 'https://images.unsplash.com/photo-1564221710304-0b37c8b9d729?auto=format&fit=crop&q=80',
+      heroImage: getCityImage('frankfurt', 'hero'),
       accentColor: '#9333ea',
       stats: [
         { icon: TrendingUp, value: '€250K – €5M', labelKey: 'investmentRange' },
@@ -93,7 +91,7 @@ const LocationPage = ({ location }: LocationPageProps) => {
       ],
     },
     pristina: {
-      heroImage: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&q=80',
+      heroImage: getCityImage('pristina', 'hero'),
       accentColor: '#10b981',
       stats: [
         { icon: TrendingUp, value: '€80K – €1.5M', labelKey: 'investmentRange' },
@@ -252,8 +250,6 @@ const LocationPage = ({ location }: LocationPageProps) => {
               </div>
             </div>
           </div>
-
-
         </div>
       </section>
 

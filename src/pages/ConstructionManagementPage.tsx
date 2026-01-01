@@ -3,9 +3,16 @@ import { motion } from 'framer-motion';
 import { 
   FileCheck, Construction, TrendingUp
 } from 'lucide-react';
+import { getImage } from '../hooks/useImages';
 
 const ConstructionManagementPage = () => {
   const { t } = useTranslation();
+
+  const heroImage = getImage('construction', 'hero');
+  const galleryImages = [
+    getImage('construction', 'gallery'),
+    getImage('construction', 'gallery')
+  ];
 
   return (
     <div className="bg-white text-slate-900 font-sans selection:bg-[#14B3AA] selection:text-white">
@@ -14,7 +21,7 @@ const ConstructionManagementPage = () => {
       <section className="relative h-[90vh] flex items-center overflow-hidden bg-slate-900">
         <div className="absolute inset-0">
           <img 
-            src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop"
+            src={heroImage}
             alt="Construction Site Management"
             className="w-full h-full object-cover opacity-40 scale-105"
           />
@@ -68,13 +75,13 @@ const ConstructionManagementPage = () => {
             </motion.div>
             
             <div className="grid grid-cols-2 gap-4">
-              <img src="https://images.unsplash.com/photo-1503387762-592dea58ef23?q=80&w=1000&auto=format&fit=crop" className="rounded-lg shadow-xl mt-12" alt="Architecture" />
+              <img src={galleryImages[0]} className="rounded-lg shadow-xl mt-12" alt="Architecture" />
               <div className="space-y-4">
                 <div className="bg-[#14B3AA] p-8 rounded-lg text-white">
                   <p className="text-4xl font-bold mb-1">AHOX</p>
                   <p className="text-sm opacity-80 uppercase tracking-widest">Construction Management</p>
                 </div>
-                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=1000&auto=format&fit=crop" className="rounded-lg shadow-xl" alt="Engineering" />
+                <img src={galleryImages[1]} className="rounded-lg shadow-xl" alt="Engineering" />
               </div>
             </div>
           </div>

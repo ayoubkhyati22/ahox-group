@@ -4,9 +4,13 @@ import {
   Users, Camera, ShieldAlert, Lock,
   Zap, Fingerprint, Search, ShieldCheck, CheckCircle
 } from 'lucide-react';
+import { getImage } from '../hooks/useImages';
 
 const SecurityPage = () => {
   const { t } = useTranslation();
+
+  const heroImage = getImage('security', 'hero');
+  const consultingImage = getImage('security', 'consulting');
 
   const serviceIcons = [Users, Camera, ShieldAlert, Lock, Zap, Fingerprint, Search, ShieldCheck];
 
@@ -17,7 +21,7 @@ const SecurityPage = () => {
       <section className="relative h-[90vh] flex items-center overflow-hidden bg-slate-950">
         <div className="absolute inset-0">
           <img 
-            src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=2070&auto=format&fit=crop"
+            src={heroImage}
             alt="Security Operations"
             className="w-full h-full object-cover opacity-40 scale-105"
           />
@@ -81,7 +85,7 @@ const SecurityPage = () => {
             <div className="relative">
               <div className="absolute -inset-4 border border-slate-100 rounded-lg -z-10" />
               <img 
-                src="https://images.unsplash.com/photo-1454165833767-027eeef1596e?q=80&w=1000&auto=format&fit=crop" 
+                src={consultingImage} 
                 className="rounded-lg shadow-2xl grayscale hover:grayscale-0 transition-all duration-1000" 
                 alt="Professional Security Consulting" 
               />
