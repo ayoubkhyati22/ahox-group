@@ -2,28 +2,30 @@ import { MessageCircle, Mail, X, Send, Clock, ShieldCheck } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
+import { COMPANY_INFO, getWhatsAppLink, getEmailLink } from '../constants/companyInfo';
 
 const FloatingContactButtonAlt = () => {
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
 
   const handleWhatsApp = () => {
-    const message = encodeURIComponent(t('whatsapp.message') || 'Hello AHOX Team, I have an inquiry.');
-    const phoneNumber = '4915733448898';
-    window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+    const message = t('whatsapp.message');
+    window.open(getWhatsAppLink(message), '_blank');
     setIsOpen(false);
   };
 
   const handleEmail = () => {
-    window.location.href = 'mailto:info@ahox-cm.de?subject=Investment Inquiry&body=' + encodeURIComponent(t('whatsapp.message') || '');
+    const subject = t('common.investmentInquiry', { defaultValue: 'Investment Inquiry' });
+    const body = t('whatsapp.message');
+    window.location.href = getEmailLink(subject, body);
     setIsOpen(false);
   };
 
   const contactOptions = [
     {
       id: 'whatsapp',
-      label: 'Priority WhatsApp',
-      subtext: 'Typical reply: < 5 min',
+      label: t('contact.priorityWhatsApp', { defaultValue: 'Priority WhatsApp' }),
+      subtext: t('contact.typicalReply', { defaultValue: 'Typical reply: < 5 min' }),
       icon: MessageCircle,
       color: '#25D366',
       bg: 'rgba(37, 211, 102, 0.1)',
@@ -31,8 +33,8 @@ const FloatingContactButtonAlt = () => {
     },
     {
       id: 'email',
-      label: 'Institutional Support',
-      subtext: 'Corporate inquiries',
+      label: t('contact.institutionalSupport', { defaultValue: 'Institutional Support' }),
+      subtext: t('contact.corporateInquiries', { defaultValue: 'Corporate inquiries' }),
       icon: Mail,
       color: '#E8D700',
       bg: 'rgba(232, 215, 0, 0.1)',
@@ -131,6 +133,7 @@ const FloatingContactButtonAlt = () => {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         className="relative w-20 h-20 group"
+        aria-label={t('contact.openContactMenu', { defaultValue: 'Open contact menu' })}
       >
         {/* The Outer Kinetic Ring */}
         <div className="absolute inset-[-4px] rounded-full overflow-hidden opacity-50 group-hover:opacity-100 transition-opacity">

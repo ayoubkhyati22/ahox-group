@@ -4,14 +4,14 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 
 import de from '../locales/de.json';
 import en from '../locales/en.json';
-import fr from '../locales/fr.json';
-import darija from '../locales/darija.json';
+import ar from '../locales/ar.json';
+import sq from '../locales/sq.json';
 
 const resources = {
   de: { translation: de },
   en: { translation: en },
-  fr: { translation: fr },
-  darija: { translation: darija },
+  ar: { translation: ar },
+  sq: { translation: sq }
 };
 
 i18n
@@ -19,10 +19,15 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    fallbackLng: 'de',
+    fallbackLng: 'en',
+    supportedLngs: ['de', 'en', 'ar', 'sq'],
     interpolation: {
       escapeValue: false,
     },
+    detection: {
+      order: ['localStorage', 'navigator'],
+      caches: ['localStorage']
+    }
   });
 
 export default i18n;

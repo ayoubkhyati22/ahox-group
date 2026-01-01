@@ -16,8 +16,8 @@ const Header = () => {
   const languages = [
     { code: 'de', label: 'Deutsch', flag: '🇩🇪' },
     { code: 'en', label: 'English', flag: '🇬🇧' },
-    { code: 'fr', label: 'Français', flag: '🇫🇷' },
-    { code: 'darija', label: 'العربية', flag: '🇲🇦' },
+    { code: 'sq', label: 'Albania', flag: '🇦🇱' },
+    { code: 'ar', label: 'العربية', flag: '🇸🇦' },
   ];
 
   const navLinks = [

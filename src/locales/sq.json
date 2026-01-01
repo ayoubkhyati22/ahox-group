@@ -1,0 +1,480 @@
+{
+  "nav": {
+    "casablanca": "Kasablanka",
+    "dubai": "Dubai",
+    "frankfurt": "Frankfurt",
+    "pristina": "Prishtinë"
+  },
+  "hero": {
+    "title": "LIDHJA E KAPITALIT ME MUNDËSITË",
+    "subtitle": "Aksesi juaj në tregjet e pasurive të paluajtshme me rendiment të lartë të nesërmes",
+    "cta": "Zbuloni mundësitë e investimit",
+    "scrollDown": "Rrëshqitni poshtë"
+  },
+  "about": {
+    "tagline": "Investim Ndërkombëtar & Lidhje e Pasurive të Paluajtshme",
+    "text": "Si një lehtësues i pavarur investimesh, ne lidhim investitorët me kompani ndërtimi të verifikuara dhe shitës të pasurive të paluajtshme në qytete të zgjedhura në rritje. Qëllimi ynë: koncepte investimi të personalizuara për pasuri të paluajtshme dhe ndërtim me kthime të qëndrueshme."
+  },
+  "divisions": {
+    "title": "SHËRBIMET TONA",
+    "subtitle": "Ne jemi ekspertët për shërbime ndërtimi, pasuri të paluajtshme dhe siguri",
+    "construction": {
+      "title": "Ndërtim & Menaxhim",
+      "description": "Shërbime profesionale ndërtimi dhe menaxhimi të projekteve"
+    },
+    "realEstate": {
+      "title": "Pasuri të Paluajtshme",
+      "description": "Ndërmjetësim i pasurive të paluajtshme dhe këshillim për investime"
+    },
+    "security": {
+      "title": "Siguri",
+      "description": "Shërbime gjithëpërfshirëse sigurie"
+    },
+    "learnMore": "Mëso më shumë"
+  },
+  "value": {
+    "title": "PSE TË INVESTONI ME NE",
+    "subtitle": "Ne nuk shesim pasuri të paluajtshme - ne strukturojmë investime.",
+    "benefits": [
+      {
+        "title": "Akses jashtë tregut",
+        "description": "Akses ekskluziv në projekte që nuk janë të disponueshme në tregun publik"
+      },
+      {
+        "title": "Partnerë Lokalë",
+        "description": "Kompani ndërtimi dhe partnerë të verifikuar në vend në çdo qytet"
+      },
+      {
+        "title": "Koncepte të Personalizuara",
+        "description": "Strategji investimi të përshtatura për qëllimet tuaja specifike dhe profilin e rrezikut"
+      },
+      {
+        "title": "Reduktim i Rrezikut",
+        "description": "Rrezik i reduktuar përmes strukturave dhe proceseve të verifikuara plotësisht"
+      },
+      {
+        "title": "Efikasitet Kohor",
+        "description": "Kurseni kohë me mbështetje të qartë vendimmarrjeje dhe udhëzim ekspert"
+      },
+      {
+        "title": "Lehtësim Strategjik",
+        "description": "Partneri juaj i besuar nga koncepti deri në mbyllje"
+      }
+    ],
+    "engineering": "Inxhinieri e Vlerës",
+    "proven": "Korniza",
+    "frameworks": "të Provuara"
+  },
+  "services": {
+    "title": "PROCESI YNË I INVESTIMIT",
+    "subtitle": "Një pikë kontakti - tregje të shumta",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Analiza e Nevojave të Investitorit",
+        "description": "Ne analizojmë buxhetin tuaj, objektivat e kthimit, tolerancën ndaj rrezikut dhe vendndodhjen e preferuar për të kuptuar qëllimet tuaja të investimit."
+      },
+      {
+        "number": "02",
+        "title": "Përputhje e Projektit",
+        "description": "Zgjedhja e kompanive të ndërtimit dhe shitësve të përshtatshëm që përputhen me kërkesat tuaja."
+      },
+      {
+        "number": "03",
+        "title": "Zhvillimi i Konceptit",
+        "description": "Ne zhvillojmë strukturën e investimit, modelin e ndërtimit ose blerjes dhe skenarët e kthimit."
+      },
+      {
+        "number": "04",
+        "title": "Lehtësim & Koordinim",
+        "description": "Koordinim profesional midis investitorit, kompanisë së ndërtimit dhe shitësit."
+      },
+      {
+        "number": "05",
+        "title": "Mbështetje deri në Mbyllje",
+        "description": "Mbështetje dhe udhëzim të vazhdueshëm gjatë gjithë procesit të investimit."
+      }
+    ]
+  },
+  "cities": {
+    "title": "TREGJET E INVESTIMIT",
+    "subtitle": "Katër qytete strategjike me profile të dallueshme investimi"
+  },
+  "cta": {
+    "title": "Gati të ndërtoni portofolin tuaj?",
+    "subtitle": "Për njerëzit që duan që kapitali i tyre të punojë, jo vetëm të qëndrojë i papunë.",
+    "button": "Kërkoni Analizë Personale Investimi",
+    "secondaryButton": "Fitoni Akses në Projekte Ekskluzive"
+  },
+  "footer": {
+    "rights": "Të gjitha të drejtat e rezervuara",
+    "tagline": "Kapital i Mençur. Lidhje të Forta.",
+    "contact": "Na Kontaktoni",
+    "locations": "Vendndodhjet Tona",
+    "services": "Shërbimet Tona",
+    "readyToStart": "Gati të filloni projektin tuaj?",
+    "getInTouch": "Kontaktoni",
+    "privacy": "Politika e Privatësisë",
+    "terms": "Kushtet e Shërbimit",
+    "impressum": "Impressum",
+    "datenschutz": "Mbrojtja e të Dhënave",
+    "ceo": "Drejtori Ekzekutiv",
+    "address": "Adresa",
+    "phone": "Telefoni",
+    "email": "Email",
+    "website": "Faqja e Internetit"
+  },
+  "whatsapp": {
+    "message": "Përshëndetje, jam i interesuar për mundësitë e investimit."
+  },
+  "locations": {
+    "casablanca": {
+      "title": "Kasablanka",
+      "subtitle": "Treg në zhvillim me potencial të fortë rritjeje",
+      "description": "Kasablanka ofron mundësi ku tregjet sapo po shfaqen. Urbanizimi i shpejtë dhe kërkesa në rritje për pasuri rezidenciale dhe tregtare krijojnë çmime tërheqëse hyrjeje.",
+      "idealFor": "Ideale për",
+      "features": [
+        "Investime në fazën e hershme",
+        "Zhvillime projektesh",
+        "Rritje afatgjatë"
+      ],
+      "highlights": [
+        "Urbanizim i shpejtë",
+        "Kërkesë në rritje për pasuri rezidenciale dhe tregtare",
+        "Çmime tërheqëse hyrjeje",
+        "Sektor biznesi në rritje"
+      ]
+    },
+    "dubai": {
+      "title": "Dubai",
+      "subtitle": "Rritje dinamike & kthime mbi mesatare",
+      "description": "Dubai përfaqëson shpejtësinë, rritjen dhe rrjedhën globale të kapitalit. Me të ardhura të pa-taksueshme dhe kërkesë ndërkombëtare, është tregu perfekt për investime të orientuara drejt rrjedhës së parave.",
+      "idealFor": "Ideale për",
+      "features": [
+        "Investime të orientuara drejt rrjedhës së parave",
+        "Kthime afatshkurtra dhe afatmesme",
+        "Portofole ndërkombëtare"
+      ],
+      "highlights": [
+        "Të ardhura të pa-taksueshme",
+        "Kërkesë ndërkombëtare",
+        "Zhvillime të reja moderne",
+        "Cikle të shpejta projektesh"
+      ]
+    },
+    "frankfurt": {
+      "title": "Frankfurt",
+      "subtitle": "Stabilitet & siguri afatgjatë",
+      "description": "Frankfurt qëndron për siguri, stabilitet dhe kthime të parashikueshme. Si qendra financiare e Evropës, ofron kërkesë të lartë për pasuri rezidenciale dhe tregtare me treg të fortë qiraje.",
+      "idealFor": "Ideale për",
+      "features": [
+        "Ruajtje kapitali",
+        "Kthime afatgjata",
+        "Investime Core & Core+"
+      ],
+      "highlights": [
+        "Qendra financiare e Evropës",
+        "Kërkesë e lartë për pasuri rezidenciale dhe tregtare",
+        "Treg i fortë qirash",
+        "Mjedis ekonomik i qëndrueshëm"
+      ]
+    },
+    "pristina": {
+      "title": "Prishtinë",
+      "subtitle": "Treg i nënvlerësuar me potencial të lartë rritjeje",
+      "description": "Prishtina është një treg për investitorë që mendojnë përpara. Me një popullsi të re, kosto të ulëta hyrjeje dhe pak investitorë profesionalë, ofron avantazhin e hyrësit të parë.",
+      "idealFor": "Ideale për",
+      "features": [
+        "Zhvilluesit",
+        "Investime ndërtimi",
+        "Mundësi me marzhe më të larta"
+      ],
+      "highlights": [
+        "Popullsi e re",
+        "Kosto të ulëta hyrjeje",
+        "Kërkesë në rritje për ndërtime të reja",
+        "Avantazhi i hyrësit të parë"
+      ]
+    }
+  },
+  "targetAudience": {
+    "title": "ME KEND PUNOJMË",
+    "subtitle": "Për njerëzit që duan që kapitali i tyre të punojë, jo vetëm të qëndrojë i papunë.",
+    "investors": [
+      "Investitorë Privatë",
+      "Sipërmarrës",
+      "Zyra Familjare",
+      "Investitorë Kapitali",
+      "Ndërtues Pasurie & Diversifikues"
+    ]
+  },
+  "construction": {
+    "hero": {
+      "tagline": "AHOX GmbH",
+      "title": "Efikasitet në",
+      "titleBold": "Kantier",
+      "description": "Ndërmjetësim profesional i shërbimeve të ndërtimit - Ne lidhim ndërtuesit me profesionistët më të kualifikuar në industri."
+    },
+    "philosophy": {
+      "title": "Ndërmjetësim Strategjik për",
+      "titleAccent": "standardet më të larta të cilësisë",
+      "text1": "Ndërmjetësimi i shërbimeve të ndërtimit luan një rol vendimtar në industrinë moderne të ndërtimit. Ne në AHOX GmbH mbështesim ndërtuesit në gjetjen e partnerëve të duhur për planifikim, ekzekutim dhe përfundim.",
+      "text2": "Ne vendosim theksin më të madh në kontrollin e referencave, përvojës dhe certifikatave. Qëllimi ynë është zbatimi i qetë dhe efektiv i projekteve tuaja të ndërtimit - nga ndërtesat rezidenciale deri te projektet tregtare.",
+      "quote": "Ne nxisim bashkëpunimin dhe efikasitetin në industrinë e ndërtimit përmes zgjedhjes së kualifikuar."
+    },
+    "services": {
+      "title": "Zona Jonë e Përgjegjësisë",
+      "subtitle": "Shërbime Gjithëpërfshirëse Ndërtimi",
+      "categories": {
+        "interior": {
+          "title": "Përfundime Brendshme & Zanatçi",
+          "items": ["Punime dyshemeje", "Lyerje & Suvatim", "Mur i thatë & Tapicim", "Instalimi i dyerve dhe kornizave"]
+        },
+        "energy": {
+          "title": "Energji & Rinovim",
+          "items": ["Modernizimi energjetik", "Ndërtimi i fasadave & çatisë", "Energji diellore", "Teknologji efikase ngrohjeje"]
+        },
+        "technical": {
+          "title": "Teknologji & Jashtë",
+          "items": ["Punë elektrike", "Ngrohje / Hidraulikë", "Kopësht & Peizazh", "Dritare & Tenda"]
+        },
+        "logistics": {
+          "title": "Logjistikë & Menaxhim",
+          "items": ["Punë shkatërrimi", "Koordinimi i lëvizjes", "Pastrimi i ndërtesave", "Dizajn i brendshëm dhe i jashtëm"]
+        }
+      }
+    },
+    "value": {
+      "title": "Vlerë e Shtuar përmes",
+      "titleAccent": "Menaxhimit Profesional.",
+      "benefits": [
+        {
+          "title": "Negocimi i Kontratave & Kushteve",
+          "description": "Ne mbështesim në përgatitjen e kontratave dhe sqarimin e marrëveshjeve financiare për të shmangur keqkuptimet dhe mosmarrëveshjet."
+        },
+        {
+          "title": "Sigurimi i Cilësisë",
+          "description": "Zgjedhja e ofruesve të shërbimeve bazohet në kritere të rrepta lidhur me certifikimin dhe përvojën e projektit."
+        },
+        {
+          "title": "Përfitime për Ofruesit e Shërbimeve",
+          "description": "Ne rrisim dukshmërinë dhe arritjen e kompanive tona partnere dhe kështu mundësojmë zgjerimin e fushës së tyre të biznesit."
+        }
+      ],
+      "promise": {
+        "title": "Premtimi Ynë",
+        "text": "Qoftë për ndërtimin e ndërtesave rezidenciale, ndërtesave tregtare ose projekteve të infrastrukturës - AHOX GmbH është pika juaj qendrore për suksesin dhe cilësinë e projekteve tuaja të ndërtimit.",
+        "signature": "Ekipi AHOX"
+      }
+    }
+  },
+  "realEstate": {
+    "hero": {
+      "tagline": "AHOX GmbH",
+      "title": "Ekscelencë në",
+      "titleBold": "Ndërmjetësimin e Pasurive të Paluajtshme",
+      "description": "Partneri juaj strategjik për ndërmjetësimin e pasurive të paluajtshme dhe tokës - profesional, i orientuar drejt tregut dhe diskret."
+    },
+    "philosophy": {
+      "title": "Ura midis",
+      "titleAccent": "Furnizimit dhe Kërkesës",
+      "text1": "Ndërmjetësimi i pasurive të paluajtshme është një aktivitet i rëndësishëm në industrinë e pasurive të paluajtshme. AHOX GmbH shërben si një kompani e specializuar ndërmjetësimi midis blerësve dhe shitësve potencialë të pasurive të paluajtshme dhe tokës.",
+      "text2": "Qëllimi ynë është të menaxhojmë procesin e shitjes në mënyrë efikase dhe të qetë. Ne mbështetemi në ekspertizë të shëndoshë për tregjet lokale, kornizat ligjore dhe teknikat e provuara të negocimit."
+    },
+    "services": {
+      "title": "Shërbimet",
+      "subtitle": "Zona Jonë e Përgjegjësisë në Ndërmjetësim",
+      "items": [
+        {
+          "title": "Blerja e Pasurive të Paluajtshme",
+          "description": "Ne kërkojmë aktivisht për objekte të mundshme shitjeje përmes kërkimit të synuar dhe rrjetit tonë të gjerë të pronarëve dhe zhvilluesve."
+        },
+        {
+          "title": "Vlerësim i Bazuar në Treg",
+          "description": "Vlerësim i shëndoshë bazuar në njohuri të thellë të tregjeve lokale dhe kornizave ligjore."
+        },
+        {
+          "title": "Menaxhimi i Negociatave",
+          "description": "Koordinim profesional midis blerësit dhe shitësit për të sqaruar çmimet, kushtet dhe detajet e kontratës."
+        }
+      ]
+    },
+    "process": {
+      "title": "Rruga AHOX drejt Suksesit.",
+      "description": "Pasi pasuria të jetë gjetur për ju, ne ju shoqërojmë përmes çdo hapi vendimtar të transaksionit.",
+      "checklist": [
+        "Blerje e synuar e objekteve të shitjes",
+        "Vlerësim profesional i pasurive të paluajtshme",
+        "Bashkëpunim me kompanitë e ndërtimit",
+        "Kryerja e shikimeve",
+        "Negociata finale kontraktuale"
+      ],
+      "steps": [
+        {
+          "title": "Kërkimi & Blerja",
+          "text": "Ne identifikojmë potencialet përmes bashkëpunimeve me zhvilluesit."
+        },
+        {
+          "title": "Vlerësimi & Kontrolli i Tregut",
+          "text": "Analiza e kushteve të tregut lokal për një strategji optimale çmimesh."
+        },
+        {
+          "title": "Negocimi & Sqarimi",
+          "text": "Ne kryejmë negociata me pronarët për çmimet dhe kushtet."
+        },
+        {
+          "title": "Shoqërimi deri në Mbyllje",
+          "text": "Mbështetje e plotë deri në protokoll dhe dorëzim."
+        }
+      ]
+    }
+  },
+  "security": {
+    "hero": {
+      "tagline": "AHOX GmbH",
+      "title": "Siguri përmes",
+      "titleBold": "Kompetencës",
+      "description": "Partneri juaj i specializuar për ndërmjetësimin e shërbimeve profesionale të sigurisë - I personalizuar, i besueshëm dhe në nivelin më të lartë."
+    },
+    "philosophy": {
+      "title": "Ndërmjetësimi i",
+      "titleAccent": "Zgjidhjeve të Sigurisë",
+      "text1": "AHOX GmbH është e specializuar në ndërmjetësimin e shërbimeve profesionale të sigurisë. Ne shërbejmë si një lidhje strategjike midis klientëve dhe kompanive të sigurisë të klasit të parë.",
+      "text2": "Ne punojmë ngushtë me një shumëllojshmëri partnerësh të certifikuar për t'ju ofruar zgjidhje të personalizuara. Qofshin banka, ndërtesa të zyrës, shitje me pakicë ose komplekse rezidenciale ekskluzive - ne gjejmë ekspertët e duhur për mbrojtjen tuaj.",
+      "values": [
+        {
+          "title": "Zgjedhje e Kujdesshme",
+          "description": "Personel i trajnuar rregullisht"
+        },
+        {
+          "title": "Standardet më të Larta",
+          "description": "Cilësi në çdo skenar"
+        }
+      ]
+    },
+    "services": {
+      "title": "Portofoli i Shërbimeve",
+      "subtitle": "Koncepte Gjithëpërfshirëse Sigurie",
+      "items": [
+        {
+          "title": "Shërbime Sigurie",
+          "description": "Forca sigurie të armatosura ose të paarmatosura për të mbrojtur persona, ngjarje ose objekte."
+        },
+        {
+          "title": "Sisteme Mbikëqyrjeje",
+          "description": "Instalimi dhe mirëmbajtja e sistemeve të alarmit, mbikëqyrjes me video dhe sistemeve moderne të kontrollit të aksesit."
+        },
+        {
+          "title": "Këshillim për Sigurinë",
+          "description": "Analizë eksperte dhe zhvillim i koncepteve të personalizuara të sigurisë për kompanitë dhe individët."
+        },
+        {
+          "title": "Sigurisë Kibernetike",
+          "description": "Identifikimi dhe mbrojtja kundër kërcënimeve online si hakimi, rrjedhja e të dhënave dhe mashtrimi dixhital."
+        },
+        {
+          "title": "Trajnimi i Sigurisë",
+          "description": "Trajnim profesional në ndihmën e parë, vetëmbrojtje dhe mbrojtjen nga zjarri për parandalimin e rrezikut."
+        },
+        {
+          "title": "Shërbime Detektive",
+          "description": "Detektivë privatë për hetimin e krimeve, rasteve të mashtrimit ose çështjeve të tjera ligjore."
+        },
+        {
+          "title": "Menaxhimi i Rrezikut",
+          "description": "Vlerësimi i rrezikut dhe krijimi i planeve të veprimit për minimizimin efektiv të rrezikut."
+        },
+        {
+          "title": "Mbrojtja e Ngjarjeve",
+          "description": "Siguri gjithëpërfshirëse për koncerte, panaira ose ngjarje sportive përmes personelit të kualifikuar."
+        }
+      ]
+    },
+    "sectors": {
+      "title": "Vlerat & Fokusi.",
+      "description": "Ne vlerësojmë shumë besueshmërinë dhe kënaqësinë e klientit. Fokusi ynë është në sektorët që kërkojnë precizionin më të lartë.",
+      "items": [
+        "Banka & Sektori Financiar",
+        "Ndërtesa Zyrave & Industria",
+        "Shitje me Pakicë & Dyqane të Mëdha",
+        "Komplekse Rezidenciale & Prona Private"
+      ],
+      "values": [
+        {
+          "title": "Besueshmëria",
+          "description": "Ne garantojmë disponueshmëri konstante dhe ekzekutim në kohë të të gjitha shërbimeve të sigurisë."
+        },
+        {
+          "title": "Kompetenca",
+          "description": "Përmes rrjetit tonë, ne aksesojmë vetëm specialistë të certifikuar me shumë vite përvojë."
+        },
+        {
+          "title": "Transparenca",
+          "description": "Komunikimi i qartë dhe planifikimi i detajuar i shpërndarjes janë baza e aktiviteteve tona të ndërmjetësimit."
+        },
+        {
+          "title": "Sigurimi i Cilësisë",
+          "description": "Kontroll konstant i shërbimeve të ndërmjetësuara sipas standardeve më moderne të cilësisë."
+        }
+      ]
+    }
+  },
+  "locationPage": {
+    "elevated": "STRUKTURA",
+    "structures": "TË LARTA.",
+    "description": "Përmes ekzekutimit të mprehtë dhe tolerancës zero për kompromisin, ne kemi përcaktuar horizontin e {{location}}. Procesi ynë kombinon integritetin arkitektonik me precizionin tregtar.",
+    "features": ["Analiza e Konceptit", "Furnizimi Strategjik", "Menaxhimi Strukturor"],
+    "contact": {
+      "title": "PARTNERITET ME NE NË",
+      "description": "Sillni inxhinieri profesionale dhe menaxhim ndërtimi në ndërmarrjen tuaj të ardhshme. Ne operojmë me transparencë radikale.",
+      "email": "Posta Elektronike",
+      "phone": "Lidhja Telefonike",
+      "button": "Kërkoni Detaje"
+    },
+    "stats": {
+      "investmentRange": "Diapazoni i Investimit",
+      "germanCities": "Qytete Gjermane për Investim në Pasuri të Paluajtshme",
+      "financialInstitutions": "Institucione Financiare",
+      "investorNationalities": "Nacionalitete Investitorësh",
+      "economicCapital": "Kryeqyteti Ekonomik i Marokut",
+      "growthDistricts": "Rajone Urbane me Rritje të Lartë",
+      "demandConcentration": "Përqendrimi i Kërkesës Kombëtare për Pasuri të Paluajtshme",
+      "personalTax": "Tatimi mbi të Ardhurat Personale",
+      "globalCities": "Qytete Globale të Investimit në Pasuri të Paluajtshme",
+      "fastestGrowing": "Tregu më i Shpejtë në Rritje në Kosovë",
+      "diasporaDemand": "Kërkesë e Drejtuar nga Diaspora",
+      "residentialMarket": "Treg Rezidencial me Rritje të Lartë"
+    },
+    "officeLocation": "Vendndodhja e Zyrës",
+    "enterMarket": "Hyni në Treg",
+    "viewPhase": "Shikoni Fazën"
+  },
+  "common": {
+    "selectLanguage": "Zgjidhni Gjuhën",
+    "constructionManagement": "Menaxhimi i Ndërtimit",
+    "discretion": "Diskrecion",
+    "knowledge": "Njohuri Ekspertësh",
+    "quality": "Cilësi",
+    "projectManagement": "Menaxhimi i Projektit",
+    "riskProfile": "Profili i Rrezikut",
+    "minimizedExposure": "Ekspozim i Minimizuar",
+    "assetGrowth": "Rritja e Aktiveve",
+    "precisionTargets": "Objektiva Precize",
+    "howWeWork": "Si Punojmë",
+    "structuredProcess": "Proces i Strukturuar",
+    "professionalSupport": "Mbështetje Profesionale",
+    "provenResults": "Rezultate të Provuara",
+    "yourInvestmentPartner": "Partneri Juaj i Investimit",
+    "internationalRealEstate": "Investime ndërkombëtare në pasuri të paluajtshme.",
+    "personallyFacilitated": "Lehtësuar personalisht. Strukturuar strategjikisht.",
+    "globalNetwork": "Rrjet Global",
+    "connectingInvestors": "Lidhja e investitorëve nëpër katër tregje strategjike",
+    "verifiedPartners": "Partnerë të Verifikuar",
+    "vettedConstruction": "Kompani ndërtimi dhe profesionistë të pasurive të paluajtshme të verifikuar",
+    "sustainableReturns": "Kthime të Qëndrueshme",
+    "tailoredInvestment": "Koncepte investimi të personalizuara me vlerë afatgjatë"
+  },
+  "contact": {
+    "getInTouch": "Kontaktoni"
+  }
+}
