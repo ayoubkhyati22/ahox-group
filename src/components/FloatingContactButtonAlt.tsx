@@ -1,8 +1,8 @@
-import { MessageCircle, Mail, X, Send, Clock, ShieldCheck } from 'lucide-react';
+import { MessageCircle, Mail, X, Send, Clock, ShieldCheck, ChevronLeft } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
-import { COMPANY_INFO, getWhatsAppLink, getEmailLink } from '../constants/companyInfo';
+import { getWhatsAppLink, getEmailLink } from '../constants/companyInfo';
 
 const FloatingContactButtonAlt = () => {
   const { t } = useTranslation();
@@ -24,136 +24,130 @@ const FloatingContactButtonAlt = () => {
   const contactOptions = [
     {
       id: 'whatsapp',
-      label: t('contact.priorityWhatsApp', { defaultValue: 'Priority WhatsApp' }),
-      subtext: t('contact.typicalReply', { defaultValue: 'Typical reply: < 5 min' }),
+      label: 'Direct Channel',
+      subtext: 'High-Priority Response',
       icon: MessageCircle,
-      color: '#25D366',
-      bg: 'rgba(37, 211, 102, 0.1)',
+      color: '#C5A059', // Gold instead of neon green
+      bg: 'rgba(197, 160, 89, 0.05)',
       onClick: handleWhatsApp
     },
     {
       id: 'email',
-      label: t('contact.institutionalSupport', { defaultValue: 'Institutional Support' }),
-      subtext: t('contact.corporateInquiries', { defaultValue: 'Corporate inquiries' }),
+      label: 'Institutional Desk',
+      subtext: 'Official Inquiries',
       icon: Mail,
-      color: '#E8D700',
-      bg: 'rgba(232, 215, 0, 0.1)',
+      color: '#A1A1AA', // Zinc Grey
+      bg: 'rgba(255, 255, 255, 0.05)',
       onClick: handleEmail
     }
   ];
 
   return (
-    <div className="fixed bottom-10 right-10 z-[1000] font-sans">
-      
+    <div className="fixed bottom-10 right-10 z-[2000] font-sans">
       <AnimatePresence>
         {isOpen && (
           <>
-            {/* Ultra-Blur Backdrop */}
+            {/* Architectural Backdrop */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-slate-950/40 backdrop-blur-md"
+              className="fixed inset-0 bg-[#050505]/60 backdrop-blur-xl"
               onClick={() => setIsOpen(false)}
             />
 
-            {/* Menu Container */}
-            <div className="absolute bottom-24 right-0 flex flex-col gap-4 items-end">
+            {/* Panel List Container */}
+            <div className="absolute bottom-28 right-0 flex flex-col gap-6 items-end">
               {contactOptions.map((option, index) => {
                 const Icon = option.icon;
                 return (
                   <motion.div
                     key={option.id}
-                    initial={{ opacity: 0, x: 50, scale: 0.9 }}
-                    animate={{ opacity: 1, x: 0, scale: 1 }}
-                    exit={{ opacity: 0, x: 20, scale: 0.9 }}
-                    transition={{ 
-                        type: "spring", 
-                        stiffness: 400, 
-                        damping: 30, 
-                        delay: index * 0.1 
-                    }}
-                    className="relative"
+                    initial={{ opacity: 0, x: 30, y: 20 }}
+                    animate={{ opacity: 1, x: 0, y: 0 }}
+                    exit={{ opacity: 0, x: 10, scale: 0.95 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 25, delay: index * 0.1 }}
                   >
-                    {/* Security Badge Layer */}
-                    <div className="absolute -top-2 -left-2 z-20">
-                         <div className="bg-slate-900 border border-white/10 rounded-full p-1 shadow-xl">
-                            <ShieldCheck className="w-3 h-3 text-white" />
-                         </div>
-                    </div>
-
                     <button
                       onClick={option.onClick}
-                      className="group flex items-center gap-6 p-1 pl-6 pr-2 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-2xl hover:bg-white/10 hover:border-white/20 transition-all duration-500 w-[280px] shadow-2xl overflow-hidden"
+                      className="group relative flex items-center bg-[#0F0F0F] border border-white/10 hover:border-[#C5A059]/50 transition-all duration-500 w-[300px] overflow-hidden"
+                      style={{ borderRadius: '2px' }} // Sharp architectural edge
                     >
-                      {/* Geometric Grid Internal Background */}
-                      <div className="absolute inset-0 opacity-10 pointer-events-none group-hover:opacity-20 transition-opacity">
-                         <svg width="100%" height="100%"><rect width="100%" height="100%" fill="url(#grid)" /></svg>
+                      {/* Geometric "Drafting" Grid Background */}
+                      <div className="absolute inset-0 opacity-[0.03] group-hover:opacity-10 pointer-events-none transition-opacity">
+                         <div className="h-full w-full" style={{ backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)', backgroundSize: '16px 16px' }} />
                       </div>
 
-                      <div className="flex-1 text-right py-3 relative z-10">
-                        <span className="block text-white text-[10px] font-black uppercase tracking-[0.3em] mb-1">
+                      <div className="flex-1 text-right py-6 px-6 relative z-10">
+                        <span className="block text-[#C5A059] text-[9px] font-black uppercase tracking-[0.5em] mb-2 transition-all group-hover:tracking-[0.6em]">
                           {option.label}
                         </span>
                         <div className="flex items-center justify-end gap-2">
-                           <Clock className="w-3 h-3 opacity-40 text-white" />
-                           <span className="text-[9px] text-white/50 uppercase font-bold tracking-widest">{option.subtext}</span>
+                           <span className="text-[10px] text-zinc-500 uppercase font-light tracking-widest">{option.subtext}</span>
+                           <div className="w-1 h-1 bg-zinc-800 rounded-full" />
                         </div>
                       </div>
 
+                      {/* Icon Slab */}
                       <div 
-                        className="w-14 h-14 rounded-xl flex items-center justify-center transition-all duration-500 shadow-lg relative z-10 group-hover:scale-105"
-                        style={{ background: option.bg }}
+                        className="w-20 h-full border-l border-white/5 py-8 flex items-center justify-center transition-all duration-500 bg-white/[0.02] group-hover:bg-[#C5A059]/10"
                       >
-                         <Icon className="w-6 h-6" style={{ color: option.color }} />
-                         
-                         {/* Dynamic corner light */}
-                         <div className="absolute top-0 right-0 w-1 h-1 bg-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity animate-pulse m-2" />
+                         <Icon className="w-5 h-5 group-hover:scale-110 transition-transform duration-500" style={{ color: option.color }} />
                       </div>
-                      
-                      {/* Interaction Progress Bar (Top) */}
+
+                      {/* Animated Line Marker */}
                       <motion.div 
-                         initial={{ width: 0 }}
-                         animate={{ width: "100%" }}
-                         transition={{ duration: 1, delay: 0.5 + (index * 0.1) }}
-                         className="absolute top-0 left-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent" 
+                        className="absolute bottom-0 right-0 h-[2px] bg-[#C5A059]"
+                        initial={{ width: 0 }}
+                        animate={{ width: "40px" }}
+                        transition={{ delay: 0.5 + index * 0.1 }}
                       />
                     </button>
                   </motion.div>
                 );
               })}
+
+              {/* Status Banner */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.3 }}
+                className="flex items-center gap-2 pr-2"
+              >
+                 <ShieldCheck className="w-3 h-3 text-[#C5A059] opacity-40" />
+                 <span className="text-[8px] font-black uppercase tracking-[0.4em] text-zinc-600">Secure Protocol Active</span>
+              </motion.div>
             </div>
           </>
         )}
       </AnimatePresence>
 
-      {/* --- Main Orbit Button --- */}
+      {/* --- MASTER CONTROL HUB (GOLD/ONYX ORBIT) --- */}
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        className="relative w-20 h-20 group"
-        aria-label={t('contact.openContactMenu', { defaultValue: 'Open contact menu' })}
+        className="relative w-20 h-20 z-[2001]"
       >
-        {/* The Outer Kinetic Ring */}
-        <div className="absolute inset-[-4px] rounded-full overflow-hidden opacity-50 group-hover:opacity-100 transition-opacity">
+        {/* The Animated Spin Edge (Swiss Watch Precision Style) */}
+        <div className="absolute inset-0 rounded-full p-[1px]">
           <motion.div
-            className="w-full h-full"
+            className="w-full h-full rounded-full"
             style={{
-              background: 'conic-gradient(from 0deg, transparent, #14B3AA, transparent, #E8D700, transparent)',
+              background: `conic-gradient(from 0deg, transparent 0deg, #C5A059 180deg, transparent 360deg)`,
             }}
             animate={{ rotate: 360 }}
             transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
           />
         </div>
 
-        {/* The Central Command Hub */}
-        <div className="absolute inset-0 bg-slate-900 border border-white/20 rounded-full flex items-center justify-center shadow-[0_0_40px_rgba(20,179,170,0.2)] overflow-hidden">
+        {/* The Internal Command Button */}
+        <div className="absolute inset-[3px] bg-[#0A0A0A] rounded-full flex items-center justify-center border border-white/5 shadow-2xl overflow-hidden group">
             
-          {/* Animated Internal Scanning Light */}
+          {/* Subtle Scanning Shadow Animation */}
           <motion.div
-            className="absolute inset-0 bg-gradient-to-b from-white/10 to-transparent pointer-events-none"
-            animate={{ y: ["-100%", "200%"] }}
+            className="absolute inset-0 bg-white/5"
+            animate={{ x: ['-100%', '100%'] }}
             transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
           />
 
@@ -161,44 +155,46 @@ const FloatingContactButtonAlt = () => {
             {isOpen ? (
               <motion.div
                 key="close"
-                initial={{ rotate: -90, opacity: 0 }}
-                animate={{ rotate: 0, opacity: 1 }}
-                exit={{ rotate: 90, opacity: 0 }}
+                initial={{ scale: 0.5, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.5, opacity: 0 }}
               >
-                <X className="w-8 h-8 text-white relative z-10" />
+                <X className="w-6 h-6 text-zinc-200" />
               </motion.div>
             ) : (
               <motion.div
                 key="open"
-                initial={{ scale: 0.5, opacity: 0 }}
+                initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.5, opacity: 0 }}
-                className="relative flex items-center justify-center"
+                exit={{ scale: 0.8, opacity: 0 }}
+                className="flex items-center justify-center"
               >
-                <Send className="w-7 h-7 text-[#E8D700]" />
-                <div className="absolute inset-0 bg-[#E8D700]/20 blur-xl animate-pulse" />
+                <div className="relative">
+                   <MessageCircle className="w-6 h-6 text-white group-hover:text-[#C5A059] transition-colors" />
+                   {/* Ghost Echo Pulse */}
+                   <motion.div 
+                     animate={{ scale: [1, 1.5, 1], opacity: [0.5, 0, 0.5] }}
+                     transition={{ duration: 2, repeat: Infinity }}
+                     className="absolute inset-0 bg-[#C5A059] rounded-full blur-md"
+                   />
+                </div>
               </motion.div>
             )}
           </AnimatePresence>
         </div>
 
-        {/* Outer Notification Ripple */}
+        {/* Priority "Live" Signal */}
         {!isOpen && (
-            <span className="absolute -top-1 -right-1 flex h-4 w-4 z-50">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#E8D700] opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-4 w-4 bg-[#E8D700]"></span>
-            </span>
+            <motion.div 
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              className="absolute top-2 right-2 w-3 h-3"
+            >
+               <span className="absolute inset-0 rounded-full bg-[#C5A059] animate-ping opacity-50"></span>
+               <span className="relative block w-full h-full bg-[#C5A059] border-2 border-[#0A0A0A] rounded-full"></span>
+            </motion.div>
         )}
       </motion.button>
-
-      {/* SVG Asset Library (Used in components above) */}
-      <svg className="hidden">
-        <defs>
-          <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
-            <path d="M 20 0 L 0 0 0 20" fill="none" stroke="currentColor" strokeWidth="0.5" />
-          </pattern>
-        </defs>
-      </svg>
     </div>
   );
 };
