@@ -31,7 +31,8 @@
       "title": "Sicherheit",
       "description": "Umfassende Sicherheitsdienstleistungen"
     },
-    "learnMore": "Mehr"
+    "learnMore": "Mehr",
+    "inquireNow": "Jetzt anfragen"
   },
   "value": {
     "title": "IHRE VORTEILE",
@@ -64,7 +65,9 @@
     ],
     "engineering": "Wertschöpfung",
     "proven": "Bewährte",
-    "frameworks": "Strukturen"
+    "frameworks": "Strukturen",
+    "investIn": "Investieren in",
+    "technicalExcellence": "Technische Exzellenz bei jeder Transaktion."
   },
   "services": {
     "title": "INVESTMENTPROZESS",
@@ -99,7 +102,8 @@
   },
   "cities": {
     "title": "INVESTMENTMÄRKTE",
-    "subtitle": "Vier strategische Städte"
+    "subtitle": "Vier strategische Städte",
+    "locations": "Standorte"
   },
   "cta": {
     "title": "Portfolio aufbauen?",
@@ -123,10 +127,18 @@
     "address": "Adresse",
     "phone": "Telefon",
     "email": "E-Mail",
-    "website": "Webseite"
+    "website": "Webseite",
+    "communications": "Kommunikation",
+    "ourNetwork": "Unser Netzwerk",
+    "sectors": "Sektoren",
+    "backToTop": "Nach oben"
   },
   "whatsapp": {
-    "message": "Hallo, ich interessiere mich für Investmentmöglichkeiten."
+    "message": "Hallo, ich interessiere mich für Investmentmöglichkeiten.",
+    "directChannel": "Direkter Kanal",
+    "highPriorityResponse": "Prioritätsantwort",
+    "institutionalDesk": "Institutional Desk",
+    "officialInquiries": "Offizielle Anfragen"
   },
   "locations": {
     "casablanca": {
@@ -200,13 +212,15 @@
   },
   "targetAudience": {
     "title": "ZIELGRUPPE",
+    "subtitle": "Für Menschen, die ihr Kapital arbeiten lassen.",
     "investors": [
       "Privatinvestoren",
       "Unternehmer",
       "Family Offices",
       "Kapitalanleger",
       "Vermögensaufbauer"
-    ]
+    ],
+    "profiles": "Profile"
   },
   "construction": {
     "hero": {
@@ -220,7 +234,8 @@
       "titleAccent": "Qualitätsstandards",
       "text1": "Die Vermittlung von Baudienstleistungen spielt eine entscheidende Rolle in der modernen Bauindustrie. Wir von der AHOX GmbH unterstützen Bauherren dabei, die richtigen Partner für Planung, Ausführung und Fertigstellung zu finden.",
       "text2": "Dabei legen wir größten Wert auf die Prüfung von Referenzen, Erfahrungen und Zertifizierungen. Unser Ziel ist eine reibungslose und effiziente Durchführung Ihrer Bauvorhaben – vom Wohnhaus bis zum Gewerbeprojekt.",
-      "quote": "Wir fördern Zusammenarbeit und Effizienz durch qualifizierte Selektion."
+      "quote": "Wir fördern Zusammenarbeit und Effizienz durch qualifizierte Selektion.",
+      "constructionManagement": "Baumanagement"
     },
     "services": {
       "title": "Aufgabengebiet",
@@ -279,7 +294,9 @@
       "title": "Die Brücke",
       "titleAccent": "Angebot & Nachfrage",
       "text1": "Die Vermittlung von Immobilien ist eine bedeutende Tätigkeit in der Immobilienbranche. Die AHOX GmbH dient als spezialisiertes Vermittlungsunternehmen zwischen potenziellen Käufern und Verkäufern von Immobilien und Grundstücken.",
-      "text2": "Unser Ziel ist es, den Verkaufsprozess effizient und reibungslos abzuwickeln. Dabei stützen wir uns auf fundiertes Fachwissen über lokale Märkte, rechtliche Rahmenbedingungen und erprobte Verhandlungstechniken."
+      "text2": "Unser Ziel ist es, den Verkaufsprozess effizient und reibungslos abzuwickeln. Dabei stützen wir uns auf fundiertes Fachwissen über lokale Märkte, rechtliche Rahmenbedingungen und erprobte Verhandlungstechniken.",
+      "discretion": "Diskretion",
+      "expertKnowledge": "Fachwissen"
     },
     "services": {
       "title": "Dienstleistungen",
@@ -422,24 +439,39 @@
   "locationPage": {
     "elevated": "ERHÖHTE",
     "structures": "STRUKTUREN.",
+    "facilitation": "VERMITTLUNG",
     "description": "Durch präzise Ausführung und kompromisslose Qualität haben wir die Skyline von {{location}} geprägt. Unser Prozess kombiniert architektonische Integrität mit kommerzieller Präzision.",
     "features": ["Konzeptanalyse", "Beschaffung", "Management"],
     "contact": {
       "title": "PARTNERSCHAFT IN",
+      "inquire": "Anfragen",
       "description": "Bringen Sie Engineering und Baumanagement in Ihr Vorhaben. Wir arbeiten mit radikaler Transparenz.",
       "email": "E-Post",
       "phone": "Telefon",
-      "button": "Details"
+      "button": "Details",
+      "officialEmail": "Offizielle E-Mail",
+      "telephone": "Telefon",
+      "facilitatingEntry": "Vermittlung des Einstiegs in {{location}}s wachstumsstarke Anlagen."
     },
     "stats": {
-      "projects": "Projekte",
-      "team": "Team",
-      "experience": "Jahre",
-      "satisfaction": "Zufriedenheit"
+      "investmentRange": "Investmentbereich",
+      "germanCities": "Deutsche Städte für Immobilieninvestments",
+      "financialInstitutions": "Finanzinstitute",
+      "investorNationalities": "Investoren-Nationalitäten",
+      "economicCapital": "Wirtschaftskapital Marokkos",
+      "growthDistricts": "Wachstumsstarke Stadtbezirke",
+      "demandConcentration": "Nationale Immobilien-Nachfragekonzentration",
+      "personalTax": "Persönliche Einkommenssteuer",
+      "globalCities": "Globale Immobilieninvestment-Städte",
+      "fastestGrowing": "Schnellstwachsender Markt im Kosovo",
+      "diasporaDemand": "Diaspora-getriebene Nachfrage",
+      "residentialMarket": "Wachstumsstarker Wohnungsmarkt"
     },
     "officeLocation": "Büro",
     "enterMarket": "Markt",
-    "viewPhase": "Phase"
+    "viewPhase": "Phase",
+    "targetProfiles": "ZIELPROFILE",
+    "locationDesk": "Standort-Desk"
   },
   "common": {
     "selectLanguage": "Sprache",
@@ -451,6 +483,35 @@
     "riskProfile": "Risikoprofil",
     "minimizedExposure": "Minimiert",
     "assetGrowth": "Wachstum",
-    "precisionTargets": "Präzisionsziele"
+    "precisionTargets": "Präzisionsziele",
+    "howWeWork": "Wie wir arbeiten",
+    "structuredProcess": "Strukturierter Prozess",
+    "professionalSupport": "Professionelle Unterstützung",
+    "provenResults": "Bewährte Ergebnisse",
+    "yourInvestmentPartner": "Ihr Investmentpartner",
+    "internationalRealEstate": "Internationale Immobilieninvestments.",
+    "personallyFacilitated": "Persönlich vermittelt. Strategisch strukturiert.",
+    "globalNetwork": "Globales Netzwerk",
+    "connectingInvestors": "Investoren über vier strategische Märkte verbinden",
+    "verifiedPartners": "Geprüfte Partner",
+    "vettedConstruction": "Geprüfte Bauunternehmen und Immobilienprofis",
+    "sustainableReturns": "Nachhaltige Renditen",
+    "tailoredInvestment": "Maßgeschneiderte Investmentkonzepte mit langfristigem Wert",
+    "international": "International",
+    "stability": "Stabilität",
+    "strategy": "Strategie"
+  },
+  "contact": {
+    "getInTouch": "Kontakt"
+  },
+  "companyInfo": {
+    "name": "AHOX GmbH",
+    "legalName": "AHOX GmbH",
+    "address": {
+      "street": "Ostendstraße 80",
+      "postalCode": "60314",
+      "city": "Frankfurt a.M.",
+      "country": "Deutschland"
+    }
   }
 }

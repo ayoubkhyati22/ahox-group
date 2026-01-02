@@ -1,4 +1,4 @@
-import { MessageCircle, Mail, X, Send, Clock, ShieldCheck, ChevronLeft } from 'lucide-react';
+import { MessageCircle, Mail, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
@@ -24,19 +24,19 @@ const FloatingContactButtonAlt = () => {
   const contactOptions = [
     {
       id: 'whatsapp',
-      label: 'Direct Channel',
-      subtext: 'High-Priority Response',
+      label: t('whatsapp.directChannel'),
+      subtext: t('whatsapp.highPriorityResponse'),
       icon: MessageCircle,
-      color: '#C5A059', // Gold instead of neon green
+      color: '#C5A059',
       bg: 'rgba(197, 160, 89, 0.05)',
       onClick: handleWhatsApp
     },
     {
       id: 'email',
-      label: 'Institutional Desk',
-      subtext: 'Official Inquiries',
+      label: t('whatsapp.institutionalDesk'),
+      subtext: t('whatsapp.officialInquiries'),
       icon: Mail,
-      color: '#A1A1AA', // Zinc Grey
+      color: '#A1A1AA',
       bg: 'rgba(255, 255, 255, 0.05)',
       onClick: handleEmail
     }
@@ -71,7 +71,7 @@ const FloatingContactButtonAlt = () => {
                     <button
                       onClick={option.onClick}
                       className="group relative flex items-center bg-[#0F0F0F] border border-white/10 hover:border-[#C5A059]/50 transition-all duration-500 w-[300px] overflow-hidden"
-                      style={{ borderRadius: '2px' }} // Sharp architectural edge
+                      style={{ borderRadius: '2px' }}
                     >
                       {/* Geometric "Drafting" Grid Background */}
                       <div className="absolute inset-0 opacity-[0.03] group-hover:opacity-10 pointer-events-none transition-opacity">
@@ -111,14 +111,14 @@ const FloatingContactButtonAlt = () => {
         )}
       </AnimatePresence>
 
-      {/* --- MASTER CONTROL HUB (GOLD/ONYX ORBIT) --- */}
+      {/* --- MASTER CONTROL HUB --- */}
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         className="relative w-20 h-20 z-[2001]"
       >
-        {/* The Animated Spin Edge (Swiss Watch Precision Style) */}
+        {/* The Animated Spin Edge */}
         <div className="absolute inset-0 rounded-full p-[1px]">
           <motion.div
             className="w-full h-full rounded-full"
@@ -171,8 +171,6 @@ const FloatingContactButtonAlt = () => {
             )}
           </AnimatePresence>
         </div>
-
-
       </motion.button>
     </div>
   );

@@ -1,10 +1,10 @@
 import { useTranslation } from 'react-i18next';
 import { motion, useInView } from 'framer-motion';
-import { Building2, Users, Award, TrendingUp, ArrowRight, Compass } from 'lucide-react';
+import { Building2, Users, Award, TrendingUp, Compass } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
 import { getCityImage } from '../hooks/useImages';
 
-// Background Moving Lines (Brand Consistency)
+// Background Moving Lines
 const MovingLines = () => (
   <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
     <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -87,7 +87,7 @@ const LocationPage = ({ location }: LocationPageProps) => {
   }> = {
     casablanca: {
       heroImage: getCityImage('casablanca', 'hero'),
-      accentColor: '#D1D1D1', // Cool Silver
+      accentColor: '#D1D1D1',
       stats: [
         { icon: TrendingUp, value: '€120K – €2.5M', labelKey: 'investmentRange' },
         { icon: Award, value: '#1', labelKey: 'economicCapital' },
@@ -97,7 +97,7 @@ const LocationPage = ({ location }: LocationPageProps) => {
     },
     dubai: {
       heroImage: getCityImage('dubai', 'hero'),
-      accentColor: '#A1A1AA', // Zinc Grey
+      accentColor: '#A1A1AA',
       stats: [
         { icon: TrendingUp, value: '€300K – €10M', labelKey: 'investmentRange' },
         { icon: Award, value: '0%', labelKey: 'personalTax' },
@@ -107,7 +107,7 @@ const LocationPage = ({ location }: LocationPageProps) => {
     },
     frankfurt: {
       heroImage: getCityImage('frankfurt', 'hero'),
-      accentColor: '#FFFFFF', // High-Contrast White
+      accentColor: '#FFFFFF',
       stats: [
         { icon: TrendingUp, value: '€250K – €5M', labelKey: 'investmentRange' },
         { icon: Award, value: 'Top 3', labelKey: 'germanCities' },
@@ -117,7 +117,7 @@ const LocationPage = ({ location }: LocationPageProps) => {
     },
     pristina: {
       heroImage: getCityImage('pristina', 'hero'),
-      accentColor: '#71717A', // Stone Grey
+      accentColor: '#71717A',
       stats: [
         { icon: TrendingUp, value: '€80K – €1.5M', labelKey: 'investmentRange' },
         { icon: Award, value: '#1', labelKey: 'fastestGrowing' },
@@ -156,7 +156,7 @@ const LocationPage = ({ location }: LocationPageProps) => {
           >
             <div className="w-1.5 h-1.5 rounded-full bg-zinc-100" />
             <span className="text-zinc-100 text-[10px] uppercase tracking-[0.4em] font-black">
-              Location Desk
+              {t('locationPage.locationDesk')}
             </span>
           </motion.div>
 
@@ -165,7 +165,7 @@ const LocationPage = ({ location }: LocationPageProps) => {
             animate={{ opacity: 1, y: 0 }}
             className="text-white text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter leading-none italic uppercase italic-subtle"
           >
-            {location}
+            {t(`locations.${location}.title`)}
           </motion.h1>
 
           <p className="text-zinc-500 text-base md:text-lg max-w-xl font-light leading-relaxed border-l border-white/10 pl-6 italic">
@@ -174,7 +174,7 @@ const LocationPage = ({ location }: LocationPageProps) => {
         </div>
       </section>
 
-      {/* 2. STATS SECTION (ZINC STRIP) */}
+      {/* 2. STATS SECTION */}
       <section className="bg-[#111111] border-y border-white/5">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 divide-y lg:divide-y-0 lg:divide-x divide-white/5">
           {data.stats.map((stat, idx) => (
@@ -197,7 +197,7 @@ const LocationPage = ({ location }: LocationPageProps) => {
         </div>
       </section>
 
-      {/* 3. CONTENT SECTION (MATTE LAYOUT) */}
+      {/* 3. CONTENT SECTION */}
       <section className="py-32 md:py-40 relative overflow-hidden bg-[#050505]">
         <MovingLines />
         <div className="container mx-auto px-6 lg:px-20 relative z-10">
@@ -206,7 +206,7 @@ const LocationPage = ({ location }: LocationPageProps) => {
             <div className="lg:col-span-6 space-y-12">
               <h2 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter uppercase italic italic-subtle leading-none">
                 {t('locationPage.elevated')} <br />
-                <span className="text-zinc-800">FACILITATION</span>
+                <span className="text-zinc-800">{t('locationPage.facilitation')}</span>
               </h2>
               
               <div className="p-8 bg-[#111111] border border-white/5 relative group overflow-hidden">
@@ -236,7 +236,7 @@ const LocationPage = ({ location }: LocationPageProps) => {
 
                <div className="pt-10 mt-10 border-t border-white/5">
                   <h4 className="text-[10px] font-black uppercase tracking-[0.4em] mb-8 text-zinc-600">
-                    TARGET PROFILES
+                    {t('locationPage.targetProfiles')}
                   </h4>
                   <div className="grid md:grid-cols-2 gap-4">
                     {(t(`locations.${location}.features`, { returnObjects: true }) as string[]).map((feature, index) => (
@@ -255,24 +255,23 @@ const LocationPage = ({ location }: LocationPageProps) => {
       {/* 4. CONTACT MONOLITH */}
       <section id="contact" className="py-20 md:py-28 container mx-auto px-6">
         <div className="bg-[#0D0D0D] border border-white/5 flex flex-col lg:flex-row relative group overflow-hidden">
-          {/* Subtle hover reveal on monolith border */}
           <div className="absolute inset-0 bg-white/[0.02] opacity-0 group-hover:opacity-100 transition-opacity" />
 
           <div className="lg:w-2/3 p-10 lg:p-20 flex flex-col gap-8 relative z-10">
             <h2 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter leading-[0.8] uppercase italic italic-subtle">
-               Inquire <br /> 
-               <span className="text-zinc-700">{location}</span>
+               {t('locationPage.contact.inquire')} <br /> 
+               <span className="text-zinc-700">{t(`locations.${location}.title`)}</span>
             </h2>
             <div className="w-12 h-1 bg-white" />
             <p className="text-zinc-500 text-lg md:text-xl font-light italic">
-               Facilitating entry into {location}'s high-growth assets.
+               {t('locationPage.contact.facilitatingEntry', { location: t(`locations.${location}.title`) })}
             </p>
           </div>
 
           <div className="lg:w-1/3 bg-[#1A1A1A] p-10 lg:p-16 flex flex-col justify-center gap-12 border-t lg:border-t-0 lg:border-l border-white/5 relative z-10">
                <div className="flex flex-col group">
                   <span className="text-[10px] uppercase font-black text-zinc-600 mb-2 tracking-[0.5em] group-hover:text-white transition-colors">
-                    Official Email
+                    {t('locationPage.contact.officialEmail')}
                   </span>
                   <a href="mailto:info@ahox-group.com" className="text-xl md:text-2xl font-black text-zinc-100 italic transition-all group-hover:tracking-tighter break-all">
                     info@ahox-group.com
@@ -280,7 +279,7 @@ const LocationPage = ({ location }: LocationPageProps) => {
                </div>
                <div className="flex flex-col group">
                   <span className="text-[10px] uppercase font-black text-zinc-600 mb-2 tracking-[0.5em] group-hover:text-white transition-colors">
-                    Telephone
+                    {t('locationPage.contact.telephone')}
                   </span>
                   <a href="tel:+496927278761" className="text-xl md:text-2xl font-black text-zinc-100 italic transition-all group-hover:tracking-tighter">
                     +49 69 2727 8761

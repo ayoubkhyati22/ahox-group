@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { MapPin, Phone, Mail, Globe, ArrowUpRight } from 'lucide-react';
+import { MapPin, Phone, Mail, ArrowUpRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -10,7 +10,7 @@ const Footer = () => {
     {
       icon: MapPin,
       title: t('footer.address'),
-      content: ['Ostendstraße 80', '60314 Frankfurt a.M.', 'Germany'],
+      content: [t('companyInfo.address.street'), `${t('companyInfo.address.postalCode')} ${t('companyInfo.address.city')}`, t('companyInfo.address.country')],
     },
     {
       icon: Phone,
@@ -33,7 +33,7 @@ const Footer = () => {
 
   return (
     <footer className="relative bg-[#050505] text-white pt-24 overflow-hidden">
-      {/* Decorative Grid Pattern (Matching Home) */}
+      {/* Decorative Grid Pattern */}
       <div className="absolute inset-0 opacity-[0.02] pointer-events-none">
         <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(#ffffff 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
       </div>
@@ -56,9 +56,9 @@ const Footer = () => {
             </motion.div>
           </div>
 
-          {/* 2. CONTACT (ZINC & GOLD) */}
+          {/* 2. CONTACT */}
           <div className="lg:col-span-3">
-             <span className="text-[10px] font-black uppercase tracking-[0.4em] text-zinc-600 block mb-10">Communications</span>
+             <span className="text-[10px] font-black uppercase tracking-[0.4em] text-zinc-600 block mb-10">{t('footer.communications')}</span>
              <div className="space-y-8">
                 {contactInfo.map((item, i) => (
                   <div key={i} className="group">
@@ -73,9 +73,9 @@ const Footer = () => {
              </div>
           </div>
 
-          {/* 3. GLOBAL FOOTPRINT (DARK GRAY CARDS) */}
+          {/* 3. GLOBAL FOOTPRINT */}
           <div className="lg:col-span-3">
-             <span className="text-[10px] font-black uppercase tracking-[0.4em] text-zinc-600 block mb-10">Our Network</span>
+             <span className="text-[10px] font-black uppercase tracking-[0.4em] text-zinc-600 block mb-10">{t('footer.ourNetwork')}</span>
              <ul className="space-y-4">
                {locations.map((loc, i) => (
                  <li key={i}>
@@ -95,9 +95,9 @@ const Footer = () => {
              </ul>
           </div>
 
-          {/* 4. SECTORS (TEXT STROKE FEEL) */}
+          {/* 4. SECTORS */}
           <div className="lg:col-span-2">
-            <span className="text-[10px] font-black uppercase tracking-[0.4em] text-zinc-600 block mb-10">Sectors</span>
+            <span className="text-[10px] font-black uppercase tracking-[0.4em] text-zinc-600 block mb-10">{t('footer.sectors')}</span>
             <div className="flex flex-col gap-4 text-xs font-black tracking-widest uppercase">
                 <Link to="/construction" className="hover:text-gold transition-colors">{t('divisions.construction.title')}</Link>
                 <Link to="/real-estate" className="hover:text-gold transition-colors">{t('divisions.realEstate.title')}</Link>
@@ -108,23 +108,21 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* BOTTOM LEGAL BAR (DARK GREY BACKGROUND) */}
+      {/* BOTTOM LEGAL BAR */}
       <div className="bg-[#0A0A0A] border-t border-white/5 py-10 relative overflow-hidden">
         <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center gap-10">
             <span className="text-zinc-600 text-[10px] font-bold tracking-widest uppercase">
-             AHOX GROUP
+             {t('companyInfo.name')}
             </span>
           </div>
-
-
 
           {/* Top of page trigger */}
           <button 
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             className="group flex items-center gap-2 text-[10px] text-zinc-600 hover:text-white transition-all uppercase font-black"
           >
-            <span>Back to top</span>
+            <span>{t('footer.backToTop')}</span>
             <div className="w-8 h-8 rounded-full border border-zinc-800 flex items-center justify-center group-hover:border-gold transition-all">
               <ArrowUpRight className="w-3 h-3 group-hover:-translate-y-1 transition-transform" />
             </div>

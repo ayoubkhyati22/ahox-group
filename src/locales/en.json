@@ -30,7 +30,8 @@
       "title": "Security",
       "description": "Comprehensive security services"
     },
-    "learnMore": "Learn More"
+    "learnMore": "Learn More",
+    "inquireNow": "Inquire Now"
   },
   "value": {
     "title": "WHY INVEST WITH US",
@@ -63,7 +64,9 @@
     ],
     "engineering": "Value Engineering",
     "proven": "Proven",
-    "frameworks": "Frameworks"
+    "frameworks": "Frameworks",
+    "investIn": "Invest In",
+    "technicalExcellence": "Technical Excellence in Every Transaction."
   },
   "services": {
     "title": "OUR INVESTMENT PROCESS",
@@ -98,7 +101,8 @@
   },
   "cities": {
     "title": "INVESTMENT MARKETS",
-    "subtitle": "Four Strategic Cities with Distinct Investment Profiles"
+    "subtitle": "Four Strategic Cities with Distinct Investment Profiles",
+    "locations": "Locations"
   },
   "cta": {
     "title": "Ready to Build Your Portfolio?",
@@ -122,16 +126,24 @@
     "address": "Address",
     "phone": "Phone",
     "email": "Email",
-    "website": "Website"
+    "website": "Website",
+    "communications": "Communications",
+    "ourNetwork": "Our Network",
+    "sectors": "Sectors",
+    "backToTop": "Back to top"
   },
   "whatsapp": {
-    "message": "Hello, I'm interested in investment opportunities."
+    "message": "Hello, I'm interested in investment opportunities.",
+    "directChannel": "Direct Channel",
+    "highPriorityResponse": "High-Priority Response",
+    "institutionalDesk": "Institutional Desk",
+    "officialInquiries": "Official Inquiries"
   },
   "locations": {
     "casablanca": {
       "title": "Casablanca",
       "subtitle": "Emerging market with strong growth potential",
-      "description": "Casablanca offers opportunities where markets are just emerging.",
+      "description": "Casablanca offers opportunities where markets are just emerging. Rapid urbanization and increasing demand for residential and commercial properties create attractive entry prices.",
       "idealFor": "Ideal for:",
       "features": [
         "Early-stage investments",
@@ -141,13 +153,14 @@
       "highlights": [
         "Rapid urbanization",
         "Increasing demand for residential & commercial properties",
-        "Attractive entry prices"
+        "Attractive entry prices",
+        "Growing business sector"
       ]
     },
     "dubai": {
       "title": "Dubai",
       "subtitle": "Dynamic growth & above-average returns",
-      "description": "Dubai represents speed, growth, and global capital flow.",
+      "description": "Dubai represents speed, growth, and global capital flow. With tax-free income and international demand, it's the perfect market for cash-flow oriented investments.",
       "idealFor": "Ideal for:",
       "features": [
         "Cash-flow oriented investments",
@@ -164,7 +177,7 @@
     "frankfurt": {
       "title": "Frankfurt am Main",
       "subtitle": "Stability & long-term security",
-      "description": "Frankfurt stands for security, stability, and predictable returns.",
+      "description": "Frankfurt stands for security, stability, and predictable returns. As Europe's financial hub, it offers high demand for residential and commercial real estate with a strong rental market.",
       "idealFor": "Ideal for:",
       "features": [
         "Capital preservation",
@@ -174,13 +187,14 @@
       "highlights": [
         "Europe's financial hub",
         "High demand for residential & commercial real estate",
-        "Strong rental market"
+        "Strong rental market",
+        "Stable economic environment"
       ]
     },
     "pristina": {
       "title": "Pristina",
       "subtitle": "Undervalued market with high upside potential",
-      "description": "Pristina is a market for investors who think ahead.",
+      "description": "Pristina is a market for investors who think ahead. With a young population, low entry costs, and few professional investors, it offers first-mover advantages.",
       "idealFor": "Ideal for:",
       "features": [
         "Developers",
@@ -191,7 +205,7 @@
         "Young population",
         "Low entry costs",
         "Rising demand for new builds",
-        "Few professional investors (first-mover advantage)"
+        "First-mover advantage"
       ]
     }
   },
@@ -204,7 +218,8 @@
       "Family Offices",
       "Capital Investors",
       "Wealth Builders & Diversifiers"
-    ]
+    ],
+    "profiles": "Profiles"
   },
   "construction": {
     "hero": {
@@ -218,7 +233,8 @@
       "titleAccent": "highest quality standards",
       "text1": "The brokerage of construction services plays a crucial role in the modern construction industry. We at AHOX GmbH support builders in finding the right partners for planning, execution and completion.",
       "text2": "We place the greatest emphasis on checking references, experience and certifications. Our goal is a smooth and efficient implementation of your construction projects - from residential buildings to commercial projects.",
-      "quote": "We promote collaboration and efficiency in the construction industry through qualified selection."
+      "quote": "We promote collaboration and efficiency in the construction industry through qualified selection.",
+      "constructionManagement": "Construction Management"
     },
     "services": {
       "title": "Our Area of Responsibility",
@@ -277,7 +293,9 @@
       "title": "The Bridge between",
       "titleAccent": "Supply and Demand",
       "text1": "The brokerage of real estate is a significant activity in the real estate industry. AHOX GmbH serves as a specialized brokerage company between potential buyers and sellers of real estate and land.",
-      "text2": "Our goal is to handle the sales process efficiently and smoothly. We rely on sound expertise about local markets, legal frameworks and proven negotiation techniques."
+      "text2": "Our goal is to handle the sales process efficiently and smoothly. We rely on sound expertise about local markets, legal frameworks and proven negotiation techniques.",
+      "discretion": "Discretion",
+      "expertKnowledge": "Expert Knowledge"
     },
     "services": {
       "title": "Services",
@@ -420,14 +438,19 @@
   "locationPage": {
     "elevated": "ELEVATED",
     "structures": "STRUCTURES.",
+    "facilitation": "FACILITATION",
     "description": "Through sharp execution and zero-tolerance for compromise, we've defined the skyline of {{location}}. Our process combines architectural integrity with commercial precision.",
     "features": ["Concept Analysis", "Strategic Sourcing", "Structural Management"],
     "contact": {
       "title": "PARTNER WITH US IN",
+      "inquire": "Inquire",
       "description": "Bring professional engineering and construction management to your next venture. We operate with radical transparency.",
       "email": "Electronic Mail",
       "phone": "Telephone Connection",
-      "button": "Request Details"
+      "button": "Request Details",
+      "officialEmail": "Official Email",
+      "telephone": "Telephone",
+      "facilitatingEntry": "Facilitating entry into {{location}}'s high-growth assets."
     },
     "stats": {
       "investmentRange": "Investment Range",
@@ -445,7 +468,9 @@
     },
     "officeLocation": "Office Location",
     "enterMarket": "Enter Market",
-    "viewPhase": "View Phase"
+    "viewPhase": "View Phase",
+    "targetProfiles": "TARGET PROFILES",
+    "locationDesk": "Location Desk"
   },
   "common": {
     "selectLanguage": "Select Language",
@@ -457,6 +482,35 @@
     "riskProfile": "Risk Profile",
     "minimizedExposure": "Minimized Exposure",
     "assetGrowth": "Asset Growth",
-    "precisionTargets": "Precision Targets"
+    "precisionTargets": "Precision Targets",
+    "howWeWork": "How We Work",
+    "structuredProcess": "Structured Process",
+    "professionalSupport": "Professional Support",
+    "provenResults": "Proven Results",
+    "yourInvestmentPartner": "Your Investment Partner",
+    "internationalRealEstate": "International real estate investments.",
+    "personallyFacilitated": "Personally facilitated. Strategically structured.",
+    "globalNetwork": "Global Network",
+    "connectingInvestors": "Connecting investors across four strategic markets",
+    "verifiedPartners": "Verified Partners",
+    "vettedConstruction": "Vetted construction companies and real estate professionals",
+    "sustainableReturns": "Sustainable Returns",
+    "tailoredInvestment": "Tailored investment concepts with long-term value",
+    "international": "International",
+    "stability": "Stability",
+    "strategy": "Strategy"
+  },
+  "contact": {
+    "getInTouch": "Get in Touch"
+  },
+  "companyInfo": {
+    "name": "AHOX GmbH",
+    "legalName": "AHOX GmbH",
+    "address": {
+      "street": "Ostendstraße 80",
+      "postalCode": "60314",
+      "city": "Frankfurt a.M.",
+      "country": "Germany"
+    }
   }
 }

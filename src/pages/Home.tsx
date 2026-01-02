@@ -1,9 +1,9 @@
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-  ChevronRight, TrendingUp, Shield, Globe2, Target,
-  ArrowRight, CheckCircle2, Building2, Palmtree,
-  Landmark, Mountain, LayoutPanelLeft, Compass
+  ChevronRight, TrendingUp, Shield, Globe2,
+  ArrowRight, Building2, Palmtree,
+  Landmark, Mountain, Compass
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
@@ -71,7 +71,7 @@ const HomePage = () => {
   return (
     <div className="min-h-screen bg-[#0A0A0A] selection:bg-gold/30 text-white font-sans">
       
-      {/* 1. HERO SECTION (DARK GRAY GRADIENT) */}
+      {/* 1. HERO SECTION */}
       <section className="h-screen relative overflow-hidden flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <AnimatePresence mode="wait">
@@ -84,7 +84,6 @@ const HomePage = () => {
               className="absolute inset-0"
               style={{ backgroundImage: `url(${heroImages[currentImageIndex].url})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
             >
-              {/* Overlay with a hint of Warm Gray */}
               <div className="absolute inset-0 bg-gradient-to-br from-[#121212]/95 via-transparent to-[#0A0A0A]" />
             </motion.div>
           </AnimatePresence>
@@ -112,7 +111,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* 2. PHILOSOPHY SECTION (STONE GRAY BACKGROUND) */}
+      {/* 2. PHILOSOPHY SECTION */}
       <section className="py-32 md:py-40 relative bg-[#111111]">
         <MovingLines />
         <div className="container mx-auto px-6 relative z-10 text-center">
@@ -127,26 +126,26 @@ const HomePage = () => {
                    <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mb-6 group hover:border-gold/50 transition-colors">
                       <Globe2 className="w-5 h-5 md:w-6 md:h-6 text-zinc-400 group-hover:text-gold transition-colors" />
                    </div>
-                   <p className="text-[10px] font-bold uppercase tracking-widest text-zinc-500">International</p>
+                   <p className="text-[10px] font-bold uppercase tracking-widest text-zinc-500">{t('common.international')}</p>
                 </div>
                 <div className="flex flex-col items-center">
                    <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mb-6 group hover:border-teal/50 transition-colors">
                       <Shield className="w-5 h-5 md:w-6 md:h-6 text-zinc-400 group-hover:text-teal transition-colors" />
                    </div>
-                   <p className="text-[10px] font-bold uppercase tracking-widest text-zinc-500">Stability</p>
+                   <p className="text-[10px] font-bold uppercase tracking-widest text-zinc-500">{t('common.stability')}</p>
                 </div>
                 <div className="flex flex-col items-center">
                    <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mb-6 group hover:border-gold/50 transition-colors">
                       <TrendingUp className="w-5 h-5 md:w-6 md:h-6 text-zinc-400 group-hover:text-gold transition-colors" />
                    </div>
-                   <p className="text-[10px] font-bold uppercase tracking-widest text-zinc-500">Strategy</p>
+                   <p className="text-[10px] font-bold uppercase tracking-widest text-zinc-500">{t('common.strategy')}</p>
                 </div>
              </div>
           </motion.div>
         </div>
       </section>
 
-      {/* 3. THREE DIVISIONS (DARK SLATE CARDS) */}
+      {/* 3. THREE DIVISIONS */}
       <section className="py-24 md:py-32 bg-[#0A0A0A]">
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
@@ -165,7 +164,7 @@ const HomePage = () => {
                     <h3 className="text-xl md:text-2xl font-bold uppercase mb-3 md:mb-4 tracking-tighter" style={{ color: div.color }}>{t(`divisions.${div.id}.title`)}</h3>
                     <p className="text-zinc-500 text-sm font-light leading-relaxed mb-6 md:mb-8">{t(`divisions.${div.id}.description`)}</p>
                     <div className="flex justify-center items-center gap-2 text-zinc-600 group-hover:text-white transition-colors">
-                        <span className="text-[9px] font-black uppercase tracking-widest">Inquire Now</span>
+                        <span className="text-[9px] font-black uppercase tracking-widest">{t('divisions.inquireNow')}</span>
                         <ArrowRight className="w-3 h-3" />
                     </div>
                   </div>
@@ -176,15 +175,15 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* 4. WHY INVEST (CONTRAST GRAY TILES) */}
+      {/* 4. WHY INVEST */}
       <section className="py-32 md:py-40 bg-[#111111] border-y border-white/5">
         <div className="container mx-auto px-6">
           <div className="flex flex-col lg:flex-row gap-16 md:gap-20 items-end mb-20">
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-tighter leading-none flex-1">
-              <span className="text-zinc-600 block">Invest In</span> {t('value.proven')}
+              <span className="text-zinc-600 block">{t('value.investIn')}</span> {t('value.proven')}
             </h2>
             <p className="text-zinc-500 max-w-md font-light uppercase text-xs tracking-widest pb-4 border-b border-zinc-800">
-              Technical Excellence in Every Transaction.
+              {t('value.technicalExcellence')}
             </p>
           </div>
 
@@ -200,7 +199,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* 5. PROCESS SECTION (GHOST SILVER TEXT) */}
+      {/* 5. PROCESS SECTION */}
       <section className="py-32 md:py-40 bg-[#0A0A0A] relative overflow-hidden">
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto space-y-32 md:space-y-40">
@@ -223,12 +222,12 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* 6. TARGET AUDIENCE (SMOOTH GRAY LAYERS) */}
+      {/* 6. TARGET AUDIENCE */}
       <section className="py-24 md:py-32 bg-[#121212]">
         <div className="container mx-auto px-6">
            <div className="grid lg:grid-cols-2 gap-20 md:gap-32">
               <div>
-                <span className="text-gold font-bold text-[10px] uppercase tracking-[0.5em] mb-4 block">Profiles</span>
+                <span className="text-gold font-bold text-[10px] uppercase tracking-[0.5em] mb-4 block">{t('targetAudience.profiles')}</span>
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tighter italic mb-6 md:mb-8 italic-subtle">{t('targetAudience.title')}</h2>
                 <div className="p-6 md:p-8 border-l-2 border-zinc-700 bg-white/[0.02]">
                    <p className="text-xl md:text-2xl font-light italic text-zinc-400 leading-snug">"{t('targetAudience.subtitle')}"</p>
@@ -246,10 +245,10 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* 7. CITIES (STEEL EFFECT) */}
+      {/* 7. CITIES */}
       <section className="py-24 md:py-32 bg-[#0A0A0A]">
         <div className="container mx-auto px-6">
-           <h2 className="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter mb-16 md:mb-20 italic italic-subtle text-white">Locations</h2>
+           <h2 className="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter mb-16 md:mb-20 italic italic-subtle text-white">{t('cities.locations')}</h2>
            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
              {cities.map((city) => (
                <Link to={`/${city.name}`} key={city.name}>
@@ -258,7 +257,7 @@ const HomePage = () => {
                      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
                      <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-end">
                         <span className="text-gold text-[10px] font-black uppercase tracking-[0.4em] mb-2">{city.tag}</span>
-                        <h3 className="text-3xl md:text-4xl font-black uppercase tracking-tighter mb-4">{city.name}</h3>
+                        <h3 className="text-3xl md:text-4xl font-black uppercase tracking-tighter mb-4">{t(`nav.${city.name}`)}</h3>
                         <div className="w-10 h-10 md:w-12 md:h-12 bg-white flex items-center justify-center -mb-16 md:-mb-20 group-hover:mb-0 transition-all duration-500">
                            <ArrowRight className="text-black w-5 h-5 md:w-6 md:h-6" />
                         </div>
@@ -270,16 +269,10 @@ const HomePage = () => {
         </div>
       </section>
 
-
-
       <style dangerouslySetInnerHTML={{ __html: `
         .italic-subtle {
           font-style: italic;
           letter-spacing: -0.06em;
-        }
-        @font-face {
-          font-family: 'Sans';
-          src: url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;900&display=swap');
         }
       `}} />
     </div>
