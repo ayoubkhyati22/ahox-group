@@ -84,7 +84,7 @@ const Header = () => {
             <img 
               src={logoSrc} 
               alt="AHOX" 
-              className={`h-28 sm:h-18 w-auto transition-all duration-500 ${isScrolled ? 'scale-90' : 'scale-100'}`} 
+              className={`h-24 sm:h-18 w-auto transition-all duration-500 ${isScrolled ? 'scale-90' : 'scale-100'}`} 
             />
           </Link>
 
@@ -114,14 +114,15 @@ const Header = () => {
           {/* Right Actions */}
           <div className="flex items-center gap-2 sm:gap-6">
             
-            {/* Language Selector (Stone Effect) */}
+            {/* Language Selector (Stone Effect) - Flag only on mobile */}
             <div className="relative" ref={langRef}>
               <button
                 onClick={() => setIsLangOpen(!isLangOpen)}
                 className="flex items-center gap-3 px-4 py-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full transition-all group"
               >
-                <span className="text-lg opacity-80 group-hover:opacity-100 grayscale-[0.5] group-hover:grayscale-0">{currentLanguage.flag}</span>
-                <span className="hidden sm:block text-[10px] font-black uppercase tracking-widest text-zinc-300 group-hover:text-white">
+                {/* Flag visible only on small screens */}
+                <span className="sm:hidden text-lg opacity-80 group-hover:opacity-100 grayscale-[0.5] group-hover:grayscale-0">{currentLanguage.flag}</span>
+                <span className="text-[10px] font-black uppercase tracking-widest text-zinc-300 group-hover:text-white">
                   {currentLanguage.code}
                 </span>
                 <ChevronDown className={`w-3 h-3 text-zinc-500 group-hover:text-gold transition-all ${isLangOpen ? 'rotate-180' : ''}`} />
@@ -146,7 +147,8 @@ const Header = () => {
                         }`}
                       >
                         <span className="flex items-center gap-3">
-                          <span className="text-sm grayscale-[0.2]">{lang.flag}</span>
+                          {/* Flag visible only on small screens in dropdown */}
+                          <span className="sm:hidden text-sm grayscale-[0.2]">{lang.flag}</span>
                           {lang.label}
                         </span>
                         {i18n.language === lang.code && (
@@ -238,4 +240,4 @@ const Header = () => {
   );
 };
 
-export default Header;  
+export default Header;

@@ -15,7 +15,7 @@
         },
         {
           "id": "residential-complex",
-          "url": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1920&h=1080&fit=crop",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/4/4b/%D8%B9%D9%85%D8%A7%D8%B1%D8%A9_%D9%85%D8%A7%D8%BA%D8%A7%D9%8A.jpg",
           "alt": "Residential Complex"
         },
         {
@@ -37,7 +37,7 @@
     },
     "cities": {
       "casablanca": {
-        "hero": "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?auto=format&fit=crop&q=80",
+        "hero": "https://images.unsplash.com/photo-1538230575309-59dfc388ae36?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FzYWJsYW5jYXxlbnwwfHwwfHx8MA%3D%3D",
         "thumbnail": "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=800&h=600&fit=crop",
         "alt": "Casablanca Skyline"
       },
@@ -47,12 +47,12 @@
         "alt": "Dubai Skyline"
       },
       "frankfurt": {
-        "hero": "https://images.unsplash.com/photo-1564221710304-0b37c8b9d729?auto=format&fit=crop&q=80",
+        "hero": "https://wallpapercave.com/wp/wp1917634.jpg",
         "thumbnail": "https://images.unsplash.com/photo-1564221710304-0b37c8b9d729?w=800&h=600&fit=crop",
         "alt": "Frankfurt Skyline"
       },
       "pristina": {
-        "hero": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&q=80",
+        "hero": "https://wallpapercat.com/w/full/7/d/b/1631033-1920x1080-desktop-full-hd-pristina-background-image.jpg",
         "thumbnail": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&h=600&fit=crop",
         "alt": "Pristina Mountain View"
       }
