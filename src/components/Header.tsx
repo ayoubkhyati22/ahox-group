@@ -71,7 +71,7 @@ const Header = () => {
       <motion.header
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        className={`fixed top-0 left-0 right-0 z-[70] transition-all duration-500 ${
+        className={`fixed top-0 left-0 right-0 z-[80] transition-all duration-500 ${
           isScrolled 
             ? 'bg-[#0A0A0A]/80 backdrop-blur-xl border-b border-white/5 py-1 shadow-2xl shadow-black/50' 
             : 'bg-transparent py-4'
@@ -84,7 +84,7 @@ const Header = () => {
             <img 
               src={logoSrc} 
               alt="AHOX" 
-              className={`h-16 sm:h-18 w-auto transition-all duration-500 ${isScrolled ? 'scale-90' : 'scale-100'}`} 
+              className={`h-28 sm:h-18 w-auto transition-all duration-500 ${isScrolled ? 'scale-90' : 'scale-100'}`} 
             />
           </Link>
 
@@ -133,7 +133,7 @@ const Header = () => {
                     initial={{ opacity: 0, y: 15 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
-                    className="absolute right-0 mt-3 w-44 bg-[#111111] border border-white/10 rounded-sm shadow-2xl p-1 overflow-hidden"
+                    className="absolute right-0 mt-3 w-44 bg-[#111111] border border-white/10 rounded-sm shadow-4xl p-1 overflow-hidden"
                   >
                     {languages.map((lang) => (
                       <button
