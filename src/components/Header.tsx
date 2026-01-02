@@ -34,7 +34,6 @@ const Header = () => {
     setIsLangOpen(false);
   };
 
-  // Close language dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (langRef.current && !langRef.current.contains(event.target as Node)) {
@@ -45,80 +44,67 @@ const Header = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  // Handle scroll detection
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Handle scroll lock
   useEffect(() => {
     document.body.style.overflow = isMobileMenuOpen ? 'hidden' : 'unset';
   }, [isMobileMenuOpen]);
 
-  useEffect(() => {
-    document.documentElement.dir = i18n.language === 'darija' ? 'rtl' : 'ltr';
-    document.documentElement.lang = i18n.language;
-  }, [i18n.language]);
-
   const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (location.pathname === '/') {
       e.preventDefault();
-      window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: 'smooth'
-      });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
 
-  // Get the appropriate logo based on scroll state
-  const logoSrc = isScrolled ? getLogo('mainColor') : getLogo('mainWhite');
+  // Keep logo white for premium dark look regardless of scroll
+  const logoSrc = getLogo('mainWhite');
 
   return (
     <>
       <motion.header
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        className={`fixed top-0 left-0 right-0 z-[70] transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-[70] transition-all duration-500 ${
           isScrolled 
-            ? 'bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm' 
-            : 'bg-transparent'
+            ? 'bg-[#0A0A0A]/80 backdrop-blur-xl border-b border-white/5 py-1 shadow-2xl shadow-black/50' 
+            : 'bg-transparent py-4'
         }`}
       >
         <div className="container mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
           
-          {/* Logo - Made Bigger - Switches based on scroll */}
-          <Link to="/" onClick={handleLogoClick} className="relative z-[80]">
+          {/* Logo Monolith */}
+          <Link to="/" onClick={handleLogoClick} className="relative z-[80] group">
             <img 
               src={logoSrc} 
               alt="AHOX" 
-              className="h-16 sm:h-20 w-auto transition-opacity duration-300" 
+              className={`h-16 sm:h-18 w-auto transition-all duration-500 ${isScrolled ? 'scale-90' : 'scale-100'}`} 
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-10">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-sm font-medium transition-all duration-300 relative py-2 ${
+                className={`text-[11px] font-black uppercase tracking-[0.3em] transition-all duration-300 relative py-2 ${
                   location.pathname === link.path 
-                    ? isScrolled ? 'text-teal' : 'text-white'
-                    : isScrolled ? 'text-slate-600 hover:text-teal' : 'text-white/90 hover:text-white'
+                    ? 'text-gold' 
+                    : 'text-zinc-400 hover:text-white'
                 }`}
               >
                 {link.label}
                 {location.pathname === link.path && (
                   <motion.div 
                     layoutId="nav-underline" 
-                    className={`absolute bottom-0 left-0 right-0 h-0.5 rounded-full transition-colors duration-300 ${
-                      isScrolled ? 'bg-teal' : 'bg-white'
-                    }`} 
+                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gold rounded-full"
                   />
                 )}
               </Link>
@@ -126,57 +112,45 @@ const Header = () => {
           </nav>
 
           {/* Right Actions */}
-          <div className="flex items-center gap-2 sm:gap-4">
+          <div className="flex items-center gap-2 sm:gap-6">
             
-            {/* Language Selector (Shared Desktop/Mobile) */}
+            {/* Language Selector (Stone Effect) */}
             <div className="relative" ref={langRef}>
               <button
                 onClick={() => setIsLangOpen(!isLangOpen)}
-                className={`flex items-center gap-2 px-3 py-2 rounded-xl transition-all duration-300 group ${
-                  isScrolled ? 'hover:bg-slate-50' : 'hover:bg-white/10'
-                }`}
+                className="flex items-center gap-3 px-4 py-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full transition-all group"
               >
-                <div className={`w-8 h-8 rounded-full flex items-center justify-center text-lg border transition-all duration-300 ${
-                  isScrolled 
-                    ? 'bg-slate-100 border-gray-100 group-hover:border-teal/30' 
-                    : 'bg-white/10 border-white/20 group-hover:border-white/40'
-                }`}>
-                  {currentLanguage.flag}
-                </div>
-                <span className={`hidden sm:block text-sm font-semibold uppercase transition-colors duration-300 ${
-                  isScrolled ? 'text-slate-700' : 'text-white'
-                }`}>
+                <span className="text-lg opacity-80 group-hover:opacity-100 grayscale-[0.5] group-hover:grayscale-0">{currentLanguage.flag}</span>
+                <span className="hidden sm:block text-[10px] font-black uppercase tracking-widest text-zinc-300 group-hover:text-white">
                   {currentLanguage.code}
                 </span>
-                <ChevronDown className={`w-3 h-3 transition-all duration-300 ${
-                  isScrolled ? 'text-slate-400' : 'text-white/70'
-                } ${isLangOpen ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`w-3 h-3 text-zinc-500 group-hover:text-gold transition-all ${isLangOpen ? 'rotate-180' : ''}`} />
               </button>
               
               <AnimatePresence>
                 {isLangOpen && (
                   <motion.div
-                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                    className="absolute right-0 mt-2 w-48 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl shadow-slate-200/50 border border-gray-100 p-2 overflow-hidden"
+                    initial={{ opacity: 0, y: 15 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    className="absolute right-0 mt-3 w-44 bg-[#111111] border border-white/10 rounded-sm shadow-2xl p-1 overflow-hidden"
                   >
                     {languages.map((lang) => (
                       <button
                         key={lang.code}
                         onClick={() => changeLanguage(lang.code)}
-                        className={`w-full flex items-center justify-between px-4 py-3 rounded-xl text-sm transition-all ${
+                        className={`w-full flex items-center justify-between px-4 py-3 text-[10px] font-black uppercase tracking-widest transition-all ${
                           i18n.language === lang.code 
-                            ? 'bg-teal/5 text-teal font-semibold' 
-                            : 'hover:bg-slate-50 text-slate-600'
+                            ? 'bg-gold/10 text-gold font-black' 
+                            : 'hover:bg-white/5 text-zinc-400 hover:text-white'
                         }`}
                       >
                         <span className="flex items-center gap-3">
-                          <span className="text-lg">{lang.flag}</span>
+                          <span className="text-sm grayscale-[0.2]">{lang.flag}</span>
                           {lang.label}
                         </span>
                         {i18n.language === lang.code && (
-                          <div className="w-1.5 h-1.5 bg-teal rounded-full" />
+                          <div className="w-1 h-1 bg-gold rounded-full shadow-[0_0_8px_rgba(197,160,89,0.8)]" />
                         )}
                       </button>
                     ))}
@@ -185,42 +159,46 @@ const Header = () => {
               </AnimatePresence>
             </div>
 
-            {/* Mobile Hamburger */}
+            {/* Mobile Menu Trigger (Zinc Plate) */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={`z-[80] lg:hidden w-11 h-11 flex flex-col items-center justify-center gap-1.5 rounded-xl transition-all duration-300 ${
-                isScrolled 
-                  ? 'bg-slate-900 hover:bg-slate-800' 
-                  : 'bg-white/10 hover:bg-white/20 backdrop-blur-sm'
-              }`}
+              className="z-[80] lg:hidden w-12 h-12 flex flex-col items-center justify-center gap-1.5 bg-white/5 border border-white/10 rounded-sm transition-all hover:bg-white/10"
             >
               <motion.span 
-                animate={isMobileMenuOpen ? { rotate: 45, y: 4 } : { rotate: 0, y: 0 }}
-                className="w-5 h-0.5 bg-white block rounded-full"
+                animate={isMobileMenuOpen ? { rotate: 45, y: 4.5, backgroundColor: "#C5A059" } : { rotate: 0, y: 0 }}
+                className="w-6 h-[1px] bg-white block"
               />
               <motion.span 
-                animate={isMobileMenuOpen ? { opacity: 0, x: -10 } : { opacity: 1, x: 0 }}
-                className="w-5 h-0.5 bg-white block rounded-full"
+                animate={isMobileMenuOpen ? { opacity: 0 } : { opacity: 1 }}
+                className="w-6 h-[1px] bg-white block"
               />
               <motion.span 
-                animate={isMobileMenuOpen ? { rotate: -45, y: -4 } : { rotate: 0, y: 0 }}
-                className="w-5 h-0.5 bg-white block rounded-full"
+                animate={isMobileMenuOpen ? { rotate: -45, y: -4.5, backgroundColor: "#C5A059" } : { rotate: 0, y: 0 }}
+                className="w-6 h-[1px] bg-white block"
               />
             </button>
           </div>
         </div>
       </motion.header>
 
-      {/* Fullscreen Mobile Menu */}
+      {/* Fullscreen Mobile Menu (Dark Onyx Overlay) */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[60] bg-white flex flex-col pt-32 px-8"
+            initial={{ x: '100%' }}
+            animate={{ x: 0 }}
+            exit={{ x: '100%' }}
+            transition={{ type: "spring", damping: 25, stiffness: 200 }}
+            className="fixed inset-0 z-[60] bg-[#050505] flex flex-col pt-32 px-10 border-l border-white/10"
           >
-            <nav className="flex flex-col space-y-4">
+            {/* Blueprint Grid Lines for Mobile Background */}
+            <div className="absolute inset-0 opacity-5 pointer-events-none overflow-hidden">
+                {[...Array(5)].map((_, i) => (
+                   <div key={i} className="h-full w-px bg-white absolute" style={{ left: `${(i+1)*20}%` }} />
+                ))}
+            </div>
+
+            <nav className="flex flex-col space-y-8 relative z-10">
               {navLinks.map((link, index) => (
                 <motion.div
                   initial={{ opacity: 0, x: 20 }}
@@ -231,7 +209,9 @@ const Header = () => {
                   <Link
                     to={link.path}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="text-4xl font-bold tracking-tight text-slate-900 hover:text-teal transition-colors"
+                    className={`text-5xl font-black italic tracking-tighter uppercase transition-all duration-300 ${
+                       location.pathname === link.path ? 'text-gold' : 'text-zinc-500 hover:text-white'
+                    }`}
                   >
                     {link.label}
                   </Link>
@@ -239,15 +219,15 @@ const Header = () => {
               ))}
             </nav>
 
-            {/* Bottom Contact Info for Mobile */}
             <motion.div 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
-              className="mt-auto mb-12 pt-8 border-t border-gray-100"
+              className="mt-auto mb-20 relative z-10"
             >
-              <p className="text-sm text-slate-400 mb-2 uppercase tracking-widest">{t('contact.getInTouch')}</p>
-              <a href="mailto:info@ahox-group.com" className="text-xl font-medium text-slate-900">
+              <div className="w-12 h-1 bg-gold mb-8" />
+              <p className="text-[10px] text-zinc-600 font-bold uppercase tracking-[0.4em] mb-4">Facilitating Global Wealth</p>
+              <a href="mailto:info@ahox-group.com" className="text-lg font-black text-white italic">
                 info@ahox-group.com
               </a>
             </motion.div>
@@ -258,4 +238,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Header;  

@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { MapPin, Phone, Mail, Globe } from 'lucide-react';
+import { MapPin, Phone, Mail, Globe, ArrowUpRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -9,7 +10,7 @@ const Footer = () => {
     {
       icon: MapPin,
       title: t('footer.address'),
-      content: ['AHOX GmbH', 'Ostendstraße 80', '60314 Frankfurt a.M.', 'Germany'],
+      content: ['Ostendstraße 80', '60314 Frankfurt a.M.', 'Germany'],
     },
     {
       icon: Phone,
@@ -21,165 +22,130 @@ const Footer = () => {
       title: t('footer.email'),
       content: ['info@ahox-group.com'],
     },
-    {
-      icon: Globe,
-      title: t('footer.website'),
-      content: ['www.ahox-group.com'],
-    },
   ];
 
   const locations = [
-    { name: 'frankfurt', region: 'Germany' },
-    { name: 'casablanca', region: 'Morocco' },
-    { name: 'dubai', region: 'UAE' },
-    { name: 'pristina', region: 'Kosovo' },
-  ];
-
-  const services = [
-    t('divisions.construction.title'),
-    t('divisions.realEstate.title'),
-    t('divisions.security.title'),
-    t('common.projectManagement'),
+    { name: 'frankfurt', code: 'DE' },
+    { name: 'casablanca', code: 'MA' },
+    { name: 'dubai', code: 'UAE' },
+    { name: 'pristina', code: 'XK' },
   ];
 
   return (
-    <footer className="bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
-      {/* Main Footer Content */}
-      <div className="container mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+    <footer className="relative bg-[#050505] text-white pt-24 overflow-hidden">
+      {/* Decorative Grid Pattern (Matching Home) */}
+      <div className="absolute inset-0 opacity-[0.02] pointer-events-none">
+        <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(#ffffff 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+      </div>
+
+      <div className="container mx-auto px-6 pb-20 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8">
           
-          {/* Company Info & Logo */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="lg:col-span-1"
-          >
-            <img 
-              src="/images/ahox-group-main-logo-white.png" 
-              alt="AHOX Logo" 
-              className="h-22 w-auto object-contain mb-6"
-            />
-            {/* <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 bg-gold/10 hover:bg-gold rounded-lg flex items-center justify-center transition-colors">
-                <span className="text-gold hover:text-white text-xl">f</span>
-              </a>
-              <a href="#" className="w-10 h-10 bg-gold/10 hover:bg-gold rounded-lg flex items-center justify-center transition-colors">
-                <span className="text-gold hover:text-white text-xl">in</span>
-              </a>
-              <a href="#" className="w-10 h-10 bg-gold/10 hover:bg-gold rounded-lg flex items-center justify-center transition-colors">
-                <span className="text-gold hover:text-white text-xl">𝕏</span>
-              </a>
-            </div> */}
-          </motion.div>
-
-          {/* Contact Information */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            viewport={{ once: true }}
-          >
-            <h3 className="text-xl font-bold text-gold mb-6">{t('footer.contact')}</h3>
-            <div className="space-y-4">
-              {contactInfo.map((item, index) => {
-                const Icon = item.icon;
-                return (
-                  <div key={index} className="flex gap-3">
-                    <Icon className="w-5 h-5 text-gold flex-shrink-0 mt-1" />
-                    <div>
-                      <p className="text-sm font-semibold text-gray-300 mb-1">{item.title}</p>
-                      {item.content.map((line, i) => (
-                        <p key={i} className="text-sm text-gray-400">
-                          {item.title === t('footer.email') ? (
-                            <a href={`mailto:${line}`} className="hover:text-gold transition-colors">
-                              {line}
-                            </a>
-                          ) : item.title === t('footer.website') ? (
-                            <a href={`https://${line}`} target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">
-                              {line}
-                            </a>
-                          ) : item.title === t('footer.phone') ? (
-                            <a href={`tel:${line.replace(/\s/g, '')}`} className="hover:text-gold transition-colors">
-                              {line}
-                            </a>
-                          ) : (
-                            line
-                          )}
-                        </p>
-                      ))}
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </motion.div>
-
-          {/* Our Locations */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            <h3 className="text-xl font-bold text-gold mb-6">{t('footer.locations')}</h3>
-            <ul className="space-y-3">
-              {locations.map((location, index) => (
-                <li key={index}>
-                  <a 
-                    href={`/${location.name}`}
-                    className="flex items-center gap-2 text-gray-400 hover:text-gold transition-colors group"
-                  >
-                    <span className="w-2 h-2 bg-gold rounded-full group-hover:scale-125 transition-transform"></span>
-                    <span className="font-medium">{t(`nav.${location.name}`)}</span>
-                    <span className="text-sm text-gray-500">({location.region})</span>
-                  </a>
-                </li>
-              ))}
-            </ul>
-            
-          </motion.div>
-
-          {/* Services */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            viewport={{ once: true }}
-          >
-            <h3 className="text-xl font-bold text-gold mb-6">{t('footer.services')}</h3>
-            <ul className="space-y-3 mb-8">
-              {services.map((service, index) => (
-                <li key={index} className="flex items-center gap-2 text-gray-400 hover:text-gold transition-colors cursor-pointer">
-                  <span className="text-gold">▸</span>
-                  <span>{service}</span>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-        </div>
-      </div>
-
-      {/* Bottom Bar */}
-      <div className="border-t border-gray-800">
-        <div className="container mx-auto px-6 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            {/* <p className="text-gray-400 text-sm text-center md:text-left">
-              © {new Date().getFullYear()} AHOX GmbH. {t('footer.rights')}
-            </p> */}
-            {/* <div className="flex flex-wrap justify-center gap-6 text-sm">
-              <a href="#" className="text-gray-400 hover:text-gold transition-colors">{t('footer.privacy')}</a>
-              <a href="#" className="text-gray-400 hover:text-gold transition-colors">{t('footer.terms')}</a>
-              <a href="#" className="text-gray-400 hover:text-gold transition-colors">{t('footer.impressum')}</a>
-              <a href="#" className="text-gray-400 hover:text-gold transition-colors">{t('footer.datenschutz')}</a>
-            </div> */}
+          {/* 1. BRAND MONOLITH */}
+          <div className="lg:col-span-4 border-l border-white/10 pl-8">
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+            >
+              <img 
+                src="/images/ahox-group-main-logo-white.png" 
+                alt="AHOX Logo" 
+                className="h-18 w-auto object-contain mb-8 grayscale hover:grayscale-0 transition-all duration-700"
+              />
+            </motion.div>
           </div>
+
+          {/* 2. CONTACT (ZINC & GOLD) */}
+          <div className="lg:col-span-3">
+             <span className="text-[10px] font-black uppercase tracking-[0.4em] text-zinc-600 block mb-10">Communications</span>
+             <div className="space-y-8">
+                {contactInfo.map((item, i) => (
+                  <div key={i} className="group">
+                    <p className="text-[10px] text-gold font-bold uppercase mb-2 tracking-widest">{item.title}</p>
+                    {item.content.map((line, idx) => (
+                       <p key={idx} className="text-zinc-400 text-sm font-light hover:text-white transition-colors">
+                         {line}
+                       </p>
+                    ))}
+                  </div>
+                ))}
+             </div>
+          </div>
+
+          {/* 3. GLOBAL FOOTPRINT (DARK GRAY CARDS) */}
+          <div className="lg:col-span-3">
+             <span className="text-[10px] font-black uppercase tracking-[0.4em] text-zinc-600 block mb-10">Our Network</span>
+             <ul className="space-y-4">
+               {locations.map((loc, i) => (
+                 <li key={i}>
+                   <Link 
+                     to={`/${loc.name}`}
+                     className="flex items-center justify-between group p-3 border border-white/5 bg-white/[0.01] hover:bg-white/[0.03] transition-all"
+                   >
+                     <span className="text-sm font-bold text-zinc-400 group-hover:text-white transition-colors">
+                       {t(`nav.${loc.name}`)}
+                     </span>
+                     <span className="text-[10px] text-zinc-600 group-hover:text-gold transition-colors font-mono tracking-tighter">
+                       / {loc.code}
+                     </span>
+                   </Link>
+                 </li>
+               ))}
+             </ul>
+          </div>
+
+          {/* 4. SECTORS (TEXT STROKE FEEL) */}
+          <div className="lg:col-span-2">
+            <span className="text-[10px] font-black uppercase tracking-[0.4em] text-zinc-600 block mb-10">Sectors</span>
+            <div className="flex flex-col gap-4 text-xs font-black tracking-widest uppercase">
+                <Link to="/construction" className="hover:text-gold transition-colors">{t('divisions.construction.title')}</Link>
+                <Link to="/real-estate" className="hover:text-gold transition-colors">{t('divisions.realEstate.title')}</Link>
+                <Link to="/security" className="hover:text-gold transition-colors">{t('divisions.security.title')}</Link>
+            </div>
+          </div>
+
         </div>
       </div>
 
-      {/* Decorative Bottom Line */}
-      <div className="h-1 bg-gradient-to-r from-transparent via-gold to-transparent"></div>
+      {/* BOTTOM LEGAL BAR (DARK GREY BACKGROUND) */}
+      <div className="bg-[#0A0A0A] border-t border-white/5 py-10 relative overflow-hidden">
+        <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="flex items-center gap-10">
+            <span className="text-zinc-600 text-[10px] font-bold tracking-widest uppercase">
+              © {new Date().getFullYear()} AHOX GROUP
+            </span>
+          </div>
+
+          {/* Legal Links */}
+          <div className="flex gap-8 text-[10px] font-bold text-zinc-500 uppercase tracking-widest">
+             <a href="#" className="hover:text-gold transition-colors">Impressum</a>
+             <a href="#" className="hover:text-gold transition-colors">Privacy</a>
+             <a href="#" className="hover:text-gold transition-colors">Data Safety</a>
+          </div>
+
+          {/* Top of page trigger */}
+          <button 
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="group flex items-center gap-2 text-[10px] text-zinc-600 hover:text-white transition-all uppercase font-black"
+          >
+            <span>Back to top</span>
+            <div className="w-8 h-8 rounded-full border border-zinc-800 flex items-center justify-center group-hover:border-gold transition-all">
+              <ArrowUpRight className="w-3 h-3 group-hover:-translate-y-1 transition-transform" />
+            </div>
+          </button>
+        </div>
+      </div>
+
+      {/* Finishing Gold Accent Rule */}
+      <div className="h-[2px] w-full bg-gradient-to-r from-transparent via-gold/50 to-transparent opacity-50"></div>
+
+      <style dangerouslySetInnerHTML={{ __html: `
+        .italic-subtle {
+          font-style: italic;
+          letter-spacing: -0.02em;
+        }
+      `}} />
     </footer>
   );
 };
