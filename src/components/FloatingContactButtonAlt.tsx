@@ -106,17 +106,6 @@ const FloatingContactButtonAlt = () => {
                   </motion.div>
                 );
               })}
-
-              {/* Status Banner */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.3 }}
-                className="flex items-center gap-2 pr-2"
-              >
-                 <ShieldCheck className="w-3 h-3 text-[#C5A059] opacity-40" />
-                 <span className="text-[8px] font-black uppercase tracking-[0.4em] text-zinc-600">Secure Protocol Active</span>
-              </motion.div>
             </div>
           </>
         )}
@@ -183,17 +172,7 @@ const FloatingContactButtonAlt = () => {
           </AnimatePresence>
         </div>
 
-        {/* Priority "Live" Signal */}
-        {!isOpen && (
-            <motion.div 
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              className="absolute top-2 right-2 w-3 h-3"
-            >
-               <span className="absolute inset-0 rounded-full bg-[#C5A059] animate-ping opacity-50"></span>
-               <span className="relative block w-full h-full bg-[#C5A059] border-2 border-[#0A0A0A] rounded-full"></span>
-            </motion.div>
-        )}
+
       </motion.button>
     </div>
   );
