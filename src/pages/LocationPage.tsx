@@ -148,7 +148,7 @@ const LocationPage = ({ location }: LocationPageProps) => {
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent" />
         </motion.div>
 
-        <div className="relative z-10 w-full lg:w-2/5 bg-[#0D0D0D] border-t lg:border-t-0 lg:border-r border-white/10 p-10 lg:p-20 flex flex-col items-start gap-8 backdrop-blur-sm">
+        <div className="relative z-10 w-full lg:w-2/5 bg-[#0D0D0D] border-t lg:border-t-0 lg:border-r border-white/10 p-8 lg:p-16 flex flex-col items-start gap-6 backdrop-blur-sm">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -163,22 +163,14 @@ const LocationPage = ({ location }: LocationPageProps) => {
           <motion.h1 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-white text-6xl md:text-9xl font-black tracking-tighter leading-none italic uppercase italic-subtle"
+            className="text-white text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter leading-none italic uppercase italic-subtle"
           >
             {location}
           </motion.h1>
 
-          <p className="text-zinc-500 text-lg md:text-xl max-w-xl font-light leading-relaxed border-l border-white/10 pl-6 italic">
+          <p className="text-zinc-500 text-base md:text-lg max-w-xl font-light leading-relaxed border-l border-white/10 pl-6 italic">
             {t(`locations.${location}.description`)}
           </p>
-
-          <motion.a
-            href="#contact"
-            whileHover={{ scale: 1.05 }}
-            className="px-12 py-5 bg-white text-black font-black uppercase text-[10px] tracking-widest flex items-center gap-4 hover:bg-gold transition-all"
-          >
-            {t('locationPage.contact.button')} <ArrowRight className="w-4 h-4" />
-          </motion.a>
         </div>
       </section>
 
@@ -191,10 +183,10 @@ const LocationPage = ({ location }: LocationPageProps) => {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              className="p-16 flex flex-col gap-6 group hover:bg-white/[0.02] transition-colors"
+              className="p-10 lg:p-12 flex flex-col gap-4 group hover:bg-white/[0.02] transition-colors"
             >
-              <stat.icon className="w-6 h-6 text-zinc-500 group-hover:text-white transition-colors" />
-              <div className="text-4xl font-black uppercase tracking-tighter">
+              <stat.icon className="w-5 h-5 text-zinc-500 group-hover:text-white transition-colors" />
+              <div className="text-3xl md:text-4xl font-black uppercase tracking-tighter">
                 <AnimatedCounter value={stat.value} duration={2500} />
               </div>
               <div className="text-[10px] text-zinc-600 font-black uppercase tracking-[0.4em]">
@@ -206,50 +198,50 @@ const LocationPage = ({ location }: LocationPageProps) => {
       </section>
 
       {/* 3. CONTENT SECTION (MATTE LAYOUT) */}
-      <section className="py-48 relative overflow-hidden bg-[#050505]">
+      <section className="py-32 md:py-40 relative overflow-hidden bg-[#050505]">
         <MovingLines />
-        <div className="container mx-auto px-6 lg:px-24 relative z-10">
-          <div className="grid lg:grid-cols-12 gap-20">
+        <div className="container mx-auto px-6 lg:px-20 relative z-10">
+          <div className="grid lg:grid-cols-12 gap-16">
             
-            <div className="lg:col-span-6 space-y-16">
-              <h2 className="text-5xl md:text-8xl font-black tracking-tighter uppercase italic italic-subtle leading-none">
+            <div className="lg:col-span-6 space-y-12">
+              <h2 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter uppercase italic italic-subtle leading-none">
                 {t('locationPage.elevated')} <br />
                 <span className="text-zinc-800">FACILITATION</span>
               </h2>
               
-              <div className="p-10 bg-[#111111] border border-white/5 relative group overflow-hidden">
+              <div className="p-8 bg-[#111111] border border-white/5 relative group overflow-hidden">
                 <div className="absolute top-0 left-0 w-1 h-full bg-white opacity-20 group-hover:opacity-100 transition-opacity" />
-                <h3 className="text-zinc-100 text-3xl font-black uppercase mb-4 italic tracking-tight">
+                <h3 className="text-zinc-100 text-2xl md:text-3xl font-black uppercase mb-3 italic tracking-tight">
                   {t(`locations.${location}.title`)}
                 </h3>
-                <p className="text-xl text-zinc-400 font-light">
+                <p className="text-lg md:text-xl text-zinc-400 font-light">
                    {t(`locations.${location}.subtitle`)}
                 </p>
               </div>
             </div>
 
-            <div className="lg:col-span-6 space-y-12 py-10">
-               <p className="text-zinc-400 text-xl font-extralight leading-loose border-l border-zinc-800 pl-8 italic">
+            <div className="lg:col-span-6 space-y-10 py-8">
+               <p className="text-zinc-400 text-lg md:text-xl font-extralight leading-loose border-l border-zinc-800 pl-6 italic">
                  {t(`locations.${location}.description`)}
                </p>
 
                <div className="grid gap-4">
                   {(t(`locations.${location}.highlights`, { returnObjects: true }) as string[]).map((highlight, index) => (
-                    <div key={index} className="flex items-center gap-6 group">
+                    <div key={index} className="flex items-center gap-4 group">
                       <div className="w-2 h-px bg-zinc-700 group-hover:w-6 transition-all group-hover:bg-white" />
-                      <span className="text-sm font-bold tracking-widest text-zinc-500 uppercase group-hover:text-zinc-100 transition-colors">{highlight}</span>
+                      <span className="text-xs md:text-sm font-bold tracking-widest text-zinc-500 uppercase group-hover:text-zinc-100 transition-colors">{highlight}</span>
                     </div>
                   ))}
                </div>
 
-               <div className="pt-12 mt-12 border-t border-white/5">
-                  <h4 className="text-[10px] font-black uppercase tracking-[0.4em] mb-10 text-zinc-600">
+               <div className="pt-10 mt-10 border-t border-white/5">
+                  <h4 className="text-[10px] font-black uppercase tracking-[0.4em] mb-8 text-zinc-600">
                     TARGET PROFILES
                   </h4>
                   <div className="grid md:grid-cols-2 gap-4">
                     {(t(`locations.${location}.features`, { returnObjects: true }) as string[]).map((feature, index) => (
-                      <div key={index} className="flex items-center gap-4 p-4 border border-white/5 bg-white/[0.01]">
-                        <Award className="w-4 h-4 text-zinc-700" />
+                      <div key={index} className="flex items-center gap-3 p-3 border border-white/5 bg-white/[0.01]">
+                        <Award className="w-4 h-4 text-zinc-700 flex-shrink-0" />
                         <span className="text-xs font-bold uppercase tracking-tight text-zinc-400">{feature}</span>
                       </div>
                     ))}
@@ -261,28 +253,28 @@ const LocationPage = ({ location }: LocationPageProps) => {
       </section>
 
       {/* 4. CONTACT MONOLITH */}
-      <section id="contact" className="py-32 container mx-auto px-6">
+      <section id="contact" className="py-20 md:py-28 container mx-auto px-6">
         <div className="bg-[#0D0D0D] border border-white/5 flex flex-col lg:flex-row relative group overflow-hidden">
           {/* Subtle hover reveal on monolith border */}
           <div className="absolute inset-0 bg-white/[0.02] opacity-0 group-hover:opacity-100 transition-opacity" />
 
-          <div className="lg:w-2/3 p-12 lg:p-24 flex flex-col gap-10 relative z-10">
-            <h2 className="text-6xl md:text-8xl font-black tracking-tighter leading-[0.8] uppercase italic italic-subtle">
+          <div className="lg:w-2/3 p-10 lg:p-20 flex flex-col gap-8 relative z-10">
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter leading-[0.8] uppercase italic italic-subtle">
                Inquire <br /> 
                <span className="text-zinc-700">{location}</span>
             </h2>
             <div className="w-12 h-1 bg-white" />
-            <p className="text-zinc-500 text-xl font-light italic">
+            <p className="text-zinc-500 text-lg md:text-xl font-light italic">
                Facilitating entry into {location}'s high-growth assets.
             </p>
           </div>
 
-          <div className="lg:w-1/3 bg-[#1A1A1A] p-12 lg:p-24 flex flex-col justify-center gap-16 border-t lg:border-t-0 lg:border-l border-white/5 relative z-10">
+          <div className="lg:w-1/3 bg-[#1A1A1A] p-10 lg:p-16 flex flex-col justify-center gap-12 border-t lg:border-t-0 lg:border-l border-white/5 relative z-10">
                <div className="flex flex-col group">
                   <span className="text-[10px] uppercase font-black text-zinc-600 mb-2 tracking-[0.5em] group-hover:text-white transition-colors">
                     Official Email
                   </span>
-                  <a href="mailto:info@ahox-group.com" className="text-2xl font-black text-zinc-100 italic transition-all group-hover:tracking-tighter">
+                  <a href="mailto:info@ahox-group.com" className="text-xl md:text-2xl font-black text-zinc-100 italic transition-all group-hover:tracking-tighter break-all">
                     info@ahox-group.com
                   </a>
                </div>
@@ -290,23 +282,13 @@ const LocationPage = ({ location }: LocationPageProps) => {
                   <span className="text-[10px] uppercase font-black text-zinc-600 mb-2 tracking-[0.5em] group-hover:text-white transition-colors">
                     Telephone
                   </span>
-                  <a href="tel:+496927278761" className="text-2xl font-black text-zinc-100 italic transition-all group-hover:tracking-tighter">
+                  <a href="tel:+496927278761" className="text-xl md:text-2xl font-black text-zinc-100 italic transition-all group-hover:tracking-tighter">
                     +49 69 2727 8761
                   </a>
                </div>
           </div>
         </div>
       </section>
-
-      {/* 5. BACK BUTTON STICKER */}
-      <div className="fixed bottom-10 left-10 z-[100]">
-         <a 
-           href="/" 
-           className="w-14 h-14 bg-white rounded-full flex items-center justify-center text-black hover:bg-gold transition-colors shadow-2xl group"
-         >
-           <ArrowRight className="rotate-180 group-hover:-translate-x-1 transition-transform" />
-         </a>
-      </div>
 
       <style dangerouslySetInnerHTML={{ __html: `
         .italic-subtle {
