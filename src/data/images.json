@@ -19,11 +19,6 @@
           "alt": "Residential Complex"
         },
         {
-          "id": "office-interior",
-          "url": "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1920&h=1080&fit=crop",
-          "alt": "Modern Office Interior"
-        },
-        {
           "id": "construction-site",
           "url": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1920&h=1080&fit=crop",
           "alt": "Construction Site"
@@ -38,22 +33,22 @@
     "cities": {
       "casablanca": {
         "hero": "https://images.unsplash.com/photo-1538230575309-59dfc388ae36?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FzYWJsYW5jYXxlbnwwfHwwfHx8MA%3D%3D",
-        "thumbnail": "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=800&h=600&fit=crop",
+        "thumbnail": "https://images.unsplash.com/photo-1538230575309-59dfc388ae36?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FzYWJsYW5jYXxlbnwwfHwwfHx8MA%3D%3D",
         "alt": "Casablanca Skyline"
       },
       "dubai": {
         "hero": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&q=80",
-        "thumbnail": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&h=600&fit=crop",
+        "thumbnail": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&q=80",
         "alt": "Dubai Skyline"
       },
       "frankfurt": {
         "hero": "https://wallpapercave.com/wp/wp1917634.jpg",
-        "thumbnail": "https://images.unsplash.com/photo-1564221710304-0b37c8b9d729?w=800&h=600&fit=crop",
+        "thumbnail": "https://wallpapercave.com/wp/wp1917634.jpg",
         "alt": "Frankfurt Skyline"
       },
       "pristina": {
         "hero": "https://wallpapercat.com/w/full/7/d/b/1631033-1920x1080-desktop-full-hd-pristina-background-image.jpg",
-        "thumbnail": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&h=600&fit=crop",
+        "thumbnail": "https://wallpapercat.com/w/full/7/d/b/1631033-1920x1080-desktop-full-hd-pristina-background-image.jpg",
         "alt": "Pristina Mountain View"
       }
     },

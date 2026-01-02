@@ -270,21 +270,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* 8. FINAL CTA (GRAY SMOKE BACKGROUND) */}
-      <section className="py-32 md:py-40 bg-[#0A0A0A] border-t border-zinc-900 relative">
-         <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/40 to-transparent" />
-         <div className="container mx-auto px-6 relative z-10 text-center">
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-black uppercase tracking-tighter mb-10 md:mb-12 max-w-5xl mx-auto italic italic-subtle">{t('cta.title')}</h2>
-            <div className="flex flex-col md:flex-row justify-center items-center gap-5 md:gap-6">
-               <motion.a href="mailto:info@ahox-cm.de" className="w-full md:w-auto px-12 md:px-16 py-5 md:py-6 bg-white text-black font-black uppercase text-xs tracking-widest hover:bg-gold transition-colors shadow-2xl">
-                 {t('cta.button')}
-               </motion.a>
-               <motion.a href="tel:+496927278761" className="w-full md:w-auto px-12 md:px-16 py-5 md:py-6 border border-zinc-700 text-zinc-400 font-black uppercase text-xs tracking-widest hover:border-white hover:text-white transition-all">
-                 {t('cta.secondaryButton')}
-               </motion.a>
-            </div>
-         </div>
-      </section>
+
 
       <style dangerouslySetInnerHTML={{ __html: `
         .italic-subtle {

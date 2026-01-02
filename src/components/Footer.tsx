@@ -113,16 +113,11 @@ const Footer = () => {
         <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center gap-10">
             <span className="text-zinc-600 text-[10px] font-bold tracking-widest uppercase">
-              © {new Date().getFullYear()} AHOX GROUP
+             AHOX GROUP
             </span>
           </div>
 
-          {/* Legal Links */}
-          <div className="flex gap-8 text-[10px] font-bold text-zinc-500 uppercase tracking-widest">
-             <a href="#" className="hover:text-gold transition-colors">Impressum</a>
-             <a href="#" className="hover:text-gold transition-colors">Privacy</a>
-             <a href="#" className="hover:text-gold transition-colors">Data Safety</a>
-          </div>
+
 
           {/* Top of page trigger */}
           <button 
