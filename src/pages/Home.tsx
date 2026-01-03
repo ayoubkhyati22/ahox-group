@@ -146,7 +146,7 @@ const HomePage = () => {
       </section>
 
       {/* 3. THREE DIVISIONS */}
-      <section className="py-24 md:py-32 bg-[#0A0A0A]">
+      {/* <section className="py-24 md:py-32 bg-[#0A0A0A]">
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
             <h2 className="text-4xl md:text-6xl lg:text-7xl font-black uppercase tracking-tighter mb-4 text-white">
@@ -173,7 +173,7 @@ const HomePage = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* 4. WHY INVEST */}
       <section className="py-32 md:py-40 bg-[#111111] border-y border-white/5">
